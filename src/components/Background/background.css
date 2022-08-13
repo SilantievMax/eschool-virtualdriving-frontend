@@ -1,0 +1,14 @@
+.background {
+    background-color: #E7EBF5;
+    /* background-color: #0f3caf; */
+    position: relative;
+    top: -49px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    z-index: 10;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.468) 0px 16px 74px 4px;
+}

@@ -1,4 +1,5 @@
 import 'normalize.css';
+import Background from './components/Background/Background';
 import Header from './components/Header/Header';
 import Swiper from './components/Swiper/SwiperAuto';
 
@@ -7,6 +8,7 @@ const App = () => {
     <>
      <Header />
      <Swiper />
+     <Background />
     </>
   );
 }
