@@ -1,8 +1,12 @@
+import 'normalize.css';
+import Header from './components/header/Header';
+import Swiper from './components/swiper/SwiperAuto';
 
-function App() {
+const App = () => {
   return (
     <>
-     tset
+     <Header />
+     <Swiper />
     </>
   );
 }
