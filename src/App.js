@@ -1,6 +1,6 @@
 import 'normalize.css';
-import Header from './components/header/Header';
-import Swiper from './components/swiper/SwiperAuto';
+import Header from './components/Header/Header';
+import Swiper from './components/Swiper/SwiperAuto';
 
 const App = () => {
   return (
