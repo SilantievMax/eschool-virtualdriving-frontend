@@ -1,14 +1,14 @@
 import React from "react";
-import Background from "../../components/BackgroundForContents/BackgroundForContents";
+import BackgroundForContents from "../../components/BackgroundForContents/BackgroundForContents";
 import SwiperAvto from '../../components/SwiperAvto/SwiperAvto'
 
 const MainPage = () => {
     return (
         <>
         <SwiperAvto />
-        <Background>
+        <BackgroundForContents>
             sdfbf
-        </Background>
+        </BackgroundForContents>
         </>
     )
 }
