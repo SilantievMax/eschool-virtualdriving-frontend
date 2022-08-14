@@ -1,12 +1,11 @@
 .background {
     background-color: #E7EBF5;
-    /* background-color: #0f3caf; */
     position: relative;
-    top: -49px;
+    top: -120px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    z-index: 10;
-    width: 96%;
+    z-index: 9;
+    width: 96.8%;
     margin-left: auto;
     margin-right: auto;
     min-height: 400px;
