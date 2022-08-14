@@ -1,5 +1,4 @@
 .footer {
-    box-sizing: border-box;
     background-color: #323437;
     min-height: 123px;
     color: #fff;
@@ -15,7 +14,6 @@
 .footer__politik-link {
     display: block;
     color: #fff;
-    text-decoration: none;
     font-size: 14px;
     font-weight: 300;
 }
