@@ -23,7 +23,7 @@ const Header = () => {
                         <NavLink to={'/custom/lessons'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ФАЙЛЫ НА ЗАКАЗ</NavLink>
+                        <NavLink to={'/custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
                     </li>
                     <li className="header__item">
                         <NavLink to={'/custom/liveries'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>

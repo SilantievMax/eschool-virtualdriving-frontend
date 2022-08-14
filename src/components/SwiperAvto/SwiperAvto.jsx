@@ -1,4 +1,5 @@
 import React from 'react';
+import DetailedButton from './DetailedButton/DetailedButton'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css'
@@ -12,7 +13,7 @@ const SwiperAvto = () => {
         <section className="swiper">
             <Swiper
             modules={[Autoplay, Navigation]}
-            autoplay={{delay: 5000, disableOnInteraction: false,}}
+            autoplay={{delay: 6000, disableOnInteraction: true,}}
             navigation={true}
             cssMode={true}
             loop={true}
@@ -24,7 +25,6 @@ const SwiperAvto = () => {
                         <div className="swiper__wrapper-card">
                             <h2 className="swiper__heading">Онлайн школа виртуального автоспорта</h2>
                             <p className="swiper__description">Первая онлайн площадка в СНГ, на которой лучшие симрейсеры страны могут помочь улучшить ваш навык виртуального гоночного мастерства</p>
-                            <a href="#" className="swiper__btn">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -33,7 +33,7 @@ const SwiperAvto = () => {
                         <div className="swiper__wrapper-card">
                             <h2 className="swiper__heading">Персональные занятия</h2>
                             <p className="swiper__description">Благодаря тренировке с профессионалом 1 на 1 можно гарантированно улучшить своё время на круге и подготовиться к любому чемпионату</p>
-                            <a href="#" className="swiper__btn">ПОДРОБНЕЕ</a>
+                            <DetailedButton link='/custom/lessons' />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -42,7 +42,7 @@ const SwiperAvto = () => {
                         <div className="swiper__wrapper-card">
                             <h2 className="swiper__heading">Сетапы, реплеи и телеметрия</h2>
                             <p className="swiper__description">Подготовим настройки машин под любые трассы. Предоставим свои примеры прохождения треков в удобном для анализа формате</p>
-                            <a href="#" className="swiper__btn">ПОДРОБНЕЕ</a>
+                            <DetailedButton link='/custom/files' />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -51,7 +51,7 @@ const SwiperAvto = () => {
                         <div className="swiper__wrapper-card">
                             <h2 className="swiper__heading">Ливреи на заказ</h2>
                             <p className="swiper__description">Подготовим уникальный дизайн машины специально для вас</p>
-                            <a href="#" className="swiper__btn">ПОДРОБНЕЕ</a>
+                            <DetailedButton link='/custom/liveries' />
                         </div>
                     </div>
                 </SwiperSlide>

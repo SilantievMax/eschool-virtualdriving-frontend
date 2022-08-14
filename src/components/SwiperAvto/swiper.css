@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 530px;
+    height: 531px;
 }
 
 .swiper__slide_bgi1 {
@@ -27,8 +27,8 @@
 }
 
 .swiper__wrapper-card {
-    padding-left: 175px;
-    padding-top: 100px;
+    padding-left: 174px;
+    padding-top: 50px;
 }
 
 
@@ -42,18 +42,8 @@
 .swiper__description {
     max-width: 900px;
     font-size: 23px;
+    line-height: 35px;
     font-weight: 400;
     color: #fff;
-    margin-top: 20px;
-}
-
-.swiper__btn {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 400;
-    color: #fff;
-    background-color: #ff2121;
-    padding: 15px 33px;
-    border-radius: 3px;
-    margin-top: 30px;
+    margin-top: 22px;
 }
