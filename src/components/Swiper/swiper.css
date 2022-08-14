@@ -1,5 +1,4 @@
 .swiper {
-    /* margin-top: 42px; */
     min-height: 530px;
     position: relative;
 }
@@ -24,7 +23,7 @@
 }
 
 .swiper__slide_bgi4 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider4.webp);
+    background-image: linear-gradien    t( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider4.webp);
 }
 
 .swiper__wrapper-card {

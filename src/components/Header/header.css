@@ -24,6 +24,7 @@
 .header__nav-link {
     text-decoration: none;
     font-size: 12px;
+    font-weight: 400;
     color: #555;
 }
 

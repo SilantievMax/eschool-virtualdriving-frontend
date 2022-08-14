@@ -1,0 +1,28 @@
+.footer {
+    box-sizing: border-box;
+    background-color: #323437;
+    min-height: 123px;
+    color: #fff;
+    padding-top: 45px;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+.footer__content {
+    float: right;
+}
+
+.footer__politik-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer__copyright {
+    display: block;
+    font-size: 11px;
+    margin-top: 10px;
+    font-weight: 300;
+}

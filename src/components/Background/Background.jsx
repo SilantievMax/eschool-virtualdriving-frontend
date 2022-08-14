@@ -1,9 +1,12 @@
+import Footer from './Footer/Footer';
 import './background.css'
 
 const Background = () => {
     return (
         <>
-        <section className="background">background br</section>
+        <section className="background">
+            <Footer />
+        </section>
         </>
     )
 }
