@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../static/svg/logo.svg';
 import './header.css'
+import logo from '../../static/svg/logo.svg';
 
 const Header = () => {
     const activeStyles = {
@@ -26,7 +26,7 @@ const Header = () => {
                         <NavLink to={'/custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ФАЙЛЫ НА ЗАКАЗ</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/custom/liveriesn'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
+                        <NavLink to={'/custom/liveries'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
                     </li>
                     <li className="header__item">
                         <NavLink to={'/about'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
