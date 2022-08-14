@@ -1,3 +1,4 @@
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css'
@@ -5,7 +6,7 @@ import 'swiper/css/autoplay';
 import "swiper/css/navigation";
 import './swiper.css';
 
-const SwiperAuto = () => {
+const SwiperAvto = () => {
     return (
         <>
         <section className="swiper">
@@ -60,4 +61,4 @@ const SwiperAuto = () => {
     )
 }
 
-export default SwiperAuto;
+export default SwiperAvto;

@@ -11,19 +11,19 @@
 }
 
 .swiper__slide_bgi1 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider1.webp);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images/slider1.webp);
 }
 
 .swiper__slide_bgi2 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider2.webp);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images/slider2.webp);
 }
 
 .swiper__slide_bgi3 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider3.webp);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images/slider3.webp);
 }
 
 .swiper__slide_bgi4 {
-    background-image: linear-gradien    t( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images//slider4.webp);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../static/images/slider4.webp);
 }
 
 .swiper__wrapper-card {
