@@ -1,8 +1,11 @@
 import React from "react";
+import SwiperAvto from '../../components/SwiperAvto/SwiperAvto'
 
 const MainPage = () => {
     return (
-        <>MainPage</>
+        <>
+        <SwiperAvto />
+        </>
     )
 }
 
