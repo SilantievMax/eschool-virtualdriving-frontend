@@ -16,11 +16,11 @@ const App = () => {
     <Header />
     <Routes>
       <Route path='/' element={<MainPage />} />
-      <Route path='/about' element={<AboutPage />} />
-      <Route path='/authorization' element={<AuthorizationPage />} />
+      <Route path='/custom/lessons' element={<PersonalClassePage />} />
       <Route path='/custom/files' element={<CustomFilesPage />} />
       <Route path='/custom/liveries' element={<CustomLiveriesPage />} />
-      <Route path='/custom/lessons' element={<PersonalClassePage />} />
+      <Route path='/about' element={<AboutPage />} />
+      <Route path='/authorization' element={<AuthorizationPage />} />
     </Routes>
     </>
   );

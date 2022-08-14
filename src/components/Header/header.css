@@ -4,7 +4,8 @@
     align-items: center;
     height: 70px;
     background-color: #ffffff;
-    padding: 0 160px;
+    padding-left: 160px;
+    padding-right: 160px;
     position: fixed;
     left: 0;
     right: 0;
@@ -18,16 +19,19 @@
 
 .header__list {
     display: flex;
-    list-style: none;
-}
-
-.header__nav-link {
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 400;
-    color: #555;
 }
 
 .header__item:not(:last-child) {
     margin-right: 32px;
+}
+
+.header__nav-link {
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.header__nav-link:hover {
+    color: #ff2121
 }
