@@ -5,6 +5,7 @@ import Services from '../../components/Services/Services';
 import Simulators from "../../components/Simulators/Simulators";
 import Partners from "../../components/Partners/Partners";
 import Footer from "../../components/Footer/Footer";
+import Instructors from "../../components/Instructors/Instructors";
 
 const MainPage = () => {
     return (
@@ -13,7 +14,7 @@ const MainPage = () => {
         <BackgroundForContents>
             <Services />
             <Simulators />
-            ______________
+            <Instructors />
             <Partners />
             <Footer />
         </BackgroundForContents>
