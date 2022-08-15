@@ -3,6 +3,8 @@ import BackgroundForContents from "../../components/BackgroundForContents/Backgr
 import SwiperAvto from '../../components/SwiperAvto/SwiperAvto';
 import Services from '../../components/Services/Services';
 import Simulators from "../../components/Simulators/Simulators";
+import Partners from "../../components/Partners/Partners";
+import Footer from "../../components/Footer/Footer";
 
 const MainPage = () => {
     return (
@@ -11,6 +13,9 @@ const MainPage = () => {
         <BackgroundForContents>
             <Services />
             <Simulators />
+            ______________
+            <Partners />
+            <Footer />
         </BackgroundForContents>
         </>
     )

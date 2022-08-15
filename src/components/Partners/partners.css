@@ -1,0 +1,28 @@
+.partners {
+    background-color: #fff;
+    padding-top: 63px;
+    padding-bottom: 35px;
+}
+
+.partners__heading {
+    font-size: 37px;
+    font-weight: 700;
+    color: #2d3359;
+    text-align: center;   
+}
+
+.partners__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.partners__img_1 {
+    width: 360px;
+    margin-right: 135px;
+}
+
+.partners__img_2 {
+    width: 205px;
+}
