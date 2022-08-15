@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailedButton from './DetailedButton/DetailedButton'
+import DetailedButton from '../Buttons/DetailedButton/DetailedButton'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css'

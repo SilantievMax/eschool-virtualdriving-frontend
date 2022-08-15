@@ -1,11 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './detailedButton.css'
 
 const DetailedButton = (proos) =>  {
     return (
         <>
-        <NavLink to={`${proos.link}`} className="swiper__btn">ПОДРОБНЕЕ</NavLink>
+        <Link to={`${proos.link}`} className="swiper__btn">ПОДРОБНЕЕ</Link>
         </>
     )
 }
