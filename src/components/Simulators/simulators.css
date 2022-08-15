@@ -1,0 +1,16 @@
+.simulators__list {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 93px;
+    padding-bottom: 93px;
+}
+
+.simulators__img {
+    width: 300px;
+}
+
+.simulators__item:not(:last-child) {
+    margin-right: 40px;
+}
