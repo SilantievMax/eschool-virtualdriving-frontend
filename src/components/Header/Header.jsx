@@ -32,7 +32,7 @@ const Header = () => {
                         <NavLink to={'/about'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/authorization'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
+                        <NavLink to={'/authorization/login'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,22 @@
+.register {
+    position: fixed;
+    top: calc(50% - 350px);
+    left: calc(50% - 600px);
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    z-index: 100;
+    background: linear-gradient(112.34deg, #FFFFFF 26.52%, #B6BDCF 113.39%);
+    box-shadow: 4px 16px 74px rgba(0, 0, 0, 0.468);
+    border-radius: 6px;
+}
+
+.register__images {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../../static/images/card3.webp);
+    min-width: 500px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% center;
+    border-radius: 6px 0px 0px 6px;
+}

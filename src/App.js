@@ -7,6 +7,8 @@ import AuthorizationPage from './pages/AuthorizationPage/AuthorizationPage';
 import CustomFilesPage from './pages/CustomFilesPage/CustomFilesPage';
 import CustomLiveriesPage from './pages/CustomLiveriesPage/CustomLiveriesPage';
 import PersonalClassePage from './pages/PersonalClassePage/PersonalClassePage';
+import LoginForm from './components/LoginForm/LoginForm';
+import RegisterForm from './components/RegisterForm/RegisterForm';
 import 'normalize.css';
 import './index.css';
 
@@ -15,12 +17,13 @@ const App = () => {
     <>
     <Header />
     <Routes>
-      <Route path='/' element={<MainPage />} />
+      <Route path='/' element={<MainPage />}/>
       <Route path='/custom/lessons' element={<PersonalClassePage />} />
       <Route path='/custom/files' element={<CustomFilesPage />} />
       <Route path='/custom/liveries' element={<CustomLiveriesPage />} />
       <Route path='/about' element={<AboutPage />} />
-      <Route path='/authorization' element={<AuthorizationPage />} />
+      <Route path='/authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
+      <Route path='/authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
     </Routes>
     </>
   );

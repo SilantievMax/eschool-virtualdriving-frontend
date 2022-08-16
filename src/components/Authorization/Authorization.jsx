@@ -1,7 +1,7 @@
 import React from "react";
-import './authorizationPage.css'
+import './authorization.css'
 
-const AuthorizationPage = ({children}) => {
+const Authorization = ({children}) => {
     return (
         <>
         <React.Fragment>
@@ -14,4 +14,4 @@ const AuthorizationPage = ({children}) => {
     )
 }
 
-export default AuthorizationPage;
+export default Authorization;
