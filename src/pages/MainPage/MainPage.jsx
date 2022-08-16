@@ -6,6 +6,7 @@ import Simulators from "../../components/Simulators/Simulators";
 import Partners from "../../components/Partners/Partners";
 import Footer from "../../components/Footer/Footer";
 import Instructors from "../../components/Instructors/Instructors";
+import { Outlet } from "react-router-dom";
 
 const MainPage = () => {
     return (
@@ -18,6 +19,7 @@ const MainPage = () => {
             <Partners />
             <Footer />
         </BackgroundForContents>
+        <Outlet />
         </>
     )
 }

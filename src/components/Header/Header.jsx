@@ -20,19 +20,19 @@ const Header = () => {
                         <NavLink to={'/'} className="header__nav-link">УСЛУГИ</NavLink>
                     </li> */}
                     <li className="header__item">
-                        <NavLink to={'/custom/lessons'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
+                        <NavLink to={'custom/lessons'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
+                        <NavLink to={'custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/custom/liveries'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
+                        <NavLink to={'custom/liveries'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/about'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
+                        <NavLink to={'about'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink to={'/authorization/login'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
+                        <NavLink to={'authorization/login'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
                     </li>
                 </ul>
             </nav>

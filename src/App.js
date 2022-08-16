@@ -12,18 +12,29 @@ import RegisterForm from './components/RegisterForm/RegisterForm';
 import 'normalize.css';
 import './index.css';
 
+
 const App = () => {
   return (
     <>
     <Header />
     <Routes>
-      <Route path='/' element={<MainPage />}/>
-      <Route path='/custom/lessons' element={<PersonalClassePage />} />
-      <Route path='/custom/files' element={<CustomFilesPage />} />
-      <Route path='/custom/liveries' element={<CustomLiveriesPage />} />
+      <Route path='/' element={<MainPage />}>
+        <Route path='authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
+        <Route path='authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
+      </Route>
+      <Route path='custom/lessons' element={<PersonalClassePage />} >
+        <Route path='authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
+        <Route path='authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
+      </Route>
+      <Route path='custom/files/' element={<CustomFilesPage />}>
+        <Route path='authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
+        <Route path='authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
+      </Route>
+      <Route path='custom/liveries/' element={<CustomLiveriesPage />}>
+        <Route path='authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
+        <Route path='authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
+      </Route>
       <Route path='/about' element={<AboutPage />} />
-      <Route path='/authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
-      <Route path='/authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
     </Routes>
     </>
   );
