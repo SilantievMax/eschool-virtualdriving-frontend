@@ -16,9 +16,6 @@ const Header = () => {
             </NavLink>
             <nav className="header__nav">
                 <ul className="header__list">
-                    {/* <li className="header__item">
-                        <NavLink to={'/'} className="header__nav-link">УСЛУГИ</NavLink>
-                    </li> */}
                     <li className="header__item">
                         <NavLink to={'custom/lessons'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
                     </li>
