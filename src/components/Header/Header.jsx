@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './header.css'
+import styles from './Header.module.css'
 import logo from '../../static/svg/logo.svg';
 
 const Header = () => {
@@ -10,28 +10,33 @@ const Header = () => {
 
     return (
         <>
-        <header className="header">
-            <NavLink to={'/'} className="header__logo-link">
-                <img src={logo} alt="logo" className="header__logo" />
+        <header className={styles.header}>
+            <NavLink to={'/'} className={styles.logo_link}>
+                <img src={logo} alt="logo" className={styles.logo} />
             </NavLink>
-            <nav className="header__nav">
-                <ul className="header__list">
-                    <li className="header__item">
-                        <NavLink to={'custom/lessons'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
+            <nav className={styles.nav}>
+                <ul className={styles.list}>
+                    <li className={styles.item}>
+                        <NavLink to={'custom/lessons'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
                     </li>
-                    <li className="header__item">
-                        <NavLink to={'custom/files'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
+                    <li className={styles.item}>
+                        <NavLink to={'custom/files'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
                     </li>
-                    <li className="header__item">
-                        <NavLink to={'custom/liveries'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
+                    <li className={styles.item}>
+                        <NavLink to={'custom/liveries'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
                     </li>
-                    <li className="header__item">
-                        <NavLink to={'about'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
+                    <li className={styles.item}>
+                        <NavLink to={'about'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
                     </li>
-                    <li className="header__item">
-                        <NavLink to={'authorization/login'} className="header__nav-link" style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
+                    <li className={styles.item}>
+                        <NavLink to={'authorization/login'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ВОЙТИ</NavLink>
                     </li>
                 </ul>
+                <div class={styles.menu_burger}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </header>
         </>
