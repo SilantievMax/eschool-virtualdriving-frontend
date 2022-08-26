@@ -1,16 +1,16 @@
 import React from 'react';
-import DetailedButton from '../Buttons/DetailedButton/DetailedButton'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
+import DetailedButton from '../Buttons/DetailedButton/DetailedButton'
 import 'swiper/css'
 import 'swiper/css/autoplay';
 import "swiper/css/navigation";
-import './swiper.css';
+import styles from './Swiper.module.css';
 
 const SwiperAvto = () => {
     return (
         <>
-        <section className="swiper">
+        <section className={styles.swiper}>
             <Swiper
             modules={[Autoplay, Navigation]}
             autoplay={{delay: 6000, disableOnInteraction: true,}}
@@ -21,36 +21,36 @@ const SwiperAvto = () => {
             slidesPerView={1}
             >
                 <SwiperSlide>
-                    <div className="swiper__slide swiper__slide_bgi1">
-                        <div className="swiper__wrapper-card">
-                            <h2 className="swiper__heading">Онлайн школа виртуального автоспорта</h2>
-                            <p className="swiper__description">Первая онлайн площадка в СНГ, на которой лучшие симрейсеры страны могут помочь улучшить ваш навык виртуального гоночного мастерства</p>
+                    <div className={`${styles.slide} ${styles.slide_bgi1}`}>
+                        <div className={styles.wrapper}>
+                            <h2 className={styles.heading}>Онлайн школа виртуального автоспорта</h2>
+                            <p className={styles.description}>Первая онлайн площадка в СНГ, на которой лучшие симрейсеры страны могут помочь улучшить ваш навык виртуального гоночного мастерства</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="swiper__slide swiper__slide_bgi2">
-                        <div className="swiper__wrapper-card">
-                            <h2 className="swiper__heading">Персональные занятия</h2>
-                            <p className="swiper__description">Благодаря тренировке с профессионалом 1 на 1 можно гарантированно улучшить своё время на круге и подготовиться к любому чемпионату</p>
+                    <div className={`${styles.slide} ${styles.slide_bgi2}`}>
+                        <div className={styles.wrapper}>
+                            <h2 className={styles.heading}>Персональные занятия</h2>
+                            <p className={styles.description}>Благодаря тренировке с профессионалом 1 на 1 можно гарантированно улучшить своё время на круге и подготовиться к любому чемпионату</p>
                             <DetailedButton link='/custom/lessons' />
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="swiper__slide swiper__slide_bgi3">
-                        <div className="swiper__wrapper-card">
-                            <h2 className="swiper__heading">Сетапы, реплеи и телеметрия</h2>
-                            <p className="swiper__description">Подготовим настройки машин под любые трассы. Предоставим свои примеры прохождения треков в удобном для анализа формате</p>
+                    <div className={`${styles.slide} ${styles.slide_bgi3}`}>
+                        <div className={styles.wrapper}>
+                            <h2 className={styles.heading}>Сетапы, реплеи и телеметрия</h2>
+                            <p className={styles.description}>Подготовим настройки машин под любые трассы. Предоставим свои примеры прохождения треков в удобном для анализа формате</p>
                             <DetailedButton link='/custom/files' />
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="swiper__slide swiper__slide_bgi4">
-                        <div className="swiper__wrapper-card">
-                            <h2 className="swiper__heading">Ливреи на заказ</h2>
-                            <p className="swiper__description">Подготовим уникальный дизайн машины специально для вас</p>
+                    <div className={`${styles.slide} ${styles.slide_bgi4}`}>
+                        <div className={styles.wrapper}>
+                            <h2 className={styles.heading}>Ливреи на заказ</h2>
+                            <p className={styles.description}>Персональный дизайн для вашего автомобиля позволит выразить свою уникальность и обратит внимание на всех ваших спонсоров</p>
                             <DetailedButton link='/custom/liveries' />
                         </div>
                     </div>
