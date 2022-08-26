@@ -29,6 +29,9 @@
 .wrapper {
     padding-left: 174px;
     padding-top: 50px;
+    max-width: 2500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
