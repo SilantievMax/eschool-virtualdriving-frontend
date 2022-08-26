@@ -11,3 +11,15 @@
     min-height: 400px;
     box-shadow: rgba(0, 0, 0, 0.468) 0px 16px 74px 4px;
 }
+
+@media(max-width: 1300px) {
+    .background {
+        top: -100px;
+    }
+}
+
+@media(max-width: 940px) {
+    .background {
+        top: -80px;
+    }
+}

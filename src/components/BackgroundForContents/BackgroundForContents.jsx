@@ -1,11 +1,11 @@
 import React from 'react';
-import './backgroundForContents.css'
+import styles from './BackgroundForContents.module.css'
 
 const Background = ({children}) => {
     return (
         <>
         <React.Fragment>
-            <section className="background">
+            <section className={styles.background}>
                 {children}
             </section>
         </React.Fragment>
