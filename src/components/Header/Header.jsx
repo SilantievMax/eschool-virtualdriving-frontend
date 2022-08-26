@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Header.module.css'
 import logo from '../../static/svg/logo.svg';
+import styles from './Header.module.css'
 
 const Header = () => {
     const activeStyles = {
