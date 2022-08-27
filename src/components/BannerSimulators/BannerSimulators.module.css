@@ -1,4 +1,4 @@
-.simulators__list {
+.list {
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -8,10 +8,10 @@
     margin-top: 10px;
 }
 
-.simulators__img {
+.img {
     width: 300px;
 }
 
-.simulators__item:not(:last-child) {
+.item:not(:last-child) {
     margin-right: 40px;
 }
