@@ -7,18 +7,23 @@
     padding-right: 110px;
 }
 
-.footer__content {
-    float: right;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 2500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.footer__politik-link {
+.politik_link {
     display: block;
     color: #fff;
     font-size: 14px;
     font-weight: 300;
 }
 
-.footer__copyright {
+.copyright {
     display: block;
     font-size: 11px;
     margin-top: 10px;
