@@ -1,6 +1,6 @@
 import React from "react";
-import partners1 from '../../static/images/partners1.webp'
-import partners2 from '../../static/images/partners2.webp'
+import partners1 from '../../../static/images/partners1.webp'
+import partners2 from '../../../static/images/partners2.webp'
 import styles from './BannerPartners.module.css'
 
 const BannerPartners = () => {

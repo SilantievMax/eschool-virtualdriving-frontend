@@ -1,11 +1,11 @@
 import React from "react";
 import BackgroundForContents from "../../components/BackgroundForContents/BackgroundForContents";
-import SwiperAvto from '../../components/SwiperAvto/SwiperAvto';
-import Services from '../../components/Services/Services';
-import Simulators from "../../components/Simulators/Simulators";
-import Partners from "../../components/Partners/Partners";
+import SwiperAvto from '../../components/ComponentsForMainPage/SwiperAvto/SwiperAvto';
+import Services from '../../components/ComponentsForMainPage/Services/Services';
+import BannerSimulators from "../../components/ComponentsForMainPage/BannerSimulators/BannerSimulators";
+import BannerPartners from "../../components/ComponentsForMainPage/BannerPartners/BannerPartners";
 import Footer from "../../components/Footer/Footer";
-import Instructors from "../../components/Instructors/Instructors";
+import BannerInstructors from "../../components/ComponentsForMainPage/BannerInstructors/BannerInstructors";
 import { Outlet } from "react-router-dom";
 
 const MainPage = () => {
@@ -14,9 +14,9 @@ const MainPage = () => {
         <SwiperAvto />
         <BackgroundForContents>
             <Services />
-            <Simulators />
-            <Instructors />
-            <Partners />
+            <BannerSimulators />
+            <BannerInstructors />
+            <BannerPartners />
             <Footer />
         </BackgroundForContents>
         <Outlet />
