@@ -17,13 +17,13 @@ const Header = () => {
             <nav className={styles.nav}>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <NavLink to={'custom/lessons'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
+                        <NavLink to={'services/personal-classes'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ПЕРСОНАЛЬНЫЕ ЗАНЯТИЯ</NavLink>
                     </li>
                     <li className={styles.item}>
-                        <NavLink to={'custom/files'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
+                        <NavLink to={'services/custom-car'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>СЕТАПЫ, РЕПЛЕИ И ТЕЛЕМЕТРИЯ</NavLink>
                     </li>
                     <li className={styles.item}>
-                        <NavLink to={'custom/liveries'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
+                        <NavLink to={'services/liveries'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>ЛИВРЕИ НА ЗАКАЗ</NavLink>
                     </li>
                     <li className={styles.item}>
                         <NavLink to={'about'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>О НАС</NavLink>
