@@ -1,10 +1,12 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import BannerPersonalClasses from "../../components/ComponentsForPersonalClassesPage/BannerPersonalClasses/BannerPersonalClasses";
 
-const PersonalClassePage = () => {
+const PersonalClassesPage = () => {
     return (
-        <>PersonalClassePage <Outlet /></>
+        <>
+        <BannerPersonalClasses />
+        </>
     )
 }
 
-export default PersonalClassePage;
+export default PersonalClassesPage;
