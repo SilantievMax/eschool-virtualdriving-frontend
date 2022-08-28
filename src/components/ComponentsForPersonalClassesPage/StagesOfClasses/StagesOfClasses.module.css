@@ -1,0 +1,37 @@
+.section {
+    margin-top: 75px;
+    max-width: 1575px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    font-weight: 500;
+    font-size: 30px;
+    color: #333333;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.item {
+    padding-top: 11px;
+    padding-left: 28px;
+    border-left: 5px solid #FD1E2A;
+    min-height: 140px;
+}
+
+.description {
+    width: 285px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 139.19%;
+    color: #7A7A7A;    
+}
+
+.link {
+    color: #FD1E2A;
+}
