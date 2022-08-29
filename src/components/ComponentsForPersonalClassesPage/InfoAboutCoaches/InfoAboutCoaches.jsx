@@ -14,7 +14,7 @@ const InfoAboutCoaches = () => {
                     <InfoAboutUser />
                 </li>
                 <li className={styles.item}>
-                    {/* <BtnForInfoCoaches /> */}
+                    <BtnForInfoCoaches />
                 </li>
                 <li className={styles.item}>
                     <FeedbackAboutCoaches />

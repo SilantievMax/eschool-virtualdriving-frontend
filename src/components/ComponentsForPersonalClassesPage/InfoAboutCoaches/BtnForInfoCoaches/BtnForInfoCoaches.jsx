@@ -1,20 +1,21 @@
 import React from "react";
+import styles from "./BtnForInfoCoaches.module.css"
 
 const BtnForInfoCoaches = () => {
     return (
         <>
-        <ul className="list_btn">
-            <li className="item_btn">
-                <button className="btn">Записаться к тренеру</button>
+        <ul className={styles.list}>
+            <li className={styles.item}>
+                <button className={styles.btn}>Записаться к тренеру</button>
             </li>
-            <li className="item_btn">
-                <button className="btn">Записаться к тренеру</button>
+            <li className="item">
+                <button className={styles.btn}>Записаться к тренеру</button>
             </li>
-            <li className="item_btn">
-                <button className="btn">Записаться к тренеру</button>
+            <li className="item">
+                <button className={styles.btn}>Записаться к тренеру</button>
             </li>
-            <li className="item_btn">
-                <button className="btn">Записаться к тренеру</button>
+            <li className="item">
+                <button className={styles.btn}>Записаться к тренеру</button>
             </li>
         </ul>
         </>
