@@ -12,7 +12,7 @@ const Services = () => {
         <section className={styles.services}>
             <h3 className={styles.heading}>Услуги</h3>
             <ul className={styles.list}>
-                <Link to={'/custom/lessons'} title="Подробнее">
+                <Link to={'/services/personal-classes'} title="Подробнее">
                     <li className={styles.item}>
                         <img src={card1} alt="img" className={styles.images_card} />
                         <h4 className={styles.heading_card}>Персональные занятия</h4>
@@ -21,7 +21,7 @@ const Services = () => {
                         <OrderButton link='/'/>
                     </li>
                 </Link>
-                <Link to={'/custom/files'} title="Подробнее">
+                <Link to={'/services/custom-car'} title="Подробнее">
                     <li className={styles.item}>
                         <img src={card2} alt="img" className={styles.images_card} />
                         <h4 className={styles.heading_card}>Сетапы</h4>
@@ -30,7 +30,7 @@ const Services = () => {
                         <OrderButton link='/'/>
                     </li>
                 </Link>
-                <Link to={'/custom/liveries'} title="Подробнее">
+                <Link to={'/services/liveries'} title="Подробнее">
                     <li className={styles.item}>
                         <img src={card3} alt="img" className={styles.images_card} />
                         <h4 className={styles.heading_card}>Ливреи</h4>
