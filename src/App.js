@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header'
+import HeaderV2 from './components/HeaderV2/Header'
 import MainPage from './pages/MainPage/MainPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import AuthorizationPage from './pages/AuthorizationPage/AuthorizationPage';
