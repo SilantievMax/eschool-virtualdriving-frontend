@@ -31,10 +31,10 @@ const Header = () => {
                             <NavLink to={'services/liveries'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Ливреи</NavLink>
                         </li>
                         <li className={styles.item}>
-                            <NavLink to={'services/уquipment'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Оборудование</NavLink>
+                            <NavLink to={'services/equipment'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Оборудование</NavLink>
                         </li>
                         <li className={styles.item}>
-                            <NavLink to={'services/сoaches'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Тренеры</NavLink>
+                            <NavLink to={'services/coaches'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Тренеры</NavLink>
                         </li>
                         <li className={styles.item}>
                             <NavLink to={'about'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>О нас</NavLink>

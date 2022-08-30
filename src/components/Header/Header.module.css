@@ -30,14 +30,15 @@
 }
 
 .nav_link {
+    text-transform: uppercase;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     color: #555;
     transition: color 0.2s ease;
 }
 
 .nav_link:hover {
-    color: #ff2121;
+    color: #e61f26;
 }
 
 .menu_burger {
