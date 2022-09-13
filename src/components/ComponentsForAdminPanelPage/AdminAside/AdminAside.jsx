@@ -1,11 +1,11 @@
 import React from "react";
 
-const AdminData = () => {
+const AdminAside = () => {
     return (
         <>
-        AdminData
+        AdminAside
         </>
     )
 }
 
-export default AdminData;
+export default AdminAside;
