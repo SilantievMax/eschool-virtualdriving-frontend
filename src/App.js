@@ -19,8 +19,7 @@ const App = () => {
   return (
     <>
     <Header />
-    <AdminPanelPage />
-    {/* <Routes>
+    <Routes>
       <Route path='/' element={<MainPage />}>
         <Route path='authorization/login' element={<AuthorizationPage><LoginForm /></AuthorizationPage>} />
         <Route path='authorization/register' element={<AuthorizationPage><RegisterForm /></AuthorizationPage>} />
@@ -31,7 +30,9 @@ const App = () => {
       <Route path='services/equipment' element={<>Test</>} />
       <Route path='services/coaches' element={<>Test</>} />
       <Route path='about' element={<AboutPage />} />
-    </Routes> */}
+       {/*Admin panel*/}
+      <Route path='administrator' element={<AdminPanelPage />} />
+    </Routes>
     </>
   );
 }

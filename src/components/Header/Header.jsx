@@ -8,6 +8,8 @@ const Header = () => {
         color: '#e61f26',
     }
 
+    const isLoading = true;
+
     return (
         <>
         <header className={styles.header}>
@@ -37,6 +39,11 @@ const Header = () => {
                     <li className={styles.item}>
                         <NavLink to={'authorization/login'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>Войти</NavLink>
                     </li>
+                    {isLoading ? (
+                    <li className={styles.item}>
+                        <NavLink to={'administrator'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>admin</NavLink>
+                    </li>
+                    ) : ('')}
                 </ul>
                 <div class={styles.menu_burger}>
                     <span></span>
