@@ -6,9 +6,9 @@ const AdminAside = () => {
 
     return (
         <>
-        <aside className="fixed w-56 h-screen font-sans bg-slate-50">
+        <aside className="fixed w-56 h-screen font-sans bg-slate-50 border-r ">
             <section className="flex items-center pl-2 py-3 border-b">
-                <img className="w-14 rounded-full" src="https://api.lorem.space/image/car?w=150&h=150" alt="" />
+                <img className="w-14 h-14 rounded-full bg-slate-400 border-none" src="https://api.lorem.space/image/car?w=150&h=150" alt="" />
                 <div className="ml-5">
                     <div className="font-bold text-gray-800 text-base">Максим С.</div>
                     <div className="font-normal text-gray-500 text-xs uppercase">Admin</div>
@@ -17,7 +17,7 @@ const AdminAside = () => {
             <section>
                 <ul>
                     <li>
-                        <Link to="#" class="flex items-center px-2 py-3 text-base font-medium text-gray-900 hover:bg-slate-100">
+                        <Link to="/administrator/statistics" class="flex items-center px-2 py-3 text-base font-medium text-gray-900 hover:bg-slate-100">
                             <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                             <span class="ml-3">Статистика</span>
                         </Link>
@@ -29,7 +29,7 @@ const AdminAside = () => {
                             <svg sidebar-toggle-item class="w-6 h-6 text-gray-500 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
                         <ul id="dropdown-example" class="hidden py-2 space-y-2">
-                            <Link to="#" class="flex items-center px-2 py-2 text-base font-medium text-gray-900 hover:bg-slate-100">
+                            <Link to="training" class="flex items-center px-2 py-2 text-base font-medium text-gray-900 hover:bg-slate-100">
                                 <span class="ml-9">Тренировки</span>
                             </Link>
                             <Link to="#" class="flex items-center px-2 py-2 text-base font-medium text-gray-900 hover:bg-slate-100">

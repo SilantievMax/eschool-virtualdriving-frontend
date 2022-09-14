@@ -41,7 +41,7 @@ const Header = () => {
                     </li>
                     {isLoading ? (
                     <li className={styles.item}>
-                        <NavLink to={'administrator'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>admin</NavLink>
+                        <NavLink to={'administrator/statistics'} className={styles.nav_link} style={({isActive}) => isActive ? activeStyles : undefined}>admin</NavLink>
                     </li>
                     ) : ('')}
                 </ul>

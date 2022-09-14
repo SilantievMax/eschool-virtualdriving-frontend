@@ -13,6 +13,9 @@ import RegisterForm from './components/RegisterForm/RegisterForm';
 import 'normalize.css';
 import './index.css';
 import AdminPanelPage from './pages/AdminPanelPage/AdminPanelPage';
+import AdminHeader from './components/ComponentsForAdminPanelPage/AdminHeader/AdminHeader';
+import AdminTrainingOne from './components/ComponentsForAdminPanelPage/AdminTrainingOne/AdminTrainingOne'
+import AdminTrainingAll from './components/ComponentsForAdminPanelPage/AdminTrainingAll/AdminTrainingAll';
 
 
 const App = () => {
@@ -31,7 +34,11 @@ const App = () => {
       <Route path='services/coaches' element={<>Test</>} />
       <Route path='about' element={<AboutPage />} />
        {/*Admin panel*/}
-      <Route path='administrator' element={<AdminPanelPage />} />
+      <Route path='administrator/' element={<AdminPanelPage />} >
+        <Route path='statistics' element={<AdminHeader />} />
+        <Route path='training' element={<AdminTrainingAll />} />
+        <Route path='training/:id' element={<AdminTrainingOne />} />
+      </Route>
     </Routes>
     </>
   );
