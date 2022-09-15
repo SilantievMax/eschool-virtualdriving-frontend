@@ -3,7 +3,7 @@ import React from "react";
 const AdminHeader = () => {
     return (
         <>
-        <div class="flex py-3">
+        <div class="flex">
             <div class="shadow-lg bg-red-500 border-l-8 border-l-red-600 mb-2 p-1 w-1/4 mx-2">
                 <div class="p-4 flex flex-col">
                     <p class="text-lg text-white">В обработке:</p>

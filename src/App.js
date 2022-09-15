@@ -37,7 +37,7 @@ const App = () => {
       <Route path='administrator/' element={<AdminPanelPage />} >
         <Route path='statistics' element={<AdminHeader />} />
         <Route path='training' element={<AdminTrainingAll />} />
-        <Route path='training/:id' element={<AdminTrainingOne />} />
+        {/* <Route path='training/:id' element={<AdminTrainingOne />} /> */}
       </Route>
     </Routes>
     </>
