@@ -1,8 +1,8 @@
 import React from "react";
-import photoUser1 from '../../../static/images/photoUser1.webp'
-import photoUser2 from '../../../static/images/photoUser2.webp'
-import photoUser3 from '../../../static/images/photoUser3.webp'
-import photoUser4 from '../../../static/images/photoUser4.webp'
+import photoUser1 from '../../../assets/images/photoUser1.webp'
+import photoUser2 from '../../../assets/images/photoUser2.webp'
+import photoUser3 from '../../../assets/images/photoUser3.webp'
+import photoUser4 from '../../../assets/images/photoUser4.webp'
 import styles from './BannerInstructors.module.css'
 
 const BannerInstructors = () => {

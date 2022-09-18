@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import OrderButton from '../../Buttons/OrderButton/OrderButton'
 import styles from './Services.module.css'
-import card1 from '../../../static/images/card1.webp'
-import card2 from '../../../static/images/card2.webp'
-import card3 from '../../../static/images/card3.webp'
+import card1 from '../../../assets/images/card1.webp'
+import card2 from '../../../assets/images/card2.webp'
+import card3 from '../../../assets/images/card3.webp'
 
 const Services = () => {
     return (

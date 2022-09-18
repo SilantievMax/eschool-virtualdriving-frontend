@@ -1,7 +1,7 @@
 import React from "react";
-import simulators1 from '../../../static/images/simulators1.webp'
-import simulators2 from '../../../static/images/simulators2.webp'
-import simulators3 from '../../../static/images/simulators3.webp'
+import simulators1 from '../../../assets/images/simulators1.webp'
+import simulators2 from '../../../assets/images/simulators2.webp'
+import simulators3 from '../../../assets/images/simulators3.webp'
 import styles from './BannerSimulators.module.css'
 
 const BannerSimulators = () => {

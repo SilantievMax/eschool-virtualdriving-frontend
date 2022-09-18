@@ -7,8 +7,8 @@
     font-style: normal;
     font-weight: 300;
     src: local("Roboto"),
-         url("./static/fonts/Roboto-Light.woff2") format("woff2"),
-         url("./static/fonts/Roboto-Light.woff") format("woff");
+         url("./assets/fonts/Roboto-Light.woff2") format("woff2"),
+         url("./assets/fonts/Roboto-Light.woff") format("woff");
 }
 
 @font-face {
@@ -16,8 +16,8 @@
     font-style: normal;
     font-weight: 400;
     src: local("Roboto"),
-         url("./static/fonts/Roboto-Regular.woff2") format("woff2"),
-         url("./static/fonts/Roboto-Regular.woff") format("woff");
+         url("./assets/fonts/Roboto-Regular.woff2") format("woff2"),
+         url("./assets/fonts/Roboto-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -25,8 +25,8 @@
     font-style: normal;
     font-weight: 500;
     src: local("Roboto"),
-         url("./static/fonts/Roboto-Medium.woff2") format("woff2"),
-         url("./static/fonts/Roboto-Medium.woff") format("woff");
+         url("./assets/fonts/Roboto-Medium.woff2") format("woff2"),
+         url("./assets/fonts/Roboto-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -34,8 +34,8 @@
     font-style: normal;
     font-weight: 700;
     src: local("Roboto"),
-         url("./static/fonts/Roboto-Bold.woff2") format("woff2"),
-         url("./static/fonts/Roboto-Bold.woff") format("woff");
+         url("./assets/fonts/Roboto-Bold.woff2") format("woff2"),
+         url("./assets/fonts/Roboto-Bold.woff") format("woff");
 }
 
 html {

@@ -58,7 +58,7 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-image: url(../../../../static/svg/YouTube.svg);
+    background-image: url(../../../../assets/svg/YouTube.svg);
     background-repeat: no-repeat;
     /* background-size: cover; */
     margin-right: 8px;
@@ -68,7 +68,7 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-image: url(../../../../static/svg/TikTok.svg);
+    background-image: url(../../../../assets/svg/TikTok.svg);
     background-repeat: no-repeat;
     /* background-size: cover; */
     margin-right: 8px;
