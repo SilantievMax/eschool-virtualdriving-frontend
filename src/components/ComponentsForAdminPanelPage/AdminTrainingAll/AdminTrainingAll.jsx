@@ -28,7 +28,10 @@ const AdminTrainingAll = ({ data }) => {
               <TableLine
                 key={i}
                 orderNumber={item.orderNumber}
+                orderDate={item.orderDate}
                 car={item.car}
+                track={item.track}
+                experience={item.experience}
                 coment={item.coment}
                 communications={item.communications}
                 createdAt={item.createdAt}
@@ -37,6 +40,8 @@ const AdminTrainingAll = ({ data }) => {
                 status={item.status}
                 views={item.views}
                 fullName={item.user.fullName}
+                equipment={item.equipment}
+                executor={item.executor}
               />
             ))}
           </tbody>

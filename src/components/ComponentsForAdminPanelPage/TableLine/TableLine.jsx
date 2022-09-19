@@ -11,14 +11,40 @@ const TableLine = ({
   price,
   status,
   fullName,
+  orderDate,
+  track,
+  experience,
+  equipment,
+  executor,
 }) => {
   const [hiddenClass, setHiddenClass] = React.useState("hidden");
-  const date = new Date(createdAt);
-  const getDate = date.getDate();
-  const getMonth = date.getMonth();
-  const getfullYear = date.getFullYear();
+  let tetHours = new Date(orderDate).getHours();
+  let tetMinutes = new Date(orderDate).getMinutes();
+  tetHours = String(tetHours).length === 1 ? `0${tetHours}` : tetHours;
+  tetMinutes = String(tetMinutes).length === 1 ? `0${tetMinutes}` : tetMinutes;
+  const inputDate = (outputDate) => {
+    const date = new Date(outputDate);
+    const getDate = date.getDate();
+    const getMonth = date.getMonth();
+    const getfullYear = date.getFullYear();
+    return `${String(getDate).length === 1 ? "0" + getDate : getDate}.${
+      String(getMonth).length === 1 ? "0" + getMonth : getMonth
+    }.${getfullYear}`;
+  };
 
-  console.log();
+  const statusColorBg = (status) => {
+    // eslint-disable-next-line default-case
+    switch (status) {
+      case "В обработке":
+        return "bg-red-500";
+      case "Оплачен":
+        return "bg-amber-500";
+      case "Ждет оценки":
+        return "bg-sky-500";
+      case "Заявка закрыта":
+        return "bg-green-500";
+    }
+  };
 
   return (
     <>
@@ -46,10 +72,12 @@ const TableLine = ({
           </div>
         </td>
         <td>{fullName}</td>
-        <td>{`${getDate}.${getMonth}.${getfullYear}`}</td>
-        <td>16.09.2022</td>
+        <td>{inputDate(createdAt)}</td>
+        <td>{orderDate ? inputDate(orderDate) : "Дата не указана"}</td>
         <td>
-          <span className="bg-amber-500 py-1 px-3 rounded">{status}</span>
+          <span className={`${statusColorBg(status)} py-1 px-3 rounded`}>
+            {status}
+          </span>
         </td>
         <td>{views ? "Прочитано" : "Не прочитано"}</td>
         <td className="cursor-pointer">
@@ -82,11 +110,20 @@ const TableLine = ({
                   ФИО: <span className="font-light">{fullName}</span>
                 </div>
                 <div>
-                  Способ связи:{" "}
+                  Способ связи:
                   <span className="font-light">{communications}</span>
                 </div>
                 <div>
-                  Дата начала: <span className="font-light">20.09.2022</span>
+                  Дата оформления:
+                  <span className="font-light">{inputDate(createdAt)}</span>
+                </div>
+                <div>
+                  Дата выполнения:
+                  <span className="font-light">
+                    {orderDate
+                      ? `${inputDate(orderDate)} - ${tetHours}: ${tetMinutes}`
+                      : "Дата не указана"}
+                  </span>
                 </div>
               </div>
               <div className="border-b py-2">
@@ -94,13 +131,16 @@ const TableLine = ({
                   Информация по тренировке
                 </h2>
                 <div>
+                  Тренер: <span className="font-light">{executor}</span>
+                </div>
+                <div>
                   Машина: <span className="font-light">{car}</span>
                 </div>
                 <div>
-                  Трасса: <span className="font-light"></span>
+                  Трасса: <span className="font-light">{track}</span>
                 </div>
                 <div>
-                  Погодные условия: <span className="font-light"></span>
+                  Опыт: <span className="font-light">{experience}</span>
                 </div>
                 <div>
                   Коментарий: <span className="font-light">{coment}</span>
@@ -113,15 +153,9 @@ const TableLine = ({
                   Дополнительная информация
                 </h2>
                 <div>
-                  Оборудование:{" "}
-                  <span className="font-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Itaque sed aliquid iste eius repellat. Veritatis modi iure
-                    nam fugit animi nihil dicta odio.
-                  </span>
+                  Оборудование: <span className="font-light">{equipment}</span>
                 </div>
                 <div className="absolute bottom-0 right-0">
-                  <span className="ml-3">{`${getDate}.${getMonth}.${getfullYear}`}</span>
                   <span className="ml-3 text-4xl">{price}₽</span>
                 </div>
               </div>
