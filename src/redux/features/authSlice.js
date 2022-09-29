@@ -1,49 +1,59 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../utils/axios";
 
+export const fetchAuth = createAsyncThunk("auth/fetchAuth", async (params) => {
+  const { data } = await axios.post("/auth/login", params);
+  return data;
+});
+
+export const fetchAuthMe = createAsyncThunk("auth/fetchAuthMe", async () => {
+  const { data } = await axios.get("/auth/me");
+  return data;
+});
+
 const initialState = {
-    user: null,
-    token: null,
-    isLoading: false,
-    status: null
-}
+  data: null,
+  status: "loading",
+};
 
-export const registerUser = createAsyncThunk('auth/registerUser', async ({username, password, email}) => {
-    try {
-        const { data } = await axios.post('/register', {
-            username,
-            password,
-            email
-        })
-        if(data.token) {
-            window.localStorage.setItem('token', data.token)
-        }
-        return data
-    } catch (error) {
-        console.log()
-    }
-})
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {
+    logout: (state) => {
+      state.data = null;
+    },
+  },
+  extraReducers: {
+    [fetchAuth.pending]: (state) => {
+      state.status = "loading";
+      state.data = null;
+    },
+    [fetchAuth.fulfilled]: (state, action) => {
+      state.status = "loaded";
+      state.data = action.payload;
+    },
+    [fetchAuth.rejected]: (state) => {
+      state.status = "error";
+      state.data = null;
+    },
+    [fetchAuthMe.pending]: (state) => {
+      state.status = "loading";
+      state.data = null;
+    },
+    [fetchAuthMe.fulfilled]: (state, action) => {
+      state.status = "loaded";
+      state.data = action.payload;
+    },
+    [fetchAuthMe.rejected]: (state) => {
+      state.status = "error";
+      state.data = null;
+    },
+  },
+});
 
-export const authSlice = createSlice({
-    name: 'auth',
-    initialState,
-    reducers: {},
-    extraReducers: {
-        [registerUser.pending]: (state) => {
-            state.isLoading = true
-            state.status = null
-        },
-        [registerUser.fulfilled]: (state, action) => {
-            state.isLoading = false
-            state.status = action.payload.message
-            state.user = action.payload.user
-            state.token = action.payload.token
-        },
-        [registerUser.rejected]: (state, action) => {
-            state.status = action.payload.message
-            state.isLoading = false
-        },
-    }
-})
+export const selectIsAuth = (state) => Boolean(state.auth.data);
 
-export default authSlice.reducer;
+export const authReducer = authSlice.reducer;
+
+export const { logout } = authSlice.actions;

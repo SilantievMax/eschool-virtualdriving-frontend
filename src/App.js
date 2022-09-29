@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HeaderV2 from "./components/HeaderV2/Header";
@@ -13,11 +14,16 @@ import RegisterForm from "./components/RegisterForm/RegisterForm";
 import "normalize.css";
 import "./index.css";
 import AdminPanelPage from "./pages/AdminPanelPage/AdminPanelPage";
-import AdminHeader from "./components/ComponentsForAdminPanelPage/AdminHeader/AdminHeader";
-import AdminTrainingOne from "./components/ComponentsForAdminPanelPage/AdminTrainingOne/AdminTrainingOne";
-import AdminTrainingAll from "./components/ComponentsForAdminPanelPage/AdminTrainingAll/AdminTrainingAll";
+import { fetchAuthMe, selectIsAuth } from "./redux/features/authSlice";
 
 const App = () => {
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
+
+  React.useEffect(() => {
+    dispatch(fetchAuthMe());
+  }, []);
+
   return (
     <>
       <Header />

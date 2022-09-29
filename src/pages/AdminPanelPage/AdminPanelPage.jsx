@@ -1,13 +1,15 @@
 import React from "react";
-import { Outlet, Route, Routes} from "react-router-dom";
+import { Navigate, Route, Routes} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux"
 import { fetchOrders } from "../../redux/features/ordersSlice";
 import axios from "../../utils/axios";
 import AdminAside from "../../components/ComponentsForAdminPanelPage/AdminAside/AdminAside";
 import AdminHeader from "../../components/ComponentsForAdminPanelPage/AdminHeader/AdminHeader";
 import AdminTrainingAll from "../../components/ComponentsForAdminPanelPage/AdminTrainingAll/AdminTrainingAll";
+import { selectIsAuth } from "../../redux/features/authSlice";
 
 const AdminPanelPage = () => {
+    const isAuth = useSelector(selectIsAuth)
     const dispatch = useDispatch();
     const { orders } = useSelector(state => state.orders);
 
@@ -16,6 +18,10 @@ const AdminPanelPage = () => {
     React.useEffect(() => {
         dispatch(fetchOrders())
     }, []);
+
+    if (!isAuth) {
+        return <Navigate to="/" />
+      }
 
     return (
         <>
