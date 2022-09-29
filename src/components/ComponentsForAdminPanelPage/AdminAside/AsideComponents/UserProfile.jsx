@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserProfile = () => {
+const UserProfile = ({ fullName, role, avatarUrl }) => {
     return (
         <>
             <section className="flex items-center pl-2 py-3 border-b">
@@ -11,10 +11,10 @@ const UserProfile = () => {
                 />
                 <div className="ml-5">
                     <div className="font-bold text-gray-800 text-base">
-                        Максим С.
+                        {fullName}
                     </div>
                     <div className="font-normal text-gray-500 text-xs uppercase">
-                        Admin
+                        {role}
                     </div>
                 </div>
             </section>
