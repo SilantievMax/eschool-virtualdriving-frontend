@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TableLine from "../TableLine/TableLine";
+import TableLine from "../TableLine";
 
 const AdminTrainingAll = ({ data }) => {
   const items = data.items;
