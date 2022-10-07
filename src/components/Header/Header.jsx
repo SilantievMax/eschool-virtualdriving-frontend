@@ -108,7 +108,7 @@ const Header = () => {
                                         isActive ? activeStyles : undefined
                                     }
                                 >
-                                    admin
+                                    личный кабинет
                                 </NavLink>
                             </li>
                         )}
