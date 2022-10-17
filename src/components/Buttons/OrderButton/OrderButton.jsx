@@ -5,7 +5,7 @@ import './orderButton.css'
 const OrderButton = (props) => {
     return (
         <>
-        <Link to={props.link} class="services__btn">ЗАКАЗАТЬ</Link>
+        <Link to={props.link} className="services__btn">ЗАКАЗАТЬ</Link>
         </>
     )
 }

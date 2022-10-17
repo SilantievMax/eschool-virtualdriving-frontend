@@ -18,9 +18,10 @@ const Table = ({ orders }) => {
                 </tr>
             </thead>
             <tbody>
-                {items.map((item, i) => (
+                {items.map((item) => (
                     <RowsTable
-                        key={i}
+                        key={item._id}
+                        id={item._id}
                         orderNumber={item.orderNumber}
                         orderDate={item.orderDate}
                         car={item.car}

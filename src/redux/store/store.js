@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { ordersReducer } from "../features/ordersSlice";
+import { ordersReducer } from "../features/ordersTrainingSlice";
 import { authReducer } from "../features/authSlice";
 
-export const store = configureStore({
+export default configureStore({
     reducer: {
-        orders: ordersReducer,
+        ordersTraining: ordersReducer,
         auth: authReducer,
-    }
+    },
 });

@@ -1,22 +1,76 @@
 import React from "react";
+import axios from "../../../utils/axios.js";
 
 const OrderForm = () => {
-    const [orderNumber, setOrderNumber] = React.useState(741565598)
-    const [car, setCar] = React.useState('taha')
-    const [coment, setComent] = React.useState("I found that there are several ways to handle user's text input with hooks. What is more preferable or proper way to handle an input with hooks? Which would you use?")
-    const [price, setPrice] = React.useState(4444)
+    const [isLoading, setLoading] = React.useState(false);
+    const [orderNumber, setOrderNumber] = React.useState(741565552);
+    const [car, setCar] = React.useState("taha");
+    const [communications, setCommunications] = React.useState("89264524585");
+    const [coment, setComent] = React.useState("Coment");
+    const [price, setPrice] = React.useState(4444);
 
-    console.log({orderNumber, car, coment, price})
+    const onSubmit = async () => {
+        try {
+            setLoading(true);
+
+            const fields = {
+                orderNumber ,
+                car,
+                communications,
+                coment,
+                price,
+            };
+
+            const { data } = await axios.post(
+                "/orders/training/create",
+                fields
+            );
+
+            const id = data._id;
+            console.log(data)
+        } catch (err) {
+            console.warn(err.response.data);
+            alert("Ошибка при создании статьи!");
+        }
+    };
 
     return (
         <div>
-            <form>
-                <input type="text" value={orderNumber} onChange={(e) => setOrderNumber(e.target.value)} placeholder="orderNumber" />
-                <input type="text" value={car} onChange={(e) => setCar(e.target.value)} placeholder="car" />
-                <input type="text" value={coment} onChange={(e) => setComent(e.target.value)} placeholder="coment" />
-                <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="price" />
-                <button type="submit">Отправить</button>
-            </form>
+            <div>
+                <input
+                    type="number"
+                    value={orderNumber}
+                    onChange={(e) => setOrderNumber(e.target.value)}
+                    placeholder="orderNumber"
+                />
+                <input
+                    type="text"
+                    value={car}
+                    onChange={(e) => setCar(e.target.value)}
+                    placeholder="car"
+                />
+                <input
+                    type="text"
+                    value={coment}
+                    onChange={(e) => setComent(e.target.value)}
+                    placeholder="coment"
+                />
+                <input
+                    type="text"
+                    value={communications}
+                    onChange={(e) => setCommunications(e.target.value)}
+                    placeholder="communications"
+                />
+                <input
+                    type="number"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    placeholder="price"
+                />
+                <button onClick={onSubmit}>
+                    Отправить
+                </button>
+            </div>
         </div>
     );
 };

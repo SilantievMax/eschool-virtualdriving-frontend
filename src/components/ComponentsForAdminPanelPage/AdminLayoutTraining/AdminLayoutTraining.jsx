@@ -1,17 +1,16 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrders } from "../../../redux/features/ordersSlice";
-import Table from "./TrainingComponents/Table";
+import { fetcOrdersTraining } from "../../../redux/features/ordersTrainingSlice";
+import Table from "./components/Table";
 
 const AdminLayoutTraining = () => {
     const dispatch = useDispatch();
-    const { orders } = useSelector((state) => state.orders);
-    
-    React.useEffect(() => {
-        dispatch(fetchOrders());
-    }, []);
-
+    const { orders } = useSelector((state) => state.ordersTraining);
     const isOrdersLoading = orders.status === "loading";
+
+    React.useEffect(() => {
+        dispatch(fetcOrdersTraining());
+    }, []);
 
     return (
         <>

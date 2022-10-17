@@ -108,12 +108,12 @@ const Header = () => {
                                         isActive ? activeStyles : undefined
                                     }
                                 >
-                                    личный кабинет
+                                    Личный кабинет
                                 </NavLink>
                             </li>
                         )}
                     </ul>
-                    <div class={styles.menu_burger}>
+                    <div className={styles.menu_burger}>
                         <span></span>
                         <span></span>
                         <span></span>
