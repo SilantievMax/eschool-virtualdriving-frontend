@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Navigate } from "react-router-dom";
-import { fetchAuth, fetchRegister, selectIsAuth } from "../../redux/features/authSlice";
+import { fetchRegister, selectIsAuth } from "../../redux/features/authSlice";
 import "./registerForm.css";
 
 const RegisterForm = () => {
@@ -12,12 +12,13 @@ const RegisterForm = () => {
     const {
         register,
         handleSubmit,
+        setError, //ошибки с бэкэнда
         formState: { errors, isValid },
     } = useForm({
         defaultValues: {
-            fullName: "Test Testov",
-            email: "test12334@test.com",
-            password: "xxXX1234",
+            fullName: "",
+            email: "",
+            password: "",
         },
         mode: "onChange",
     });
@@ -40,8 +41,6 @@ const RegisterForm = () => {
         <>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                action=""
-                onsubmit="return false"
                 className="register__form"
             >
                 <h3 className="register__heading">Регистрация</h3>
@@ -67,7 +66,7 @@ const RegisterForm = () => {
                     {...register("password", { required: "Укажите пароль" })}
                 />
                 {/* <input type="password" autocomplete="off" className="register__input" placeholder='Повторите пароль'/> */}
-                <button type="submit" className="register__btn">
+                <button  type="submit" className="register__btn">
                     Зарегистрироваться
                 </button>
                 <Link to="/authorization/login" className="register__login">

@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { Navigate } from "react-router-dom";
-import { fetchAuth, selectIsAuth } from "../../redux/features/authSlice";
+import { fetchLogin, selectIsAuth } from "../../redux/features/authSlice";
 import "./loginForm.css";
 
 const LoginForm = () => {
     const isAuth = useSelector(selectIsAuth);
     const dispatch = useDispatch();
+    
     const {
         register,
         handleSubmit,
@@ -22,7 +22,7 @@ const LoginForm = () => {
     });
 
     const onSubmit = async (values) => {
-        const data = await dispatch(fetchAuth(values));
+        const data = await dispatch(fetchLogin(values));
         if (!data.payload) {
             return alert("Не удалось авторизоваться!");
         }
