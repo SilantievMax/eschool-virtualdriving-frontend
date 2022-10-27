@@ -1,6 +1,7 @@
 import React from "react";
 import DropDownInfo from "./DropDownInfo";
 import axios from "../../../../utils/axios.js";
+import { useSelector } from "react-redux";
 
 const RowsTable = ({
     id,
@@ -22,17 +23,21 @@ const RowsTable = ({
 }) => {
     const [hiddenClass, setHiddenClass] = React.useState("hidden");
     const [data, setData] = React.useState(views);
+    const user = useSelector((state) => state.auth);
+    const { role } = user.data;
 
     const onClickOpen = () => {
         setHiddenClass(hiddenClass === "hidden" ? "" : "hidden");
-        axios
-            .get(`/orders/training/${id}`)
-            .then((res) => {
-                setData(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        if (role[0] === "SUPERADMIN") {
+            axios
+                .get(`/orders/training/${id}`)
+                .then((res) => {
+                    setData(res.data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
     };
 
     let tetHours = new Date(orderDate).getHours();
@@ -44,7 +49,7 @@ const RowsTable = ({
     const inputDate = (outputDate) => {
         const date = new Date(outputDate);
         const getDate = date.getDate();
-        const getMonth = date.getMonth();
+        const getMonth = date.getMonth() + 1;
         const getfullYear = date.getFullYear();
         return `${String(getDate).length === 1 ? "0" + getDate : getDate}.${
             String(getMonth).length === 1 ? "0" + getMonth : getMonth

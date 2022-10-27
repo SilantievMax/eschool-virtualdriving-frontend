@@ -4,7 +4,15 @@ import axios from "../../utils/axios";
 export const fetcOrdersTraining = createAsyncThunk(
     "orders/fetcOrdersTraining",
     async () => {
-        const { data } = await axios.get("/orders/training");
+        const { data } = await axios.get("/orders/training/");
+        return data;
+    }
+);
+
+export const fetcOrdersTrainingUers = createAsyncThunk(
+    "orders/fetcOrdersTraining",
+    async () => {
+        const { data } = await axios.get("/orders/training/user");
         return data;
     }
 );

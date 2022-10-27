@@ -12,9 +12,9 @@ const PersonalClassesPage = () => {
         <BannerPersonalClasses />
         {/* <InfoAboutClasses />
         <StagesOfClasses />
-        <InfoAboutCoaches />
-        <Footer /> */}
+        <InfoAboutCoaches /> */}
         <OrderForm />
+        <Footer />
         </>
     )
 }
