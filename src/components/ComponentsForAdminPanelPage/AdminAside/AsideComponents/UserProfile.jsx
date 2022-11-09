@@ -1,6 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const UserProfile = ({ fullName, role, avatarUrl }) => {
+const UserProfile = () => {
+    const user = useSelector((state) => state.auth);
+    const { fullName, role, avatarUrl } = user.data;
+
     return (
         <>
             <section className="flex items-center pl-2 py-3 border-b">

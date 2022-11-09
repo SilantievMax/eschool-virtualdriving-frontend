@@ -5,6 +5,7 @@ import AdminAside from "../../components/ComponentsForAdminPanelPage/AdminAside/
 import AdminHeader from "../../components/ComponentsForAdminPanelPage/AdminHeader/AdminHeader";
 import { selectIsAuth } from "../../redux/features/authSlice";
 import AdminLayoutTraining from "../../components/ComponentsForAdminPanelPage/AdminLayoutTraining/AdminLayoutTraining";
+import LayoutFiles from "../../components/ComponentsForAdminPanelPage/AdminLayoutFiles/AdminLayoutFiles";
 
 const AdminPanelPage = () => {
     const isAuth = useSelector(selectIsAuth);
@@ -23,7 +24,7 @@ const AdminPanelPage = () => {
                     <Route path="setup" element={<>setup</>} />
                     <Route path="liveries" element={<>liveries</>} />
                     <Route path="users" element={<>users</>} />
-                    <Route path="files" element={<>files</>} />
+                    <Route path="files" element={<LayoutFiles />} />
                 </Routes>
             </div>
         </>
