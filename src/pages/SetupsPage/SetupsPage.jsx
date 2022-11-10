@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Card from "../../components/SetupsPageComponents/components/Card";
 
 const SetupsPage = () => {
-  return (
-    <div>SetupsPage</div>
-  )
-}
+    return (
+        <div>
+            <Card />
+        </div>
+    );
+};
 
-export default SetupsPage
+export default SetupsPage;

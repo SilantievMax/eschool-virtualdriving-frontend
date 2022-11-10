@@ -10,10 +10,8 @@ export const fetcCardsSetop = createAsyncThunk(
 );
 
 const initialState = {
-    orders: {
-        items: [],
-        status: "loading",
-    },
+    cards: [],
+    status: "loading",
 };
 
 const ordersSlice = createSlice({
@@ -22,16 +20,16 @@ const ordersSlice = createSlice({
     reducers: {},
     extraReducers: {
         [fetcCardsSetop.pending]: (state) => {
-            state.orders.items = [];
-            state.orders.status = "loading";
+            state.cards = [];
+            state.status = "loading";
         },
         [fetcCardsSetop.fulfilled]: (state, action) => {
-            state.orders.items = action.payload;
-            state.orders.status = "loaded";
+            state.cards = action.payload;
+            state.status = "loaded";
         },
         [fetcCardsSetop.rejected]: (state) => {
-            state.orders.items = [];
-            state.orders.status = "error";
+            state.cards = [];
+            state.status = "error";
         },
     },
 });
