@@ -1,10 +1,10 @@
 import React from "react";
-import BannerPersonalClasses from "../../components/ComponentsForPersonalClassesPage/BannerPersonalClasses/BannerPersonalClasses";
-import InfoAboutClasses from "../../components/ComponentsForPersonalClassesPage/InfoAboutClasses/InfoAboutClasses";
-import InfoAboutCoaches from "../../components/ComponentsForPersonalClassesPage/InfoAboutCoaches/InfoAboutCoaches";
-import OrderForm from "../../components/ComponentsForPersonalClassesPage/OrderForm/OrderForm";
-import StagesOfClasses from "../../components/ComponentsForPersonalClassesPage/StagesOfClasses/StagesOfClasses";
-import Footer from "../../components/Footer/Footer"
+import BannerPersonalClasses from "../../components/PersonalClassesPageComponents/BannerPersonalClasses/BannerPersonalClasses";
+import InfoAboutClasses from "../../components/PersonalClassesPageComponents/InfoAboutClasses/InfoAboutClasses";
+import InfoAboutCoaches from "../../components/PersonalClassesPageComponents/InfoAboutCoaches/InfoAboutCoaches";
+import OrderForm from "../../components/PersonalClassesPageComponents/OrderForm/OrderForm";
+import StagesOfClasses from "../../components/PersonalClassesPageComponents/StagesOfClasses/StagesOfClasses";
+import Footer from "../../components/GeneralComponents/Footer/Footer"
 
 const PersonalClassesPage = () => {
     return (
