@@ -3,6 +3,9 @@ import axios from "../../utils/axios";
 
 export const fetchLogin = createAsyncThunk("auth/fetchLogin", async (params) => {
   const { data } = await axios.post("/auth/login", params);
+  if(data.token) {
+    window.localStorage.setItem('token', data.token)
+  }
   return data;
 });
 
@@ -13,6 +16,9 @@ export const fetchAuthMe = createAsyncThunk("auth/fetchAuthMe", async () => {
 
 export const fetchRegister = createAsyncThunk("auth/fetchRegister", async (params) => {
   const { data } = await axios.post("/auth/register", params);
+  if(data.token) {
+    window.localStorage.setItem('token', data.token)
+  }
   return data;
 });
 

@@ -24,13 +24,7 @@ const RegisterForm = () => {
     });
 
     const onSubmit = async (values) => {
-        const data = await dispatch(fetchRegister(values));
-        if (!data.payload) {
-            return alert("Не удалось зарегистрироваться!");
-        }
-        if ("token" in data.payload) {
-            window.localStorage.setItem("token", data.payload.token);
-        }
+        dispatch(fetchRegister(values));
     };
 
     if (isAuth) {
