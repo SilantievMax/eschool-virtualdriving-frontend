@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { toast } from "react-toastify";
 import axios from "../../../utils/axios.js";
 import styles from "./OrderForm.module.css";
 
@@ -75,11 +76,13 @@ const OrderForm = () => {
             const { data } = await axios.post("/orders/training", fields);
 
             const id = data._id;
-            alert('Заказ создан')
-            console.log(data);
+            if (data) {
+                toast.success("Заказ создан");
+            }
+            setCommunications('')
         } catch (err) {
             console.warn(err.response.data);
-            alert("Ошибка при создании статьи!");
+            toast.error("Ошибка при создании заказа!");
         }
     };
 
@@ -117,7 +120,7 @@ const OrderForm = () => {
                     placeholder="orderDate"
                 />
                 <h3>Комментарий:</h3>
-                <textarea 
+                <textarea
                     className={styles.input}
                     value={coment}
                     onChange={(e) => setComent(e.target.value)}
@@ -133,7 +136,7 @@ const OrderForm = () => {
                 />
 
                 <h3>Расскажите о вашем опыте:</h3>
-                <textarea 
+                <textarea
                     className={styles.input}
                     type="text"
                     value={experience}
@@ -141,7 +144,7 @@ const OrderForm = () => {
                     placeholder="experience"
                 />
                 <h3>Какое оборудование вы используете?:</h3>
-                <textarea 
+                <textarea
                     className={styles.input}
                     type="text"
                     value={equipment}

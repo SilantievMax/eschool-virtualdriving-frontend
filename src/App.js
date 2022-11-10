@@ -15,6 +15,8 @@ import "normalize.css";
 import "./index.css";
 import AdminPanelPage from "./pages/AdminPanelPage/AdminPanelPage";
 import { fetchAuthMe, selectIsAuth } from "./redux/features/authSlice";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
   const dispatch = useDispatch();
@@ -58,6 +60,7 @@ const App = () => {
         {/*Admin panel*/}
         <Route path="administrator/*" element={<AdminPanelPage />} />
       </Routes>
+      <ToastContainer position="bottom-right" />
     </>
   );
 };
