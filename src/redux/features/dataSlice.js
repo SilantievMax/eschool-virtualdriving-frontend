@@ -4,7 +4,7 @@ import axios from "../../utils/axios";
 export const fetcCardsSetop = createAsyncThunk(
     "orders/fetcCardsSetop",
     async () => {
-        const { data } = await axios.get("info/names-setup");
+        const { data } = await axios.get("info/setup");
         return data;
     }
 );

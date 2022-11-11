@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcCardsSetop } from "../../../redux/features/ordersSetup";
+import { fetcCardsSetop } from "../../../redux/features/dataSlice";
 
 const Card = () => {
     const dispatch = useDispatch();
