@@ -25,6 +25,7 @@ export const fetchRegister = createAsyncThunk("auth/fetchRegister", async (param
 
 const initialState = {
   data: null,
+  role: null,
   status: "loading",
 };
 
@@ -35,7 +36,7 @@ const authSlice = createSlice({
     logout: (state) => {
       state.data = null;
       window.localStorage.removeItem("token");
-    },
+    }
   },
   extraReducers: {
     [fetchLogin.pending]: (state) => {
@@ -52,14 +53,17 @@ const authSlice = createSlice({
     },
     [fetchAuthMe.pending]: (state) => {
       state.status = "loading";
+      state.role = null
       state.data = null;
     },
     [fetchAuthMe.fulfilled]: (state, action) => {
       state.status = "loaded";
+      state.role = action.payload.role[0]
       state.data = action.payload;
     },
     [fetchAuthMe.rejected]: (state) => {
       state.status = "error";
+      state.role = null
       state.data = null;
     },
     [fetchRegister.pending]: (state) => {

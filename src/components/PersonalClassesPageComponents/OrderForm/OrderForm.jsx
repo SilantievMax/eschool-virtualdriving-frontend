@@ -79,7 +79,7 @@ const OrderForm = () => {
             if (data) {
                 toast.success("Заказ создан");
             }
-            setCommunications('')
+            setCommunications("");
         } catch (err) {
             console.warn(err.response.data);
             toast.error("Ошибка при создании заказа!");

@@ -15,18 +15,27 @@ import EquipmentPage from "./pages/EquipmentPage/EquipmentPage";
 import CoachesPage from "./pages/CoachesPage/CoachesPage";
 import "normalize.css";
 import "./index.css";
-import AdminPanelPage from "./pages/AdminPanelPage/AdminPanelPage";
-import { fetchAuthMe, selectIsAuth } from "./redux/features/authSlice";
+import SuperAdminPanelPage from "./pages/SuperAdminPanelPage/SuperAdminPanelPage";
+import UserPanelPage from "./pages/UserPanelPage/UserPanelPage";
+import { fetchAuthMe } from "./redux/features/authSlice";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
     const dispatch = useDispatch();
-    const isAuth = useSelector(selectIsAuth);
+    const roleUser = useSelector((state) => state.auth.role);
 
     React.useEffect(() => {
         dispatch(fetchAuthMe());
     }, []);
+
+    const adminPanelRoleComponents = (role) => {
+        if (role === "SUPERADMIN") {
+            return <SuperAdminPanelPage />;
+        } else if (role === "USER") {
+            return <UserPanelPage />;
+        }
+    };
 
     return (
         <>
@@ -62,8 +71,10 @@ const App = () => {
                 <Route path="services/equipment" element={<EquipmentPage />} />
                 <Route path="services/coaches" element={<CoachesPage />} />
                 <Route path="about" element={<AboutPage />} />
-                {/*Admin panel*/}
-                <Route path="administrator/*" element={<AdminPanelPage />} />
+                <Route
+                    path="administrator/*"
+                    element={adminPanelRoleComponents(roleUser)}
+                />
             </Routes>
             <ToastContainer position="bottom-right" />
         </>

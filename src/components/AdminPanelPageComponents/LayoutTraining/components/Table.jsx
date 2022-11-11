@@ -14,30 +14,12 @@ const Table = ({ orders }) => {
                     <th>Выполнение</th>
                     <th>Статус</th>
                     <th>Прочитано</th>
-                    <th>Избранное</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 {items.map((item) => (
-                    <RowsTable
-                        key={item._id}
-                        id={item._id}
-                        orderNumber={item.orderNumber}
-                        orderDate={item.orderDate}
-                        car={item.car}
-                        track={item.track}
-                        experience={item.experience}
-                        coment={item.coment}
-                        communications={item.communications}
-                        createdAt={item.createdAt}
-                        mark={item.mark}
-                        price={item.price}
-                        status={item.status}
-                        views={item.views}
-                        fullName={item.user.fullName}
-                        equipment={item.equipment}
-                        executor={item.executor}
-                    />
+                    <RowsTable key={item._id} item={item} />
                 ))}
             </tbody>
         </table>

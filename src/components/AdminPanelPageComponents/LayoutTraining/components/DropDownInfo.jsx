@@ -1,22 +1,8 @@
 import React from "react";
 
-const DropDownInfo = ({
-    car,
-    coment,
-    communications,
-    price,
-    track,
-    experience,
-    equipment,
-    executor,
-    orderDate,
-    orderNumber,
-    fullName,
-    createdAt,
-    hiddenClass,
-}) => {
-    let tetHours = new Date(orderDate).getHours();
-    let tetMinutes = new Date(orderDate).getMinutes();
+const DropDownInfo = ({ item, hiddenClass }) => {
+    let tetHours = new Date(item.orderDate).getHours();
+    let tetMinutes = new Date(item.orderDate).getMinutes();
     tetHours = String(tetHours).length === 1 ? `0${tetHours}` : tetHours;
     tetMinutes =
         String(tetMinutes).length === 1 ? `0${tetMinutes}` : tetMinutes;
@@ -43,31 +29,33 @@ const DropDownInfo = ({
                             <div>
                                 №{" "}
                                 <span className="font-light">
-                                    {orderNumber}
+                                    {item.orderNumber}
                                 </span>
                             </div>
                             <div>
                                 ФИО:{" "}
-                                <span className="font-light">{fullName}</span>
+                                <span className="font-light">
+                                    {item.fullName}
+                                </span>
                             </div>
                             <div>
                                 Способ связи:
                                 <span className="font-light">
-                                    {communications}
+                                    {item.communications}
                                 </span>
                             </div>
                             <div>
                                 Дата оформления:
                                 <span className="font-light">
-                                    {inputDate(createdAt)}
+                                    {inputDate(item.createdAt)}
                                 </span>
                             </div>
                             <div>
                                 Дата выполнения:
                                 <span className="font-light">
-                                    {orderDate
+                                    {item.orderDate
                                         ? `${inputDate(
-                                              orderDate
+                                              item.orderDate
                                           )} - ${tetHours}: ${tetMinutes}`
                                         : "Дата не указана"}
                                 </span>
@@ -79,23 +67,29 @@ const DropDownInfo = ({
                             </h2>
                             <div>
                                 Тренер:{" "}
-                                <span className="font-light">{executor}</span>
+                                <span className="font-light">
+                                    {item.executor}
+                                </span>
                             </div>
                             <div>
                                 Машина:{" "}
-                                <span className="font-light">{car}</span>
+                                <span className="font-light">{item.car}</span>
                             </div>
                             <div>
                                 Трасса:{" "}
-                                <span className="font-light">{track}</span>
+                                <span className="font-light">{item.track}</span>
                             </div>
                             <div>
                                 Опыт:{" "}
-                                <span className="font-light">{experience}</span>
+                                <span className="font-light">
+                                    {item.experience}
+                                </span>
                             </div>
                             <div>
                                 Коментарий:{" "}
-                                <span className="font-light">{coment}</span>
+                                <span className="font-light">
+                                    {item.coment}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -106,10 +100,14 @@ const DropDownInfo = ({
                             </h2>
                             <div>
                                 Оборудование:{" "}
-                                <span className="font-light">{equipment}</span>
+                                <span className="font-light">
+                                    {item.equipment}
+                                </span>
                             </div>
                             <div className="absolute bottom-0 right-0">
-                                <span className="ml-3 text-4xl">{price}₽</span>
+                                <span className="ml-3 text-4xl">
+                                    {item.price}₽
+                                </span>
                             </div>
                         </div>
                     </div>
