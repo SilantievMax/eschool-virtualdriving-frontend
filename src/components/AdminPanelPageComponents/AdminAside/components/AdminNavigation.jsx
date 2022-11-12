@@ -162,7 +162,7 @@ export const AdminNavigation = () => {
                                 />
                             </svg>
 
-                            <span className="ml-3">Информация</span>
+                            <span className="ml-3">Информация сайта</span>
                         </Link>
                     </li>
                     <li className="">
