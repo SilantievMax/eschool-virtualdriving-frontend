@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import DropDownUpdate from "./DropDownUpdate";
 
 const RowsTable = ({ item }) => {
+    const [status, setStatus] = useState(item.status);
     const [marker, setMarker] = useState(item.mark);
     const [hiddenClass, setHiddenClass] = useState("hidden");
     const [hiddenClass2, setHiddenClass2] = useState("hidden");
@@ -16,7 +17,7 @@ const RowsTable = ({ item }) => {
         setHiddenClass(hiddenClass === "hidden" ? "" : "hidden");
         if (role[0] === "SUPERADMIN") {
             axios
-                .get(`/orders/training/${item.id}`)
+                .get(`/orders/training/${item._id}`)
                 .then((res) => {
                     setData(res.data);
                 })
@@ -29,7 +30,7 @@ const RowsTable = ({ item }) => {
     const onClickUploadsOrders = () => {
         setMarker(!marker);
         if (role[0] === "SUPERADMIN") {
-            return axios.patch(`/orders/training/${item.id}`, {
+            return axios.patch(`/orders/training/${item._id}`, {
                 mark: !marker,
             });
         }
@@ -94,11 +95,9 @@ const RowsTable = ({ item }) => {
                 </td>
                 <td>
                     <span
-                        className={`${statusColorBg(
-                            item.status
-                        )} py-1 px-3 rounded`}
+                        className={`${statusColorBg(status)} py-1 px-3 rounded`}
                     >
-                        {item.status}
+                        {status}
                     </span>
                 </td>
                 <td>{data ? "Прочитано" : "Не прочитано"}</td>
@@ -140,7 +139,7 @@ const RowsTable = ({ item }) => {
                 </td>
             </tr>
             <DropDownInfo item={item} hiddenClass={hiddenClass} />
-            <DropDownUpdate item={item} hiddenClass={hiddenClass2} />
+            <DropDownUpdate status={status} setStatus={setStatus} item={item} hiddenClass={hiddenClass2} />
         </>
     );
 };

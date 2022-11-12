@@ -8,7 +8,7 @@ import { setupReducer } from "../features/ordersSetupSlice";
 export default configureStore({
     reducer: {
         auth: authReducer,
-        setupCard: setupCardReducer,
+        data: setupCardReducer,
         ordersTraining: traningReducer,
         ordersSetup: setupReducer,
         file: fileReducer,

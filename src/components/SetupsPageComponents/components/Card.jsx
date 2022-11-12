@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcCardsSetop } from "../../../redux/features/dataSlice";
+import { fetcCardsSetop, fetcCars } from "../../../redux/features/dataSlice";
 
 const Card = () => {
     const dispatch = useDispatch();
-    React.useEffect(() => {
+    useEffect(() => {
         dispatch(fetcCardsSetop());
     }, []);
-    const { cards, status } = useSelector((state) => state.setupCard);
-    console.log(cards);
+    const { cardsSetup, status } = useSelector((state) => state.data);
 
     if (status === "loading") {
         return <div>Загрузк...</div>;
@@ -16,7 +15,7 @@ const Card = () => {
 
     return (
         <ul className="flex flex-wrap">
-            {cards.map((card) => (
+            {cardsSetup.map((card) => (
                 <li className=" flex flex-col items-center bg-slate-500 mx-2 p-3">
                     <img className=" w-52" src={card.accessLinkImg} alt="" />
 

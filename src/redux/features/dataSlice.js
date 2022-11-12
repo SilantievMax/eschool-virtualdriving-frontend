@@ -9,26 +9,62 @@ export const fetcCardsSetop = createAsyncThunk(
     }
 );
 
+export const fetcCars = createAsyncThunk("orders/fetcCars", async () => {
+    const { data } = await axios.get("info/car");
+    return data;
+});
+
+export const fetcTracks = createAsyncThunk("orders/fetcTracks", async () => {
+    const { data } = await axios.get("info/track");
+    return data;
+});
+
 const initialState = {
-    cards: [],
+    cardsSetup: [],
+    cars: [],
+    tracks: [],
     status: "loading",
 };
 
 const ordersSlice = createSlice({
-    name: "setupCard",
+    name: "data",
     initialState,
     reducers: {},
     extraReducers: {
         [fetcCardsSetop.pending]: (state) => {
-            state.cards = [];
+            state.cardsSetup = [];
             state.status = "loading";
         },
         [fetcCardsSetop.fulfilled]: (state, action) => {
-            state.cards = action.payload;
+            state.cardsSetup = action.payload;
             state.status = "loaded";
         },
         [fetcCardsSetop.rejected]: (state) => {
-            state.cards = [];
+            state.cardsSetup = [];
+            state.status = "error";
+        },
+        [fetcCars.pending]: (state) => {
+            state.cars = [];
+            state.status = "loading";
+        },
+        [fetcCars.fulfilled]: (state, action) => {
+            state.cars = action.payload;
+            state.status = "loaded";
+        },
+        [fetcCars.rejected]: (state) => {
+            state.cars = [];
+            state.status = "error";
+        },
+        [fetcTracks.pending]: (state) => {
+            state.tracks = [];
+            state.status = "loading";
+        },
+        [fetcTracks.fulfilled]: (state, action) => {
+            state.tracks = action.payload;
+            state.status = "loaded";
+        },
+        [fetcTracks.rejected]: (state) => {
+            state.tracks = [];
             state.status = "error";
         },
     },

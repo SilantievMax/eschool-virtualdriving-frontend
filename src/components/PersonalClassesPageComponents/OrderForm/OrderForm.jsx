@@ -1,45 +1,9 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { fetcCars, fetcTracks } from "../../../redux/features/dataSlice.js";
 import axios from "../../../utils/axios.js";
 import styles from "./OrderForm.module.css";
-
-const arrCars = [
-    "BMW M4GT3",
-    "AMR V8 Vantage GT3",
-    "Audi R8 LMS EVO II GT3",
-    "Bentley Continental GT3 2018",
-    "Ferrari 488 EVO GT3",
-    "Lamborghini Huracán Evo GT3",
-    "Lexus RC F GT3",
-    "McLaren 720S GT3",
-    "Mercedes AMG EVO GT3",
-    "Porsche 911 II GT3R",
-];
-
-const arrTracks = [
-    "Monza",
-    "Paul Ricard",
-    "Spa",
-    "Imola",
-    "Silverstone",
-    "Nurburgring",
-    "Barcelona",
-    "Hungaroring",
-    "Brands Hatch",
-    "Zolder",
-    "Misano",
-    "Zandvoort",
-    "Mount panorama",
-    "Suzuka",
-    "Laguna Seca",
-    "Kyalami",
-    "Oulton Park",
-    "Donington",
-    "Snetterton",
-    "COTA",
-    "Indianapolis",
-    "Watkins Glen",
-];
 
 const OrderForm = () => {
     const [isLoading, setLoading] = React.useState(false);
@@ -57,6 +21,17 @@ const OrderForm = () => {
         "Thrustmaster T3PM Pedals, Thrustmaster T-LCM Rubber Grip, Speedlink DRIFT O.Z."
     );
     const [price, setPrice] = React.useState(1500);
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetcCars());
+        dispatch(fetcTracks());
+    }, []);
+
+    const { cars } = useSelector((state) => state.data);
+    const { tracks } = useSelector((state) => state.data);
+
+    console.log(cars);
 
     const onSubmit = async () => {
         try {
@@ -96,8 +71,8 @@ const OrderForm = () => {
                     onChange={(e) => setCar(e.target.value)}
                     name="pets"
                 >
-                    {arrCars.map((value) => (
-                        <option value={value}>{value}</option>
+                    {cars.map(({ title }) => (
+                        <option value={title}>{title}</option>
                     ))}
                 </select>
                 <h3>Выбирите трассу:</h3>
@@ -107,8 +82,8 @@ const OrderForm = () => {
                     onChange={(e) => setTrack(e.target.value)}
                     name="pets"
                 >
-                    {arrTracks.map((value) => (
-                        <option value={value}>{value}</option>
+                    {tracks.map(({title}) => (
+                        <option value={title}>{title}</option>
                     ))}
                 </select>
                 <h3>Выбирите дату тренировки:</h3>
