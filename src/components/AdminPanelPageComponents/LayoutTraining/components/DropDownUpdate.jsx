@@ -1,40 +1,48 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { fetcCars } from "../../../../redux/features/dataSlice";
+import { fetcCars, fetcTracks } from "../../../../redux/features/dataSlice";
 import { fetcOrdersTraining } from "../../../../redux/features/ordersTrainingSlice";
 import axios from "../../../../utils/axios.js";
 
 const arrStatus = ["В обработке", "Оплачен", "Ждет оценки", "Заявка закрыта"];
 
-const DropDownUpdate = ({ status, setStatus, item, hiddenClass }) => {
+const DropDownUpdate = ({
+    setStatus,
+    setCar,
+    setTrack,
+    status,
+    car,
+    track,
+    price,
+    item,
+    communications,
+    hiddenClass,
+    setPrice,
+    setCommunications,
+}) => {
     const [orderDate, setOrderDate] = useState(item.orderDate);
-    const [car, setCar] = useState(item.car);
-    const [track, setTrack] = useState(item.track);
-    const [communications, setCommunications] = useState(item.communications);
-    const [price, setPrice] = useState(item.price);
     const [] = useState();
     const [] = useState();
 
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetcCars());
+        dispatch(fetcTracks());
     }, []);
 
     const { cars } = useSelector((state) => state.data);
     const { tracks } = useSelector((state) => state.data);
 
     const onClickBtn = () => {
-        return axios
-            .patch(`/orders/training/${item._id}`, {
-                status,
-                car,
-                track,
-                communications,
-                price,
-            })
-            .then((res) => toast.success("Данные обновлены"))
-            .catch((err) => toast.error("Произошла ошибка"));
+        toast.success("Данные обновлены");
+        return axios.patch(`/orders/training/${item._id}`, {
+            status,
+            car,
+            track,
+            communications,
+            price,
+        });
     };
 
     return (

@@ -6,6 +6,10 @@ import DropDownUpdate from "./DropDownUpdate";
 
 const RowsTable = ({ item }) => {
     const [status, setStatus] = useState(item.status);
+    const [car, setCar] = useState(item.car);
+    const [track, setTrack] = useState(item.track);
+    const [communications, setCommunications] = useState(item.communications);
+    const [price, setPrice] = useState(item.price);
     const [marker, setMarker] = useState(item.mark);
     const [hiddenClass, setHiddenClass] = useState("hidden");
     const [hiddenClass2, setHiddenClass2] = useState("hidden");
@@ -138,8 +142,27 @@ const RowsTable = ({ item }) => {
                     </svg>
                 </td>
             </tr>
-            <DropDownInfo item={item} hiddenClass={hiddenClass} />
-            <DropDownUpdate status={status} setStatus={setStatus} item={item} hiddenClass={hiddenClass2} />
+            <DropDownInfo
+                car={car}
+                communications={communications}
+                track={track}
+                item={item}
+                hiddenClass={hiddenClass}
+                price={price}
+            />
+            <DropDownUpdate
+                status={status}
+                setStatus={setStatus}
+                item={item}
+                track={track}
+                setTrack={setTrack}
+                car={car}
+                setCar={setCar}
+                hiddenClass={hiddenClass2}
+                setCommunications={setCommunications}
+                setPrice={setPrice}
+                price={price}
+            />
         </>
     );
 };

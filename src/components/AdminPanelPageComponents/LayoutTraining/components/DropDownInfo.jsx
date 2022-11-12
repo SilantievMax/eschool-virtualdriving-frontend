@@ -1,6 +1,13 @@
 import React from "react";
 
-const DropDownInfo = ({ item, hiddenClass }) => {
+const DropDownInfo = ({
+    car,
+    price,
+    track,
+    communications,
+    item,
+    hiddenClass,
+}) => {
     let tetHours = new Date(item.orderDate).getHours();
     let tetMinutes = new Date(item.orderDate).getMinutes();
     tetHours = String(tetHours).length === 1 ? `0${tetHours}` : tetHours;
@@ -41,7 +48,7 @@ const DropDownInfo = ({ item, hiddenClass }) => {
                             <div>
                                 Способ связи:
                                 <span className="font-light">
-                                    {item.communications}
+                                    {communications}
                                 </span>
                             </div>
                             <div>
@@ -73,11 +80,11 @@ const DropDownInfo = ({ item, hiddenClass }) => {
                             </div>
                             <div>
                                 Машина:{" "}
-                                <span className="font-light">{item.car}</span>
+                                <span className="font-light">{car}</span>
                             </div>
                             <div>
                                 Трасса:{" "}
-                                <span className="font-light">{item.track}</span>
+                                <span className="font-light">{track}</span>
                             </div>
                             <div>
                                 Опыт:{" "}
@@ -105,9 +112,7 @@ const DropDownInfo = ({ item, hiddenClass }) => {
                                 </span>
                             </div>
                             <div className="absolute bottom-0 right-0">
-                                <span className="ml-3 text-4xl">
-                                    {item.price}₽
-                                </span>
+                                <span className="ml-3 text-4xl">{price}₽</span>
                             </div>
                         </div>
                     </div>
