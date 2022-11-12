@@ -9,6 +9,7 @@ import LayoutFiles from "../../components/AdminPanelPageComponents/LayoutFiles/L
 import LayoutSetup from "../../components/AdminPanelPageComponents/LayoutSetup/LayoutSetup";
 import LayoutLiveries from "../../components/AdminPanelPageComponents/LayoutLiveries/LayoutLiveries";
 import LayoutUsers from "../../components/AdminPanelPageComponents/LayoutUsers/LayoutUsers";
+import LayoutInfo from "../../components/AdminPanelPageComponents/LayoutInfo/LayoutInfo";
 
 const SuperAdminPanelPage = () => {
     const isAuth = useSelector(selectIsAuth);
@@ -28,6 +29,7 @@ const SuperAdminPanelPage = () => {
                     <Route path="liveries" element={<LayoutLiveries />} />
                     <Route path="users" element={<LayoutUsers />} />
                     <Route path="files" element={<LayoutFiles />} />
+                    <Route path="info" element={<LayoutInfo />} />
                 </Routes>
             </div>
         </>

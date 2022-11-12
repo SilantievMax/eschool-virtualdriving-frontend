@@ -159,6 +159,7 @@ const RowsTable = ({ item }) => {
                 car={car}
                 setCar={setCar}
                 hiddenClass={hiddenClass2}
+                communications={communications}
                 setCommunications={setCommunications}
                 setPrice={setPrice}
                 price={price}
