@@ -1,15 +1,31 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../utils/axios";
 
+export const fetchGetCar = createAsyncThunk("auth/fetchGetCar", async () => {
+    const { data } = await axios.get("/update/car");
+    return data;
+});
+
 export const fetchCar = createAsyncThunk("auth/fetchCar", async (params) => {
     const { cars } = await axios.post("/update/car", params);
     return cars;
 });
 
-export const fetchCarDelete = createAsyncThunk("auth/fetchCarDelete", async (params) => {
-    const { cars } = await axios.delete(`/update/car/${params}`);
-    return cars;
-});
+export const fetchCarDelete = createAsyncThunk(
+    "auth/fetchCarDelete",
+    async (params) => {
+        const { cars } = await axios.delete(`/update/car/${params}`);
+        return cars;
+    }
+);
+
+export const fetchGetTrack = createAsyncThunk(
+    "auth/fetchGetTrack",
+    async () => {
+        const { data } = await axios.get("/update/track");
+        return data;
+    }
+);
 
 export const fetchTrack = createAsyncThunk(
     "auth/fetchTrack",
@@ -19,16 +35,11 @@ export const fetchTrack = createAsyncThunk(
     }
 );
 
-export const fetchGetCar = createAsyncThunk("auth/fetchGetCar", async () => {
-    const { data } = await axios.get("/update/car");
-    return data;
-});
-
-export const fetchGetTrack = createAsyncThunk(
-    "auth/fetchGetTrack",
-    async () => {
-        const { data } = await axios.get("/update/track");
-        return data;
+export const fetchTrackDelete = createAsyncThunk(
+    "auth/fetchTrackDelete",
+    async (params) => {
+        const { track } = await axios.delete(`/update/track/${params}`);
+        return track;
     }
 );
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+    fetchGetCar,
     fetchCar,
     fetchCarDelete,
-    fetchGetCar,
 } from "../../../../../redux/features/infoSlice";
 
 const CardCar = () => {
@@ -12,22 +12,27 @@ const CardCar = () => {
 
     const { cars } = useSelector((state) => state.info);
 
-    const onSubmitCar = async (v) => {
-        dispatch(fetchCar({ title: v }));
+    const onSubmitCar = async () => {
+        dispatch(fetchCar({ title: text }));
+        setText("");
+        dispatch(fetchGetCar());
     };
+
     useEffect(() => {
         dispatch(fetchGetCar());
     }, []);
+
     return (
         <>
             <ul className="border p-2 ml-2">
                 {cars &&
-                    cars.map((car) => (
-                        <li key={car._id}>
-                            {car.title}{" "}
+                    cars.map(({ title, _id }) => (
+                        <li key={_id}>
+                            {title}
                             <span
                                 onClick={() => {
-                                    dispatch(fetchCarDelete(car._id));
+                                    dispatch(fetchCarDelete(_id));
+                                    dispatch(fetchGetCar());
                                 }}
                                 className="text-red-700 cursor-pointer"
                             >
@@ -47,10 +52,7 @@ const CardCar = () => {
                     name=""
                     id=""
                 />
-                <button
-                    onClick={() => onSubmitCar(text)}
-                    className="bg-slate-700"
-                >
+                <button onClick={onSubmitCar} className="bg-slate-700">
                     Добавить
                 </button>
             </div>
