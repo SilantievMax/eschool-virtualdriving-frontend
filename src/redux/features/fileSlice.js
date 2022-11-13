@@ -1,19 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../utils/axios";
 
-export const fetcFile = createAsyncThunk(
-    "file/fetcFile",
-    async () => {
-        const { data } = await axios.get("/files");
-        return data;
-    }
-);
+export const fetcFile = createAsyncThunk("file/fetcFile", async () => {
+    const { data } = await axios.get("/update/file");
+    return data;
+});
 
 const initialState = {
-    files: {
-        items: [],
-        status: "loading",
-    },
+    filesInfo: [],
+    status: "loading",
 };
 
 const fileSlice = createSlice({
@@ -22,16 +17,16 @@ const fileSlice = createSlice({
     reducers: {},
     extraReducers: {
         [fetcFile.pending]: (state) => {
-            state.files.items = [];
-            state.files.status = "loading";
+            state.filesInfo = [];
+            state.status = "loading";
         },
         [fetcFile.fulfilled]: (state, action) => {
-            state.files.items = action.payload;
-            state.files.status = "loaded";
+            state.filesInfo = action.payload;
+            state.status = "loaded";
         },
         [fetcFile.rejected]: (state) => {
-            state.files.items = [];
-            state.files.status = "error";
+            state.filesInfo = [];
+            state.status = "error";
         },
     },
 });
