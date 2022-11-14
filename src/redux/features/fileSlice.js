@@ -6,6 +6,14 @@ export const fetcFile = createAsyncThunk("file/fetcFile", async () => {
     return data;
 });
 
+export const deleteFile = createAsyncThunk(
+    "auth/deleteFile",
+    async (params) => {
+        const { cars } = await axios.delete(`/update/file/${params}`);
+        return cars;
+    }
+);
+
 const initialState = {
     filesInfo: [],
     status: "loading",
