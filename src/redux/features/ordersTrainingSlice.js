@@ -9,14 +9,6 @@ export const fetcOrdersTraining = createAsyncThunk(
     }
 );
 
-export const fetcOrdersTrainingUers = createAsyncThunk(
-    "orders/fetcOrdersTraining",
-    async () => {
-        const { data } = await axios.get("/orders/training/user");
-        return data;
-    }
-);
-
 const initialState = {
     orders: {
         items: [],

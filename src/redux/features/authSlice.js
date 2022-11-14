@@ -45,6 +45,7 @@ const authSlice = createSlice({
     },
     [fetchLogin.fulfilled]: (state, action) => {
       state.status = "loaded";
+      state.role = action.payload.role[0]
       state.data = action.payload;
     },
     [fetchLogin.rejected]: (state) => {
@@ -72,6 +73,7 @@ const authSlice = createSlice({
     },
     [fetchRegister.fulfilled]: (state, action) => {
       state.status = "loaded";
+      state.role = action.payload.role[0]
       state.data = action.payload;
     },
     [fetchRegister.rejected]: (state) => {
