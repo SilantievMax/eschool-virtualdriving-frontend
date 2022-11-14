@@ -9,9 +9,18 @@ export const fetcOrdersTrainingUers = createAsyncThunk(
     }
 );
 
+export const fetcOrdersSetupUers = createAsyncThunk(
+    "orders/fetcOrdersSetup",
+    async () => {
+        const { data } = await axios.get("/orders/setup/user");
+        return data;
+    }
+);
+
 const initialState = {
     orders: {
         items1: [],
+        items2: [],
         status: "loading",
     },
 };
@@ -31,6 +40,18 @@ const ordersSlice = createSlice({
         },
         [fetcOrdersTrainingUers.rejected]: (state) => {
             state.orders.items1 = [];
+            state.orders.status = "error";
+        },
+        [fetcOrdersSetupUers.pending]: (state) => {
+            state.orders.items2 = [];
+            state.orders.status = "loading";
+        },
+        [fetcOrdersSetupUers.fulfilled]: (state, action) => {
+            state.orders.items2 = action.payload;
+            state.orders.status = "loaded";
+        },
+        [fetcOrdersSetupUers.rejected]: (state) => {
+            state.orders.items2 = [];
             state.orders.status = "error";
         },
     },

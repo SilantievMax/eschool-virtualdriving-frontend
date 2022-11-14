@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcOrdersSetup, fetcOrdersSetupUers } from "../../../redux/features/ordersSetupSlice";
+import { fetcOrdersSetup } from "../../../redux/features/ordersSetupSlice";
 import Table from "./components/Table";
 
 const LayoutSetup = () => {
@@ -10,7 +10,6 @@ const LayoutSetup = () => {
 
     React.useEffect(() => {
         dispatch(fetcOrdersSetup());
-        dispatch(fetcOrdersSetupUers());
     }, []);
 
     return (
