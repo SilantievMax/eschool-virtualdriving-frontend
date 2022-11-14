@@ -20,7 +20,7 @@ const Card = () => {
                     <img className=" w-52" src={card.accessLinkImg} alt="" />
 
                     <span>{card.name}</span>
-                    <span>{card.prise} руб.</span>
+                    <span>{card.price} руб.</span>
                     <button className=" bg-red-800 py-2 px-3 rounded">
                         Купить
                     </button>
