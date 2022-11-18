@@ -1,7 +1,9 @@
 import axios from "axios";
 
+export const accessUrl = "http://localhost:3002/api";
+
 const instance = axios.create({
-    baseURL: "http://localhost:3002/api",
+    baseURL: accessUrl,
 });
 
 instance.interceptors.request.use((config) => {
