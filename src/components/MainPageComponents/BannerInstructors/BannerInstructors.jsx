@@ -34,7 +34,7 @@ const BannerInstructors = () => {
                         <li className={styles.item_text}>Чемпион ORSRL V8 Championship 2021</li>
                     </ul>
                 </li>
-                <li className={styles.item}>
+                {/* <li className={styles.item}>
                     <div className={styles.wrapper_img}>
                         <img src={photoUser3} alt="photoUser" className={styles.photo} />
                     </div>
@@ -43,7 +43,7 @@ const BannerInstructors = () => {
                         <li className={styles.item_text}>Чемпион Porsche eSport Championship Russia 2018 и LADA eChampionship 2019</li>
                         <li className={styles.item_text}>Победиль чемпионата ONBOARD | ESPORTS по Gran Turismo Sport</li>
                     </ul>
-                </li>
+                </li> */}
                 <li className={styles.item}>
                     <div className={styles.wrapper_img}>
                         <img src={photoUser4} alt="photoUser" className={styles.photo} />
