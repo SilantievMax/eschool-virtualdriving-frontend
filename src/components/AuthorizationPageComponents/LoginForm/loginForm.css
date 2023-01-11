@@ -58,7 +58,8 @@
 }
 
 .login__btn-discord {
-    cursor: pointer;
+    cursor: not-allowed;
+    /* cursor: pointer; */
     width: 340px;
     height: 70px;
     background-repeat: no-repeat;
