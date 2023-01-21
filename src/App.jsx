@@ -20,6 +20,8 @@ import UserPanelPage from "./pages/UserPanelPage/UserPanelPage";
 import { fetchAuthMe } from "./redux/features/authSlice";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import HeaderV3 from "./components/GeneralComponents/HeaderV3/HeaderV3";
+import Layout from "./components/GeneralComponents/Layout/Layout";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -39,8 +41,13 @@ const App = () => {
 
     return (
         <>
-            <Header />
-            <Routes>
+            <Layout>
+                <HeaderV3 />
+                ngf
+            </Layout>
+            {/* <Header /> */}
+            {/* <HeaderV2 /> */}
+            {/* <Routes>
                 <Route path="/" element={<MainPage />}>
                     <Route
                         path="authorization/login"
@@ -76,7 +83,7 @@ const App = () => {
                     element={adminPanelRoleComponents(roleUser)}
                 />
             </Routes>
-            <ToastContainer position="bottom-right" />
+            <ToastContainer position="bottom-right" /> */}
         </>
     );
 };
