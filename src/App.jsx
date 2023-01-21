@@ -24,30 +24,26 @@ import HeaderV3 from "./components/GeneralComponents/HeaderV3/HeaderV3";
 import Layout from "./components/GeneralComponents/Layout/Layout";
 
 const App = () => {
-    const dispatch = useDispatch();
-    const roleUser = useSelector((state) => state.auth.role);
+  const dispatch = useDispatch();
+  const roleUser = useSelector((state) => state.auth.role);
 
-    React.useEffect(() => {
-        dispatch(fetchAuthMe());
-    }, []);
+  React.useEffect(() => {
+    dispatch(fetchAuthMe());
+  }, []);
 
-    const adminPanelRoleComponents = (role) => {
-        if (role === "SUPERADMIN") {
-            return <SuperAdminPanelPage />;
-        } else if (role === "USER") {
-            return <UserPanelPage />;
-        }
-    };
+  const adminPanelRoleComponents = (role) => {
+    if (role === "SUPERADMIN") {
+      return <SuperAdminPanelPage />;
+    } else if (role === "USER") {
+      return <UserPanelPage />;
+    }
+  };
 
-    return (
-        <>
-            <Layout>
-                <HeaderV3 />
-                ngf
-            </Layout>
-            {/* <Header /> */}
-            {/* <HeaderV2 /> */}
-            {/* <Routes>
+  return (
+    <>
+      <Layout>
+        <HeaderV3 />
+        <Routes>
                 <Route path="/" element={<MainPage />}>
                     <Route
                         path="authorization/login"
@@ -83,9 +79,10 @@ const App = () => {
                     element={adminPanelRoleComponents(roleUser)}
                 />
             </Routes>
-            <ToastContainer position="bottom-right" /> */}
-        </>
-    );
+            <ToastContainer position="bottom-right" />
+      </Layout>
+    </>
+  );
 };
 
 export default App;
