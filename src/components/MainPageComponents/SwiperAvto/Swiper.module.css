@@ -1,97 +1,49 @@
 .swiper {
-    max-height: 530px;
-    position: relative;
+  height: 338px;
+  position: relative;
 }
 
 .slide {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 531px;
-}
-
-.slide_bgi1 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../../assets/images/slider1.webp);
-}
-
-.slide_bgi2 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../../assets/images/slider2.webp);
-}
-
-.slide_bgi3 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../../assets/images/slider3.webp);
-}
-
-.slide_bgi4 {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../../assets/images/slider4.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 0% top;
+  height: 338px;
 }
 
 .wrapper {
-    padding-left: 174px;
-    padding-top: 50px;
-    max-width: 2500px;
-    margin-left: auto;
-    margin-right: auto;
+  background: rgb(235, 235, 243);
+  background: linear-gradient(108deg, rgba(235, 235, 243, 1) 46%, rgba(235, 235, 243, 0) 64%);
+  padding-left: 48px;
+  padding-top: 40px;
+  height: calc(100% - 40px);
+  max-width: 2500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
 .heading {
-    max-width: 900px;
-    font-size: 67px;
-    font-weight: 700;
-    color: #fff;
+  font-family: "Bebas Neue Cyrillic";
+  font-size: 60px;
+  line-height: 92%;
+  color: #15161b;
+}
+
+.heading > span {
+  color: #e61f26;
 }
 
 .description {
-    max-width: 900px;
-    font-size: 23px;
-    line-height: 35px;
-    font-weight: 400;
-    color: #fff;
-    margin-top: 22px;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  line-height: 142%;
+  color: #000000;
+  opacity: 0.6;
+  max-width: 510px;
+  margin-top: 24px;
 }
 
-@media(max-width: 1300px) {
-    .slide {
-        height: 431px;
-    }
-
-    .wrapper {
-        padding-left: 104px;
-        padding-top: 20px;
-    }
-
-    .heading {
-        max-width: 800px;
-        font-size: 57px;
-    }
-    
-    .description {
-        max-width: 800px;
-        font-size: 20px;
-    }
-}
-
-@media(max-width: 940px) {
-    .slide {
-        height: 331px;
-    }
-
-    .wrapper {
-        padding-left: 54px;
-        padding-top: 15px;
-    }
-
-    .heading {
-        max-width: 500px;
-        line-height: 40px;
-        font-size: 47px;
-    }
-    
-    .description {
-        max-width: 570px;
-        font-size: 17px;
-        line-height: 20px;
-        margin-top: 10px;
-    }
+@media (max-width: 1180px) {
+  .slide {
+    background-size: 1100px;
+  }
 }

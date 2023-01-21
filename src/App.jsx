@@ -44,42 +44,34 @@ const App = () => {
       <Layout>
         <HeaderV3 />
         <Routes>
-                <Route path="/" element={<MainPage />}>
-                    <Route
-                        path="authorization/login"
-                        element={
-                            <AuthorizationPage>
-                                <LoginForm />
-                            </AuthorizationPage>
-                        }
-                    />
-                    <Route
-                        path="authorization/register"
-                        element={
-                            <AuthorizationPage>
-                                <RegisterForm />
-                            </AuthorizationPage>
-                        }
-                    />
-                </Route>
-                <Route
-                    path="services/personal-classes"
-                    element={<PersonalClassesPage />}
-                />
-                <Route path="services/custom-car" element={<SetupsPage />} />
-                <Route
-                    path="services/liveries"
-                    element={<CustomLiveriesPage />}
-                />
-                <Route path="services/equipment" element={<EquipmentPage />} />
-                <Route path="services/coaches" element={<CoachesPage />} />
-                <Route path="about" element={<AboutPage />} />
-                <Route
-                    path="administrator/*"
-                    element={adminPanelRoleComponents(roleUser)}
-                />
-            </Routes>
-            <ToastContainer position="bottom-right" />
+          <Route path="/" element={<MainPage />}>
+          
+            <Route
+              path="authorization/login"
+              element={
+                <AuthorizationPage>
+                  <LoginForm />
+                </AuthorizationPage>
+              }
+            />
+            <Route
+              path="authorization/register"
+              element={
+                <AuthorizationPage>
+                  <RegisterForm />
+                </AuthorizationPage>
+              }
+            />
+          </Route>
+          <Route path="services/personal-classes" element={<PersonalClassesPage />} />
+          <Route path="services/custom-car" element={<SetupsPage />} />
+          <Route path="services/liveries" element={<CustomLiveriesPage />} />
+          <Route path="services/equipment" element={<EquipmentPage />} />
+          <Route path="services/coaches" element={<CoachesPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="administrator/*" element={adminPanelRoleComponents(roleUser)} />
+        </Routes>
+        <ToastContainer position="bottom-right" />
       </Layout>
     </>
   );

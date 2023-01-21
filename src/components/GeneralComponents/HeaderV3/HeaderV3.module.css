@@ -44,14 +44,13 @@
 }
 
 .header_bottom {
-    padding-top: 14px;
-    padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .navBottom {
-    display: flex;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navBottom_link {
@@ -63,5 +62,5 @@
 }
 
 .navBottom_link:not(:last-child) {
-    margin-right: 80px;
+  margin-right: 80px;
 }
