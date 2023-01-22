@@ -7,16 +7,19 @@ import BannerPartners from "../../components/MainPageComponents/BannerPartners/B
 import Footer from "../../components/GeneralComponents/Footer/Footer";
 import BannerInstructors from "../../components/MainPageComponents/BannerInstructors/BannerInstructors";
 import { Outlet } from "react-router-dom";
+import Layout from "../../components/GeneralComponents/Layout/Layout";
 
 const MainPage = () => {
   return (
     <>
-      <SwiperAvto />
-      <Services />
-      <BannerSimulators />
+      <Layout>
+        <SwiperAvto />
+        <Services />
+        <BannerSimulators />
+      </Layout>
       {/* <BannerInstructors /> */}
       {/* <BannerPartners /> */}
-      {/* <Footer /> */}
+      <Footer />
 
       {/* <Outlet /> */}
     </>

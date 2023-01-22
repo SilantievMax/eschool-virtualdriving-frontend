@@ -1,31 +1,21 @@
 .footer {
-    background-color: #323437;
-    min-height: 123px;
-    color: #fff;
-    padding-top: 45px;
-    padding-left: 110px;
-    padding-right: 110px;
+  background-color: #17181c;
+  color: #fff;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    max-width: 2500px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
+.copyright,
 .politik_link {
-    display: block;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 300;
-}
-
-.copyright {
-    display: block;
-    font-size: 11px;
-    margin-top: 10px;
-    font-weight: 300;
+  font-family: "Gilroy-Regular";
+  font-size: 12px;
+  line-height: 142%;
+  color: #ffffff;
+  opacity: 0.5;
 }
