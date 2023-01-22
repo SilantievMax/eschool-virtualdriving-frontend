@@ -9,7 +9,8 @@ import slider4 from "../../../assets/images/slider4.webp";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import styles from "./Swiper.module.css";
+import styles from "./SwiperAvto.module.css";
+import "./SwiperAvto.css";
 
 const SwiperAvto = () => {
   return (
