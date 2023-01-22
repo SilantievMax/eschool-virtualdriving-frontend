@@ -12,9 +12,8 @@ const MainPage = () => {
   return (
     <>
       <SwiperAvto />
-
       <Services />
-      {/* <BannerSimulators /> */}
+      <BannerSimulators />
       {/* <BannerInstructors /> */}
       {/* <BannerPartners /> */}
       {/* <Footer /> */}
