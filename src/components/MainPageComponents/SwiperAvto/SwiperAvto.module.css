@@ -1,6 +1,8 @@
 .swiper {
   height: 338px;
   position: relative;
+  margin-top: 23px;
+  margin-bottom: 16px;
 }
 
 .slide {
