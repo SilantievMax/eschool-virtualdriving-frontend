@@ -1,39 +1,28 @@
 .section {
-    background-color: #fff;
-    padding-top: 63px;
-    padding-bottom: 35px;
+  background-color: #ebebf3;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin-top: 80px;
 }
 
 .heading {
-    font-size: 37px;
-    font-weight: 700;
-    color: #2d3359;
-    text-align: center;   
+  font-family: "Bebas Neue Cyrillic";
+  font-size: 40px;
+  line-height: 92%;
+  color: #acacb2;
 }
 
 .list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .img_1 {
-    width: 360px;
-    margin-right: 135px;
+  width: 212px;
 }
 
 .img_2 {
-    width: 205px;
-}
-
-@media(max-width: 1100px) {
-    .img_1 {
-        width: 260px;
-        margin-right: 135px;
-    }
-    
-    .img_2 {
-        width: 155px;
-    }
+  width: 152px;
 }

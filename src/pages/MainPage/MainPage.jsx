@@ -18,7 +18,7 @@ const MainPage = () => {
         <BannerSimulators />
       </Layout>
       {/* <BannerInstructors /> */}
-      {/* <BannerPartners /> */}
+      <BannerPartners />
       <Footer />
 
       {/* <Outlet /> */}
