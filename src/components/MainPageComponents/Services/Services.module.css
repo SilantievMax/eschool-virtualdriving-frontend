@@ -1,116 +1,65 @@
 .services {
-    padding-top: 92px;
-    padding-bottom: 30px;
-    max-width: 2500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.heading {
-    font-size: 37px;
-    font-weight: 700;
-    color: #3c4858;
-    text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .list {
-    display: grid;
-    grid-template-columns: repeat(3, 460px);
-    grid-column-gap: 30px;
-    justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .item {
-    cursor: pointer;
-    max-width: 460px;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding-bottom: 30px;
-    margin-top: 80px;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 16px 24px 2px;
+  max-width: 420px;
+  background-color: #ebebf3;
+  height: 100%;
 }
 
 .images_card {
-    width: 400px;
-    height: 226px;
-    border-radius: 6px;
-    position: relative;
-    top: -20px;
-    transition: all .3s ease;
+  max-width: 420px;
+  height: 164px;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
 }
 
-.item:hover .images_card {
-    transform: translateY(-20px);
-    box-shadow: rgba(0, 0, 0, 0.39) 0px 6px 14px 7px;
+.text_card {
+  padding: 30px;
+}
+
+.img {
+  width: 100%;
+  margin: -30px 0 0 0px;
 }
 
 .heading_card {
-    font-size: 22px;
-    font-weight: 500;
-    color: #2d3359;
-    margin-top: 1px;
+  font-family: "Bebas Neue Cyrillic";
+  font-size: 40px;
+  line-height: 92%;
+  color: #17181c;
 }
 
 .description_card {
-    font-size: 14px;
-    color: #666666;
-    margin-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-    line-height: 28px;
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  line-height: 137.99%;
+  color: #17181c;
+  opacity: 0.5;
+  margin-top: 16px;
 }
 
-.price_card {
-    font-size: 22px;
-    font-weight: 400;
-    color: #ff2121;
-    margin-top: 24px;
+.btn {
+  display: inline-block;
+  font-family: "Gilroy-Semibold";
+  font-size: 14px;
+  line-height: 17px;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  background-color: #e61f26;
+  margin-top: 32px;
 }
 
-@media(max-width: 1550px) {
-    .list {
-        grid-template-columns: repeat(3, 360px);
-        grid-column-gap: 30px;
-    }
-
-    .images_card {
-        width: 300px;
-        height: 170px;
-    }
-}
-
-@media(max-width: 1300px) {
-    .list {
-        grid-template-columns: repeat(3, 280px);
-        grid-column-gap: 30px;
-    }
-
-    .images_card {
-        width: 230px;
-        height: 120px;
-    }
-
-    .heading_card {
-        margin-top: 1px;
-    }
-    
-    .description_card {
-        margin-top: 10px;
-    }
-    
-    .price_card {
-        margin-top: 14px;
-    }
-}
-
-@media(max-width: 1000px) {
-    .list {
-        grid-template-columns: repeat(2, 360px);
-        grid-column-gap: 20px;
-    }
-
-    .images_card {
-        width: 300px;
-        height: 170px;
-    }
+@media (max-width: 1140px) {
+  .images_card {
+    height: 104px;
+  }
 }

@@ -13,7 +13,7 @@ const MainPage = () => {
     <>
       <SwiperAvto />
 
-      {/* <Services /> */}
+      <Services />
       {/* <BannerSimulators /> */}
       {/* <BannerInstructors /> */}
       {/* <BannerPartners /> */}
