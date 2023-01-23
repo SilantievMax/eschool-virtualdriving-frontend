@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import LoginForm from "../LoginForm/LoginForm.jsx";
+import RegisterForm from "../RegisterForm/RegisterForm.jsx";
 import styles from "./AuthorizationModal.module.css";
 
 const AuthorizationModal = ({ active, setActive }) => {
+  const [modal, setModal] = useState(1);
+
   return (
     <>
-      <div className={active ? `${styles.modal} ${styles.active} ` : styles.modal} onClick={() => setActive(false)}>
-        <div className={styles.modal__content} onClick={(e) => e.stopPropagation()}></div>
+      <div className={active ? `${styles.modal} ${styles.active} ` : styles.modal}>
+        <div className={styles.modal__content} onClick={() => setActive(false)}>
+          <div className={styles.modal__bg} onClick={(e) => e.stopPropagation()}>
+            {modal === 1 && <LoginForm modal={setModal} />}
+            {modal === 2 && <RegisterForm modal={setModal} />}
+          </div>
+        </div>
       </div>
-
-      {/* <React.Fragment>
-        <section className="register">
-          <div className="register__images"></div>
-          {children}
-        </section>
-      </React.Fragment> */}
     </>
   );
 };

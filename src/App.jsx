@@ -36,8 +36,7 @@ const App = () => {
 
   return (
     <>
-        <HeaderV3 />
-
+      <HeaderV3 />
       <Routes>
         <Route path="/" element={<MainPage />} />
         {/* <Route
