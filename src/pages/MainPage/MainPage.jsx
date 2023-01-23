@@ -20,8 +20,6 @@ const MainPage = () => {
       <BannerInstructors />
       <BannerPartners />
       <Footer />
-
-      {/* <Outlet /> */}
     </>
   );
 };

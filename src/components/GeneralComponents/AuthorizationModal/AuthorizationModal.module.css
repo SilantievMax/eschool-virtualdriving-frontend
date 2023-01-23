@@ -1,4 +1,22 @@
-.register {
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.modal__content {
+}
+
+.active {
+  display: block;
+}
+
+/* .register {
     position: fixed;
     top: calc(50% - 350px);
     left: calc(50% - 600px);
@@ -12,11 +30,11 @@
 }
 
 .register__images {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../../assets/images/card3.webp);
+     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../../assets/images/card3.webp);
     min-width: 500px;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 80% center;
     border-radius: 6px 0px 0px 6px;
-}
+} */

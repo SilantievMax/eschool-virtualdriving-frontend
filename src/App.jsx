@@ -1,16 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/GeneralComponents/Header/Header";
-import HeaderV2 from "./components/GeneralComponents/HeaderV2/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
-import AuthorizationPage from "./pages/AuthorizationPage/AuthorizationPage";
 import SetupsPage from "./pages/SetupsPage/SetupsPage";
 import CustomLiveriesPage from "./pages/LiveriesPage/LiveriesPage";
 import PersonalClassesPage from "./pages/PersonalClassesPage/PersonalClassesPage";
-import LoginForm from "./components/AuthorizationPageComponents/LoginForm/LoginForm";
-import RegisterForm from "./components/AuthorizationPageComponents/RegisterForm/RegisterForm";
 import EquipmentPage from "./pages/EquipmentPage/EquipmentPage";
 import CoachesPage from "./pages/CoachesPage/CoachesPage";
 import "normalize.css";
@@ -41,12 +36,11 @@ const App = () => {
 
   return (
     <>
-      <Layout>
         <HeaderV3 />
-      </Layout>
+
       <Routes>
-        <Route path="/" element={<MainPage />}>
-          <Route
+        <Route path="/" element={<MainPage />} />
+        {/* <Route
             path="authorization/login"
             element={
               <AuthorizationPage>
@@ -61,8 +55,8 @@ const App = () => {
                 <RegisterForm />
               </AuthorizationPage>
             }
-          />
-        </Route>
+          /> */}
+        {/* </Route> */}
         <Route path="services/personal-classes" element={<PersonalClassesPage />} />
         <Route path="services/custom-car" element={<SetupsPage />} />
         <Route path="services/liveries" element={<CustomLiveriesPage />} />
