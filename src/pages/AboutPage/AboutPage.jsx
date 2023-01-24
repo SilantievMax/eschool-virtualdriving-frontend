@@ -10,8 +10,8 @@ const AboutPage = () => {
         <AboutImages />
         <BackgroundForContents>
             <AboutText />
-            <Footer />
         </BackgroundForContents>
+            <Footer />
         </>
     )
 }
