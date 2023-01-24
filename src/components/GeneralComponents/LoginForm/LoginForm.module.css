@@ -53,7 +53,8 @@
     font-weight: 700;
     font-size: 18px;
     color: #FFFFFF;
-    cursor: pointer;
+    cursor: pointer;  
+    margin-top: 20px;
 }
 
 .login__btn-discord {

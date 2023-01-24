@@ -45,11 +45,11 @@ const LoginForm = ({ modal }) => {
           Забыли пароль?
         </a> */}
         <div className={styles.login__buttons}>
+          <div className={styles.login__btn_discord}></div>
+        </div>
           <button type="submit" className={styles.login__btn}>
             Войти
           </button>
-          <div className={styles.login__btn_discord}></div>
-        </div>
         <span to={"/authorization/register"} className={styles.login__register} onClick={() => modal(2)}>
           Регистрация
         </span>
