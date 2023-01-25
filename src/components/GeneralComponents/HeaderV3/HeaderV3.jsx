@@ -26,12 +26,12 @@ const HeaderV3 = () => {
               <NavLink to={"/"} className={styles.navTop_link} style={color}>
                 VDES академия
               </NavLink>
-              <NavLink to={"/"} className={styles.navTop_link}>
+              {/* <NavLink to={"/"} className={styles.navTop_link}>
                 VDES оборудование
               </NavLink>
               <NavLink to={"/"} className={styles.navTop_link}>
                 VDES портал
-              </NavLink>
+              </NavLink> */}
               {!isAuth ? (
                 <span className={styles.btn} onClick={() => setModalActive(true)}>
                   ВОЙТИ
@@ -54,12 +54,12 @@ const HeaderV3 = () => {
               <NavLink to={"services/liveries"} className={styles.navBottom_link} style={isActiveNav}>
                 Ливреи
               </NavLink>
-              <NavLink to={"services/coaches"} className={styles.navBottom_link} style={isActiveNav}>
+              {/* <NavLink to={"services/coaches"} className={styles.navBottom_link} style={isActiveNav}>
                 Тренеры
               </NavLink>
               <NavLink to={"about"} className={styles.navBottom_link} style={isActiveNav}>
                 О нас
-              </NavLink>
+              </NavLink> */}
             </nav>
           </div>
         </header>

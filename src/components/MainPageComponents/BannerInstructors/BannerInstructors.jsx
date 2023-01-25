@@ -31,16 +31,17 @@ const BannerInstructors = () => {
             </li>
             <li className={styles.item}>
               <div className={styles.wrapper_img} style={{ backgroundImage: `url(${Logo2})` }}>
-                <img src={photoUser2} alt="photoUser" className={styles.photo} />
+                {/* <img src={photoUser2} alt="photoUser" className={styles.photo} /> */}
               </div>
               <div className={styles.wrapper_content}>
-                <h5 className={styles.name_instructor}>Влад Химичев</h5>
+                {/* <h5 className={styles.name_instructor}>Влад Химичев</h5>
                 <ul className={styles.list_text}>
                   <li className={styles.item_text}>Обладатель 9000 рейтинга в IRacing</li>
                   <li className={styles.item_text}>Победитель чемпионата Черноземья по картингу 2016-2019</li>
                   <li className={styles.item_text}>Бронзовый призёр чемпионата ORSRL TCR Championship 2019</li>
                   <li className={styles.item_text}>Чемпион ORSRL V8 Championship 2021</li>
-                </ul>
+                </ul> */}
+                Скоро будет тут информация!
               </div>
             </li>
             <li className={styles.item}>
