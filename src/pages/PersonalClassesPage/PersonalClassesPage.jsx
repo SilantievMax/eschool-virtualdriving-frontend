@@ -14,8 +14,8 @@ const PersonalClassesPage = () => {
       {/* <BannerPersonalClasses /> */}
       <Layout>
         <Text />
+        <OrderForm />
       </Layout>
-      <OrderForm />
       <Footer />
     </>
   );
