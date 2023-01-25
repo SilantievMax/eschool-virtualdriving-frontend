@@ -15,9 +15,9 @@ const BannerSimulators = () => {
           <li className={styles.item}>
             <img src={simulators2} alt="" className={styles.img} />
           </li>
-          <li className={styles.item}>
+          {/* <li className={styles.item}>
             <img src={simulators3} alt="" className={styles.img} />
-          </li>
+          </li> */}
         </ul>
       </section>
     </>
