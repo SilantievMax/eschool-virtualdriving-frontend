@@ -4,19 +4,21 @@ import InfoAboutClasses from "../../components/PersonalClassesPageComponents/Inf
 import InfoAboutCoaches from "../../components/PersonalClassesPageComponents/InfoAboutCoaches/InfoAboutCoaches";
 import OrderForm from "../../components/PersonalClassesPageComponents/OrderForm/OrderForm";
 import StagesOfClasses from "../../components/PersonalClassesPageComponents/StagesOfClasses/StagesOfClasses";
-import Footer from "../../components/GeneralComponents/Footer/Footer"
+import Footer from "../../components/GeneralComponents/Footer/Footer";
+import Text from "../../components/PersonalClassesPageComponents/Text/Text";
+import Layout from "../../components/GeneralComponents/Layout/Layout";
 
 const PersonalClassesPage = () => {
-    return (
-        <>
-        <BannerPersonalClasses />
-        {/* <InfoAboutClasses />
-        <StagesOfClasses />
-        <InfoAboutCoaches /> */}
-        <OrderForm />
-        <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      {/* <BannerPersonalClasses /> */}
+      <Layout>
+        <Text />
+      </Layout>
+      <OrderForm />
+      <Footer />
+    </>
+  );
+};
 
 export default PersonalClassesPage;

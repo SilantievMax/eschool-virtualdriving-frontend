@@ -1,0 +1,20 @@
+.text {
+  margin-top: 57px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: "Bebas Neue Cyrillic";
+  font-size: 60px;
+  line-height: 92%;
+  color: #17181c;
+}
+
+.description {
+  font-family: "Gilroy-Semibold";
+  font-size: 18px;
+  line-height: 137.99%;
+  color: #17181c;
+  opacity: 0.4;
+  margin-top: 5px;
+}
