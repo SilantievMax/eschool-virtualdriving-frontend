@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/svg/logo.svg";
+import { selectIsAuth } from "../../../redux/features/authSlice";
 import AuthorizationModal from "../AuthorizationModal/AuthorizationModal";
 import Layout from "../Layout/Layout";
 import styles from "./HeaderV3.module.css";
 
 const HeaderV3 = () => {
+  const isAuth = useSelector(selectIsAuth);
+
   const [modalActive, setModalActive] = useState(false);
   const color = { color: "#E61F26", opacity: 1 };
   const isActiveNav = ({ isActive }) => (isActive ? color : undefined);
@@ -28,9 +32,15 @@ const HeaderV3 = () => {
               <NavLink to={"/"} className={styles.navTop_link}>
                 VDES портал
               </NavLink>
-              <span className={styles.btn} onClick={() => setModalActive(true)}>
-                ВОЙТИ
-              </span>
+              {!isAuth ? (
+                <span className={styles.btn} onClick={() => setModalActive(true)}>
+                  ВОЙТИ
+                </span>
+              ) : (
+                <NavLink to={"administrator/statistics"} className={styles.btn}>
+                  Личный кабинет
+                </NavLink>
+              )}
             </nav>
           </div>
           <div className={styles.header_bottom}>
@@ -54,7 +64,7 @@ const HeaderV3 = () => {
           </div>
         </header>
       </Layout>
-      <AuthorizationModal active={modalActive} setActive={setModalActive} />
+      {!isAuth && <AuthorizationModal active={modalActive} setActive={setModalActive} />}
     </>
   );
 };

@@ -17,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import HeaderV3 from "./components/GeneralComponents/HeaderV3/HeaderV3";
 import Layout from "./components/GeneralComponents/Layout/Layout";
+import Header from "./components/GeneralComponents/Header/Header";
 
 const App = () => {
   const dispatch = useDispatch();
