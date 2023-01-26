@@ -85,6 +85,10 @@
   margin-top: 16px;
 }
 
+.checkbox a {
+  text-decoration: underline;
+}
+
 .checkbox__input {
   display: none;
 }

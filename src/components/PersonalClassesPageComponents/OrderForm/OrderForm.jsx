@@ -8,17 +8,13 @@ import styles from "./OrderForm.module.css";
 
 const OrderForm = () => {
   const [isLoading, setLoading] = React.useState(false);
-  const [communications, setCommunications] = React.useState("89257777777");
+  const [communications, setCommunications] = React.useState("");
   const [orderDate, setOrderDate] = React.useState();
-  const [car, setCar] = React.useState("BMW M4GT3");
-  const [track, setTrack] = React.useState("Monza");
-  const [experience, setExperience] = React.useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis maximus neque, sit amet lacinia ipsum mattis ac. Integer mollis."
-  );
-  const [coment, setComent] = React.useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at elit tortor. Pellentesque ultricies metus maximus massa porttitor auctor. Nulla."
-  );
-  const [equipment, setEquipment] = React.useState("Thrustmaster T3PM Pedals, Thrustmaster T-LCM Rubber Grip, Speedlink DRIFT O.Z.");
+  const [car, setCar] = React.useState("");
+  const [track, setTrack] = React.useState("");
+  const [experience, setExperience] = React.useState("");
+  const [coment, setComent] = React.useState("");
+  const [equipment, setEquipment] = React.useState("");
   const [price, setPrice] = React.useState(1500);
 
   const dispatch = useDispatch();
@@ -68,8 +64,36 @@ const OrderForm = () => {
         </li>
         <li className={styles.orser__item}>
           <label className={styles.label}>
+            <p>
+              Выберите дату тренировки* <small>(обязательно)</small>:
+            </p>
+            <input
+              required
+              className={styles.input}
+              type="datetime-local"
+              value={orderDate}
+              onChange={(e) => setOrderDate(e.target.value)}
+              placeholder="orderDate"
+            />
+          </label>
+          <label required className={styles.label}>
+            <p>
+              Как с вами связаться* <small>(обязательно)</small>:
+            </p>
+            <input
+              className={styles.input}
+              type="text"
+              value={communications}
+              onChange={(e) => setCommunications(e.target.value)}
+              placeholder="Telegram, WhatsApp, Discord, VK, Tel"
+            />
+          </label>
+          <label className={styles.label}>
             Выберите автомобиль:
             <select className={styles.input} value={car} onChange={(e) => setCar(e.target.value)} name="pets">
+              <option selected value="*решим с трениром">
+                *решим с трениром
+              </option>
               {cars.map(({ title }) => (
                 <option value={title}>{title}</option>
               ))}
@@ -78,39 +102,41 @@ const OrderForm = () => {
           <label className={styles.label}>
             Выберите трассу:
             <select className={styles.input} value={track} onChange={(e) => setTrack(e.target.value)} name="pets">
+              <option selected value="*решим с трениром">
+                *решим с трениром
+              </option>
               {tracks.map(({ title }) => (
                 <option value={title}>{title}</option>
               ))}
             </select>
           </label>
-          <label className={styles.label}>
-            Выберите дату тренировки:
-            <input className={styles.input} type="datetime-local" value={orderDate} onChange={(e) => setOrderDate(e.target.value)} placeholder="orderDate" />
-          </label>
+
           <label className={styles.label}>
             Комментарий:
-            <textarea type="textarea" className={styles.input} value={coment} onChange={(e) => setComent(e.target.value)} placeholder="coment" />
-          </label>
-          <label className={styles.label}>
-            Как с вами связаться:
-            <input
-              className={styles.input}
-              type="text"
-              value={communications}
-              onChange={(e) => setCommunications(e.target.value)}
-              placeholder="communications"
-            />
+            <textarea type="textarea" className={styles.input} value={coment} onChange={(e) => setComent(e.target.value)} placeholder="комментарий" />
           </label>
         </li>
         <li className={styles.orser__item}>
           <label className={styles.label}>
             Расскажите о вашем опыте:
-            <textarea type="textarea" className={styles.input} value={experience} onChange={(e) => setExperience(e.target.value)} placeholder="experience" />
+            <textarea
+              type="textarea"
+              className={styles.input}
+              value={experience}
+              onChange={(e) => setExperience(e.target.value)}
+              placeholder="Сколько лет в симрейсинге? Какие машины/трассы предпочитаете? отставание от лидера, участия в чемпионатах..."
+            />
           </label>
 
           <label className={styles.label}>
             Какое оборудование вы используете?:
-            <textarea type="textarea" className={styles.input} value={equipment} onChange={(e) => setEquipment(e.target.value)} placeholder="equipment" />
+            <textarea
+              type="textarea"
+              className={styles.input}
+              value={equipment}
+              onChange={(e) => setEquipment(e.target.value)}
+              placeholder="Педали, рулевая база, баранка, кокпит..."
+            />
           </label>
           {/* <label className={styles.label}>Цена:
                 <input
@@ -123,7 +149,9 @@ const OrderForm = () => {
 
           <label className={styles.checkbox}>
             <input className={styles.checkbox__input} type="checkbox" />
-            <span>Я принимаю условия передачи информации</span>
+            <span>
+              Я принимаю условия <a href="#">передачи информации</a>
+            </span>
           </label>
 
           <small className={styles.warning}>Поля отмеченные* являются обязательными</small>

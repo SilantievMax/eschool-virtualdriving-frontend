@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/svg/logo.svg";
 import { selectIsAuth } from "../../../redux/features/authSlice";
 import AuthorizationModal from "../AuthorizationModal/AuthorizationModal";
@@ -32,6 +32,9 @@ const HeaderV3 = () => {
               <NavLink to={"/"} className={styles.navTop_link}>
                 VDES портал
               </NavLink> */}
+              <a href="http://virtualdriving.tilda.ws" target="_blank" className={styles.navTop_link}>
+                VDES магазин
+              </a>
               {!isAuth ? (
                 <span className={styles.btn} onClick={() => setModalActive(true)}>
                   ВОЙТИ
