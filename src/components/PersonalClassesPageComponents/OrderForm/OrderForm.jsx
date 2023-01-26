@@ -11,11 +11,12 @@ const OrderForm = () => {
   const isAuth = useSelector(selectIsAuth);
   const [isLoading, setLoading] = React.useState(false);
   const [communications, setCommunications] = React.useState("");
-  const [orderDate, setOrderDate] = React.useState();
-  const [car, setCar] = React.useState("");
-  const [track, setTrack] = React.useState("");
+  const [orderDate, setOrderDate] = React.useState("");
+  const [car, setCar] = React.useState("*решим с тренером");
+  const [track, setTrack] = React.useState("*решим с тренером");
   const [experience, setExperience] = React.useState("");
   const [coment, setComent] = React.useState("");
+  const [simulator, setSimulator] = React.useState("ACC");
   const [equipment, setEquipment] = React.useState("");
   const [price, setPrice] = React.useState(1500);
 
@@ -43,6 +44,7 @@ const OrderForm = () => {
         coment,
         equipment,
         price,
+        simulator,
       };
 
       const { data } = await axios.post("/orders/training", fields);
@@ -91,6 +93,17 @@ const OrderForm = () => {
             />
           </label>
           <label className={styles.label}>
+            Выберите симулятор:
+            <select className={styles.input} value={simulator} onChange={(e) => setSimulator(e.target.value)} name="pets">
+              <option selected value="ACC">
+                ACC
+              </option>
+              <option selected value="IRacing">
+                IRacing
+              </option>
+            </select>
+          </label>
+          <label className={styles.label}>
             Выберите автомобиль:
             <select className={styles.input} value={car} onChange={(e) => setCar(e.target.value)} name="pets">
               <option selected value="*решим с трениром">
@@ -112,7 +125,6 @@ const OrderForm = () => {
               ))}
             </select>
           </label>
-
           <label className={styles.label}>
             Комментарий:
             <textarea type="textarea" className={styles.input} value={coment} onChange={(e) => setComent(e.target.value)} placeholder="комментарий" />
@@ -129,7 +141,6 @@ const OrderForm = () => {
               placeholder="Сколько лет в симрейсинге? Какие машины/трассы предпочитаете? Отставание от лидера, участия в чемпионатах..."
             />
           </label>
-
           <label className={styles.label}>
             Какое оборудование вы используете?:
             <textarea
