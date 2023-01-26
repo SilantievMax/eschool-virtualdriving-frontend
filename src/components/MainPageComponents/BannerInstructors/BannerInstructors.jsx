@@ -41,7 +41,6 @@ const BannerInstructors = () => {
                   <li className={styles.item_text}>Бронзовый призёр чемпионата ORSRL TCR Championship 2019</li>
                   <li className={styles.item_text}>Чемпион ORSRL V8 Championship 2021</li>
                 </ul> */}
-                Скоро будет тут информация!
               </div>
             </li>
             <li className={styles.item}>

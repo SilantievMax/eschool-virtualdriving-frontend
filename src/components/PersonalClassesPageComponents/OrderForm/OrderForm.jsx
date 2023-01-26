@@ -5,8 +5,10 @@ import { fetcCars, fetcTracks } from "../../../redux/features/dataSlice.js";
 import img1 from "../../../assets/images/order1.webp";
 import axios from "../../../utils/axios.js";
 import styles from "./OrderForm.module.css";
+import { selectIsAuth } from "../../../redux/features/authSlice.js";
 
 const OrderForm = () => {
+  const isAuth = useSelector(selectIsAuth);
   const [isLoading, setLoading] = React.useState(false);
   const [communications, setCommunications] = React.useState("");
   const [orderDate, setOrderDate] = React.useState();
@@ -51,8 +53,12 @@ const OrderForm = () => {
       }
       setCommunications("");
     } catch (err) {
-      console.warn(err.response.data);
-      toast.error("Ошибка при создании заказа!");
+      if (isAuth) {
+        console.warn(err.response.data);
+        toast.error("Вы заполнили не все поля!");
+      } else {
+        toast.error("Вы не авторизованы!");
+      }
     }
   };
 

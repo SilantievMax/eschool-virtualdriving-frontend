@@ -4,6 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/svg/logo.svg";
 import { selectIsAuth } from "../../../redux/features/authSlice";
 import AuthorizationModal from "../AuthorizationModal/AuthorizationModal";
+import vk from "../../../assets/svg/vk.svg";
+import discord from "../../../assets/svg/discord.svg";
 import Layout from "../Layout/Layout";
 import styles from "./HeaderV3.module.css";
 
@@ -32,7 +34,7 @@ const HeaderV3 = () => {
               <NavLink to={"/"} className={styles.navTop_link}>
                 VDES портал
               </NavLink> */}
-              <a href="http://virtualdriving.tilda.ws" target="_blank" className={styles.navTop_link}>
+              <a href="http://virtualdriving.ru" target="_blank" className={styles.navTop_link}>
                 VDES магазин
               </a>
               {!isAuth ? (
@@ -64,6 +66,14 @@ const HeaderV3 = () => {
                 О нас
               </NavLink> */}
             </nav>
+            <div className={styles.nav__link}>
+              <a href="https://discord.gg/tuQxX6F" target="_blank">
+                <img src={vk} alt="vk" className={styles.nav_img} />
+              </a>
+              <a href="https://vk.com/virtualdriving" target="_blank">
+                <img src={discord} alt="discord" className={styles.nav_img} />
+              </a>
+            </div>
           </div>
         </header>
       </Layout>

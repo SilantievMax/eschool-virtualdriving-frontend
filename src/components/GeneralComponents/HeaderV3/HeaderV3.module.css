@@ -47,6 +47,8 @@
 .header_bottom {
   padding-top: 14px;
   padding-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navBottom {
@@ -64,4 +66,19 @@
 
 .navBottom_link:not(:last-child) {
   margin-right: 80px;
+}
+
+.nav__link {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+
+.nav_img {
+  opacity: 0.6; 
+  transition: opacity .5s;
+}
+
+.nav_img:hover {
+  opacity: 1;
 }
