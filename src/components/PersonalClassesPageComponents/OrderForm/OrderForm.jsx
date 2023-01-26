@@ -63,10 +63,18 @@ const OrderForm = () => {
           <img className={styles.img} src={img1} alt="img1" />
         </li>
         <li className={styles.orser__item}>
+          <label required className={styles.label}>
+            Как с вами связаться*:
+            <input
+              className={styles.input}
+              type="text"
+              value={communications}
+              onChange={(e) => setCommunications(e.target.value)}
+              placeholder="Telegram, WhatsApp, Discord, VK"
+            />
+          </label>
           <label className={styles.label}>
-            <p>
-              Выберите дату тренировки* <small>(обязательно)</small>:
-            </p>
+            Выберите дату тренировки:
             <input
               required
               className={styles.input}
@@ -76,23 +84,11 @@ const OrderForm = () => {
               placeholder="orderDate"
             />
           </label>
-          <label required className={styles.label}>
-            <p>
-              Как с вами связаться* <small>(обязательно)</small>:
-            </p>
-            <input
-              className={styles.input}
-              type="text"
-              value={communications}
-              onChange={(e) => setCommunications(e.target.value)}
-              placeholder="Telegram, WhatsApp, Discord, VK, Tel"
-            />
-          </label>
           <label className={styles.label}>
             Выберите автомобиль:
             <select className={styles.input} value={car} onChange={(e) => setCar(e.target.value)} name="pets">
               <option selected value="*решим с трениром">
-                *решим с трениром
+                *решим с тренером
               </option>
               {cars.map(({ title }) => (
                 <option value={title}>{title}</option>
@@ -103,7 +99,7 @@ const OrderForm = () => {
             Выберите трассу:
             <select className={styles.input} value={track} onChange={(e) => setTrack(e.target.value)} name="pets">
               <option selected value="*решим с трениром">
-                *решим с трениром
+                *решим с тренером
               </option>
               {tracks.map(({ title }) => (
                 <option value={title}>{title}</option>
@@ -124,7 +120,7 @@ const OrderForm = () => {
               className={styles.input}
               value={experience}
               onChange={(e) => setExperience(e.target.value)}
-              placeholder="Сколько лет в симрейсинге? Какие машины/трассы предпочитаете? отставание от лидера, участия в чемпионатах..."
+              placeholder="Сколько лет в симрейсинге? Какие машины/трассы предпочитаете? Отставание от лидера, участия в чемпионатах..."
             />
           </label>
 
@@ -154,7 +150,7 @@ const OrderForm = () => {
             </span>
           </label>
 
-          <small className={styles.warning}>Поля отмеченные* являются обязательными</small>
+          <small className={styles.warning}>Поля с * являются обязательными для создания заявки</small>
 
           <button className={styles.btn} onClick={onSubmit}>
             Отправить
