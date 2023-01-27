@@ -67,10 +67,10 @@ const HeaderV3 = () => {
               </NavLink> */}
             </nav>
             <div className={styles.nav__link}>
-              <a href="https://discord.gg/tuQxX6F" target="_blank">
+              <a href="https://vk.com/virtualdriving" target="_blank">
                 <img src={vk} alt="vk" className={styles.nav_img} />
               </a>
-              <a href="https://vk.com/virtualdriving" target="_blank">
+              <a href="https://discord.gg/tuQxX6F" target="_blank">
                 <img src={discord} alt="discord" className={styles.nav_img} />
               </a>
             </div>
