@@ -82,6 +82,16 @@
   margin-right: 30px;
 }
 
+.price {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 48px;
+  font-family: "Gilroy-Semibold";
+  font-size: 24px;
+  line-height: 17px;
+}
+
 .checkbox {
   position: relative;
   font-family: "Gilroy-Light";

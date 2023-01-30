@@ -6,8 +6,11 @@ import img1 from "../../../assets/images/order1.webp";
 import axios from "../../../utils/axios.js";
 import styles from "./OrderForm.module.css";
 import { selectIsAuth } from "../../../redux/features/authSlice.js";
+import file from "../../../assets/files/Politica_confidence.pdf";
 
 const OrderForm = () => {
+  const promocodeNew = "FOTONVDESFEB";
+
   const isAuth = useSelector(selectIsAuth);
   const [isLoading, setLoading] = React.useState(false);
   const [communications, setCommunications] = React.useState("");
@@ -19,6 +22,9 @@ const OrderForm = () => {
   const [simulator, setSimulator] = React.useState("ACC");
   const [equipment, setEquipment] = React.useState("");
   const [price, setPrice] = React.useState(1500);
+  const [privacyPolicy, setPrivacyPolicy] = React.useState(false);
+  const [quantityTrining, setQuantityTrining] = React.useState("1");
+  const [promocode, setPromocode] = React.useState("");
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -29,12 +35,12 @@ const OrderForm = () => {
   const { cars } = useSelector((state) => state.data);
   const { tracks } = useSelector((state) => state.data);
 
-  console.log(cars);
-
   const onSubmit = async () => {
     try {
       setLoading(true);
-
+      if (!privacyPolicy) {
+        return toast.error("Вы не ознакомились с политикой конфиденциальности");
+      }
       const fields = {
         car,
         track,
@@ -45,6 +51,9 @@ const OrderForm = () => {
         equipment,
         price,
         simulator,
+        privacyPolicy,
+        quantityTrining,
+        promocode,
       };
 
       const { data } = await axios.post("/orders/training", fields);
@@ -54,6 +63,15 @@ const OrderForm = () => {
         toast.success("Заказ создан");
       }
       setCommunications("");
+      setOrderDate("");
+      setSimulator("ACC");
+      setCar("*решим с тренером");
+      setTrack("*решим с тренером");
+      setComent("");
+      setExperience("");
+      setEquipment("");
+      setQuantityTrining(1);
+      setPromocode("");
     } catch (err) {
       if (isAuth) {
         console.warn(err.response.data);
@@ -61,6 +79,19 @@ const OrderForm = () => {
       } else {
         toast.error("Вы не авторизованы!");
       }
+    }
+  };
+
+  const onchangePrice = () => {
+    switch (quantityTrining) {
+      case "1":
+        return setPrice(1500);
+      case "2":
+        return setPrice(3000);
+      case "3":
+        return setPrice(4500);
+      case "4":
+        return setPrice(5000);
     }
   };
 
@@ -126,6 +157,31 @@ const OrderForm = () => {
             </select>
           </label>
           <label className={styles.label}>
+            Выберите кол-во тренировок:
+            <select
+              className={styles.input}
+              value={quantityTrining}
+              onChange={(e) => {
+                setQuantityTrining(e.target.value);
+              }}
+              onClick={onchangePrice}
+              name="pets"
+            >
+              <option selected value="1">
+                1
+              </option>
+              <option selected value="2">
+                2
+              </option>
+              <option selected value="3">
+                3
+              </option>
+              <option selected value="4">
+                4
+              </option>
+            </select>
+          </label>
+          <label className={styles.label}>
             Комментарий:
             <textarea type="textarea" className={styles.input} value={coment} onChange={(e) => setComent(e.target.value)} placeholder="комментарий" />
           </label>
@@ -151,24 +207,32 @@ const OrderForm = () => {
               placeholder="Педали, рулевая база, баранка, кокпит..."
             />
           </label>
-          {/* <label className={styles.label}>Цена:
-                <input
-                    className={styles.input}
-                    type="number"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    placeholder="price"
-                /> */}
 
+          <label required className={styles.label}>
+            Промокод:
+            <input
+              className={styles.input}
+              type="text"
+              value={promocode}
+              onChange={(e) => {
+                setPromocode(e.target.value);
+                if (promocodeNew === promocode) {
+                  setPrice(price - price * 0.05);
+                }
+              }}
+            />
+          </label>
           <label className={styles.checkbox}>
-            <input className={styles.checkbox__input} type="checkbox" />
+            <input className={styles.checkbox__input} defaultChecked={privacyPolicy} type="checkbox" onChange={() => setPrivacyPolicy(!privacyPolicy)} />
             <span>
-              Я принимаю условия <a href="#">передачи информации</a>
+              Я принимаю условия{" "}
+              <a href={file} download="Политика_конфиденциальности">
+                передачи информации
+              </a>
             </span>
           </label>
-
           <small className={styles.warning}>Поля с * являются обязательными для создания заявки</small>
-
+          <div className={styles.price}>{promocodeNew === promocode ? `${price - price * 0.05}₽ - 5%` : `${price}₽`} </div>
           <button className={styles.btn} onClick={onSubmit}>
             Отправить
           </button>
