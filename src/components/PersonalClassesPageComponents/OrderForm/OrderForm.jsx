@@ -75,7 +75,7 @@ const OrderForm = () => {
     } catch (err) {
       if (isAuth) {
         console.warn(err.response.data);
-        toast.error("Вы заполнили не все поля!");
+        toast.error("Вы заполнили не все поля или сделали больше 3 заказов");
       } else {
         toast.error("Вы не авторизованы!");
       }

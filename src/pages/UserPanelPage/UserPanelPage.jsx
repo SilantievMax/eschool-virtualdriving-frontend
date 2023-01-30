@@ -20,16 +20,16 @@ const UserPanelPage = () => {
     console.log(items2);
     return (
         <>
-            <AdminAside />
+            {/* <AdminAside /> */}
             <div className="ml-56 bg-slate-50 py-3 flex">
                 <ul>
                     {items1 &&
                         items1.map((item) => (
                             <li className="border" key={item._id}>
-                                <p>{item.orderNumber}</p>
-                                <p>{item.orderName}</p>
+                                <p>Номер заявки: {item.orderNumber}</p>
+                                <p>Услуга: {item.orderName}</p>
                                 <p>{item.orderDate}</p>
-                                <p>{item.status}</p>
+                                <p>Статус: {item.status}</p>
                             </li>
                         ))}
                 </ul>
