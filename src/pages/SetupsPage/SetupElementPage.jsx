@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import { SetupElement } from "../../components/SetupsPageComponents/components/SetupElement";
 
 export const SetupElementPage = () => {
-	let params = useParams()
+  let params = useParams();
 
-	return (<div>{params.id}</div>)
-}
+  return <SetupElement id={params.id} />;
+};

@@ -9,6 +9,14 @@ export const fetcCardsSetop = createAsyncThunk(
     }
 );
 
+export const fetchSetup = createAsyncThunk(
+    "orders/fetchSetup",
+    async (id) => {
+        const { data } = await axios.get(`info/setup/${id}`);
+        return data;
+    }
+);
+
 export const fetcCars = createAsyncThunk("orders/fetcCars", async () => {
     const { data } = await axios.get("info/car");
     return data;
@@ -21,6 +29,7 @@ export const fetcTracks = createAsyncThunk("orders/fetcTracks", async () => {
 
 const initialState = {
     cardsSetup: [],
+    setup: {},
     cars: [],
     tracks: [],
     status: "loading",
@@ -41,6 +50,18 @@ const ordersSlice = createSlice({
         },
         [fetcCardsSetop.rejected]: (state) => {
             state.cardsSetup = [];
+            state.status = "error";
+        },
+        [fetchSetup.pending]: (state) => {
+            state.setup = {};
+            state.status = "loading";
+        },
+        [fetchSetup.fulfilled]: (state, action) => {
+            state.setup = action.payload;
+            state.status = "loaded";
+        },
+        [fetchSetup.rejected]: (state) => {
+            state.setup = {};
             state.status = "error";
         },
         [fetcCars.pending]: (state) => {
