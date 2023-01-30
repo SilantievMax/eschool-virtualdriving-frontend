@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import SetupsPage from "./pages/SetupsPage/SetupsPage";
+import { SetupElementPage } from "./pages/SetupsPage/SetupElementPage";
 import CustomLiveriesPage from "./pages/LiveriesPage/LiveriesPage";
 import PersonalClassesPage from "./pages/PersonalClassesPage/PersonalClassesPage";
 import EquipmentPage from "./pages/EquipmentPage/EquipmentPage";
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="services/personal-classes" element={<PersonalClassesPage />} />
         <Route path="services/custom-car" element={<SetupsPage />} />
+        <Route path="services/custom-car/:id" element={<SetupElementPage />} />
         <Route path="services/liveries" element={<CustomLiveriesPage />} />
         <Route path="services/equipment" element={<EquipmentPage />} />
         <Route path="services/coaches" element={<CoachesPage />} />
