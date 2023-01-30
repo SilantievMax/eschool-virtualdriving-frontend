@@ -82,16 +82,29 @@ const OrderForm = () => {
     }
   };
 
-  const onchangePrice = () => {
-    switch (quantityTrining) {
-      case "1":
-        return setPrice(1500);
-      case "2":
-        return setPrice(3000);
-      case "3":
-        return setPrice(4500);
-      case "4":
-        return setPrice(5000);
+  const onchangePrice = (x) => {
+    if (promocodeNew === x) {
+      switch (quantityTrining) {
+        case "1":
+          return setPrice(1500 - 1500 * 0.05);
+        case "2":
+          return setPrice(3000 - 3000 * 0.05);
+        case "3":
+          return setPrice(4500 - 4500 * 0.05);
+        case "4":
+          return setPrice(5000 - 5000 * 0.05);
+      }
+    } else {
+      switch (quantityTrining) {
+        case "1":
+          return setPrice(1500);
+        case "2":
+          return setPrice(3000);
+        case "3":
+          return setPrice(4500);
+        case "4":
+          return setPrice(5000);
+      }
     }
   };
 
@@ -207,7 +220,6 @@ const OrderForm = () => {
               placeholder="Педали, рулевая база, баранка, кокпит..."
             />
           </label>
-
           <label required className={styles.label}>
             Промокод:
             <input
@@ -216,9 +228,7 @@ const OrderForm = () => {
               value={promocode}
               onChange={(e) => {
                 setPromocode(e.target.value);
-                if (promocodeNew === promocode) {
-                  setPrice(price - price * 0.05);
-                }
+                onchangePrice(e.target.value);
               }}
             />
           </label>
@@ -232,7 +242,7 @@ const OrderForm = () => {
             </span>
           </label>
           <small className={styles.warning}>Поля с * являются обязательными для создания заявки</small>
-          <div className={styles.price}>{promocodeNew === promocode ? `${price - price * 0.05}₽ - 5%` : `${price}₽`} </div>
+          <div className={styles.price}>{`${price}₽`} </div>
           <button className={styles.btn} onClick={onSubmit}>
             Отправить
           </button>
