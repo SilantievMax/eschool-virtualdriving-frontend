@@ -20,7 +20,7 @@ const UserPanelPage = () => {
     console.log(items2);
     return (
         <>
-            {/* <AdminAside /> */}
+            <AdminAside />
             <div className="ml-56 bg-slate-50 py-3 flex">
                 <ul>
                     {items1 &&

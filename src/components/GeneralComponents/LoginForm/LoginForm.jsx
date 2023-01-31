@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { fetchLogin, selectIsAuth } from "../../../redux/features/authSlice";
 import styles from "./LoginForm.module.css";
+import { toast } from "react-toastify";
 
 const LoginForm = ({ modal }) => {
   const isAuth = useSelector(selectIsAuth);
@@ -15,7 +16,7 @@ const LoginForm = ({ modal }) => {
     formState: { errors, isValid },
   } = useForm({
     defaultValues: {
-      email: "superadmin@eschool.com",
+      email: "",
       password: "",
     },
     mode: "onChange",
@@ -47,9 +48,9 @@ const LoginForm = ({ modal }) => {
         <div className={styles.login__buttons}>
           <div className={styles.login__btn_discord}></div>
         </div>
-          <button type="submit" className={styles.login__btn}>
-            Войти
-          </button>
+        <button type="submit" className={styles.login__btn}>
+          Войти
+        </button>
         <span to={"/authorization/register"} className={styles.login__register} onClick={() => modal(2)}>
           Регистрация
         </span>

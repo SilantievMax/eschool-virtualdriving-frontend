@@ -1,9 +1,26 @@
-import React from 'react'
+import React from "react";
+import Layout from "../../components/GeneralComponents/Layout/Layout";
+import Banner from "../../components/LiveriesPageComponents/Banner/Banner";
+import Heading from "../../components/LiveriesPageComponents/Heading/Heading";
+import OrderForm from "../../components/LiveriesPageComponents/OrderForm/OrderForm"
+import banner1 from "../../assets/images/banner (1).webp"
+import banner2 from "../../assets/images/banner (2).webp"
+import banner3 from "../../assets/images/banner (3).webp"
+import banner4 from "../../assets/images/banner (4).webp"
+import banner5 from "../../assets/images/banner (5).webp"
+import banner6 from "../../assets/images/banner (6).webp"
 
 const LiveriesPage = () => {
   return (
-    <div>LiveriesPage</div>
-  )
-}
+    <>
+      <Layout>
+        <Heading />
+        <Banner banner={banner3}/>
+        <OrderForm />
+        <Banner banner={banner2}/>
+      </Layout>
+    </>
+  );
+};
 
-export default LiveriesPage
+export default LiveriesPage;
