@@ -6,9 +6,9 @@ export const SetupCard = ({ name, price, imgSrc, onSubmit }) => {
       </div>
       <div className="p-6 space-y-2 flex-1">
         <div class="font-header text-2xl">{name}</div>
-        <div class="text-lg text-gray-600">{price} руб.</div>
       </div>
-      <div className="p-6 pt-0">
+      <div className="p-6 pt-0 flex justify-between items-center">
+        <div class="text-lg text-gray-600">{price} руб.</div>
         <button
           type="button"
           className=" bg-[#e61f26] py-2.5 px-5 text-white"
