@@ -37,7 +37,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <HeaderV3 />
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -57,7 +57,7 @@ const App = () => {
         />
       </Routes>
       <ToastContainer position="bottom-right" />
-    </>
+    </div>
   );
 };
 
