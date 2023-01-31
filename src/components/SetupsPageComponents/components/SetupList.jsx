@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetcCardsSetop } from "../../../redux/features/dataSlice";
 import { accessUrl } from "../../../utils/axios";
@@ -18,15 +19,16 @@ export const SetupList = () => {
   }
 
   return (
-    <ul className="flex flex-wrap">
+    <div class="grid grid-cols-4 gap-8">
       {cardsSetup.map((card) => (
-        <SetupCard
-          key={card._id}
-          name={card.name}
-          price={card.price}
-          imgSrc={`${accessUrl}${card.imgFile}`}
-        />
+        <Link key={card._id} to={card._id}>
+          <SetupCard
+            name={card.name}
+            price={card.price}
+            imgSrc={`${accessUrl}${card.imgFile}`}
+          />
+        </Link>
       ))}
-    </ul>
+    </div>
   );
 };
