@@ -148,6 +148,7 @@ const RowsTable = ({ item }) => {
                 track={track}
                 item={item}
                 hiddenClass={hiddenClass}
+                fullName={item.user.fullName}
                 price={price}
             />
             <DropDownUpdate

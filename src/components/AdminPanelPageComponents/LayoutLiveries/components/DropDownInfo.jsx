@@ -41,27 +41,14 @@ const DropDownInfo = ({ car, price, track, fullName, communications, item, hidde
               </div>
             </div>
             <div className="border-b py-2">
-              <h2 className="font-bold text-2xl mb-1">Информация по тренировке</h2>
-              <div>
-                Тренер: <span className="font-light">{item.executor}</span>
-              </div>
+              <h2 className="font-bold text-2xl mb-1">Общая информация</h2>
+
               <div>
                 Машина: <span className="font-light">{car}</span>
               </div>
-              <div>
-                Трасса: <span className="font-light">{track}</span>
-              </div>
-              <div>
-                Опыт: <span className="font-light">{item.experience}</span>
-              </div>
+
               <div>
                 Коментарий: <span className="font-light">{item.coment}</span>
-              </div>
-              <div>
-                Кол-во: <span className="font-light">{item.quantityTrining} шт</span>
-              </div>
-              <div>
-                Промокод: <span className="font-light">{item.promocode}</span>
               </div>
             </div>
           </div>
