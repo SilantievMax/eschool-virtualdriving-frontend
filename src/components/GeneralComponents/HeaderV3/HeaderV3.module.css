@@ -37,7 +37,8 @@
   cursor: pointer;
   color: #fff;
   font-size: 14px;
-  font-family: "Gilroy-Semibold";
+  font-family: "Gilroy";
+  font-weight: 600;
   line-height: 17px;
   background-color: #17181c;
   padding: 10px 18px;
@@ -57,7 +58,8 @@
 }
 
 .navBottom_link {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
+  font-weight: 700;
   font-size: 16px;
   line-height: 137.99%;
   color: #17181c;
@@ -75,8 +77,8 @@
 }
 
 .nav_img {
-  opacity: 0.6; 
-  transition: opacity .5s;
+  opacity: 0.6;
+  transition: opacity 0.5s;
 }
 
 .nav_img:hover {

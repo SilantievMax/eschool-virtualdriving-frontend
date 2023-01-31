@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Gilroy', 'sans-serif'],
+      header: ['Bebas Neue Cyrillic', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [],

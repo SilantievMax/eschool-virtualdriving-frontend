@@ -39,7 +39,8 @@
 }
 
 .description_card {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
+  font-weight: 500;
   font-size: 14px;
   line-height: 137.99%;
   color: #17181c;
@@ -49,7 +50,8 @@
 
 .btn {
   display: inline-block;
-  font-family: "Gilroy-Semibold";
+  font-family: "Gilroy";
+  font-weight: 600;
   font-size: 14px;
   line-height: 17px;
   color: #f2f2f2;
