@@ -8,7 +8,11 @@ module.exports = {
       sans: ['Gilroy', 'sans-serif'],
       header: ['Bebas Neue Cyrillic', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      colors: {
+        brand: '#e61f26'
+      },
+    },
   },
   plugins: [],
 }

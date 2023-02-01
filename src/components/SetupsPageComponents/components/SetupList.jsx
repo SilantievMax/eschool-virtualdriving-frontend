@@ -19,16 +19,19 @@ export const SetupList = () => {
   }
 
   return (
-    <div class="grid grid-cols-4 gap-8">
-      {cardsSetup.map((card) => (
-        <Link key={card._id} to={card._id}>
-          <SetupCard
-            name={card.name}
-            price={card.price}
-            imgSrc={`${accessUrl}${card.imgFile}`}
-          />
-        </Link>
-      ))}
-    </div>
+    <>
+      <h1 className="font-header text-6xl mb-10 mt-14">Сетапы</h1>
+      <div className="grid grid-cols-4 gap-8">
+        {cardsSetup.map((card) => (
+          <Link key={card._id} to={card._id}>
+            <SetupCard
+              name={card.name}
+              price={card.price}
+              imgSrc={`${accessUrl}${card.imgFile}`}
+            />
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
