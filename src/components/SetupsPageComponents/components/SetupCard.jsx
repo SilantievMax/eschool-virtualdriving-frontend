@@ -22,7 +22,7 @@ export const SetupCard = ({ name, price, imgSrc, onSubmit }) => {
           className=" bg-brand py-2.5 px-5 text-white"
           onClick={onSubmit}
         >
-          купить
+          заказать
         </button>
       </div>
     </div>
