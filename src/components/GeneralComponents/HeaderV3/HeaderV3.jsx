@@ -34,7 +34,7 @@ const HeaderV3 = () => {
               <NavLink to={"/"} className={styles.navTop_link}>
                 VDES портал
               </NavLink> */}
-              <a href="http://virtualdriving.ru" target="_blank" className={styles.navTop_link}>
+              <a href="https://virtualdriving.ru/shop" target="_blank" className={styles.navTop_link}>
                 VDES магазин
               </a>
               {!isAuth ? (
