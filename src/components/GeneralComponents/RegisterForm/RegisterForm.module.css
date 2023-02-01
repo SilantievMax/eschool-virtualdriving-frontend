@@ -32,16 +32,16 @@
   color: #b6b6b6;
 }
 
-.register__btn {
-    background: #FF2121;
-    border-radius: 6px;
-    border: none;
-    padding: 12px 31px;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
-    cursor: pointer;  
-    margin-top: 20px;     
+button.register__btn {
+  background: #ff2121;
+  border-radius: 6px;
+  border: none;
+  padding: 12px 31px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .register__login {
