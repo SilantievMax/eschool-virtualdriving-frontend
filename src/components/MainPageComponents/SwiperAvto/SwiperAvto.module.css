@@ -14,7 +14,11 @@
 
 .wrapper {
   background: rgb(235, 235, 243);
-  background: linear-gradient(108deg, rgba(235, 235, 243, 1) 46%, rgba(235, 235, 243, 0) 64%);
+  background: linear-gradient(
+    108deg,
+    rgba(235, 235, 243, 1) 46%,
+    rgba(235, 235, 243, 0) 64%
+  );
   padding-left: 48px;
   padding-top: 40px;
   height: calc(100% - 40px);
@@ -35,7 +39,7 @@
 }
 
 .description {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   font-size: 16px;
   line-height: 142%;
   color: #000000;

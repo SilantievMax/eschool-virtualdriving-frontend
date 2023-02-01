@@ -1,7 +1,8 @@
 .layout {
-    max-width: calc(1320px + 20px * 2);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  width: 100%;
+  max-width: calc(1320px + 20px * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }

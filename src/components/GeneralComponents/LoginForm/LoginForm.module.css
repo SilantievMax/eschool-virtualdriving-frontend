@@ -26,50 +26,50 @@
 }
 
 .login__input::placeholder {
-    font-weight: 700;
-    font-size: 18px; 
-    color: #B6B6B6;
+  font-weight: 700;
+  font-size: 18px;
+  color: #b6b6b6;
 }
 
 .login__forgot {
-    font-weight: 700;
-    font-size: 22px;
-    color: #3C4858;
-    margin-top: 25px;   
+  font-weight: 700;
+  font-size: 22px;
+  color: #3c4858;
+  margin-top: 25px;
 }
 
 .login__buttons {
-    display: flex;
-    width: 530px;
-    justify-content: space-between;
-    margin-top: 42px;
+  display: flex;
+  width: 530px;
+  justify-content: space-between;
+  margin-top: 42px;
 }
 
-.login__btn {
-    background: #FF2121;
-    border-radius: 6px;
-    border: none;
-    padding: 12px 31px;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
-    cursor: pointer;  
-    margin-top: 20px;
+button.login__btn {
+  background: #ff2121;
+  border-radius: 6px;
+  border: none;
+  padding: 12px 31px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .login__btn-discord {
-    cursor: not-allowed;
-    cursor: pointer;
-    width: 340px;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-image: url(../../../assets/svg/discordButton.svg);
+  cursor: not-allowed;
+  cursor: pointer;
+  width: 340px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/svg/discordButton.svg);
 }
 
 .login__register {
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 22px;
-    color: #3C4858;
-    margin-top: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 22px;
+  color: #3c4858;
+  margin-top: 20px;
 }

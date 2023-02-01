@@ -44,7 +44,8 @@
 }
 
 .name_instructor {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0.04em;
@@ -59,7 +60,7 @@
 
 .item_text {
   margin-top: 15px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   font-size: 16px;
   line-height: 142%;
   color: #17181c;
