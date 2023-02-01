@@ -8,6 +8,7 @@ import styles from "../../PersonalClassesPageComponents/OrderForm/OrderForm.modu
 export const SetupOrderModal = ({ onClose }) => {
   const { setup } = useSelector((state) => state.data);
   const [communications, setCommunications] = useState("");
+  const [coupon, setCoupon] = useState("");
   const [privacyPolicy, setPrivacyPolicy] = useState(true);
 
   const [error, setError] = useState("");
@@ -23,11 +24,13 @@ export const SetupOrderModal = ({ onClose }) => {
 
       await axios.post(`/orders/setup/${setup.id}`, {
         communications,
+        coupon,
       });
 
       setSuccess(true);
       setLoading(false);
       setCommunications("");
+      setCoupon("");
     } catch (error) {
       console.log(error);
       setSuccess(false);
@@ -63,10 +66,22 @@ export const SetupOrderModal = ({ onClose }) => {
               <input
                 className="w-full h-10 px-4 border-2"
                 type="text"
-                placeholder="Telegram, WhatsApp, Discord, VK"
+                placeholder="Телефон, Telegram, WhatsApp, Discord, VK"
                 value={communications}
                 onChange={(e) => setCommunications(e.target.value)}
                 required
+              />
+            </label>
+
+            <label className="block cursor-pointer mb-6">
+              <span className="block mb-2 text-gray-600 font-sans font-semibold text-sm uppercase">
+                Купон (если есть):
+              </span>
+              <input
+                className="w-full h-10 px-4 border-2"
+                type="text"
+                value={coupon}
+                onChange={(e) => setCoupon(e.target.value)}
               />
             </label>
 
