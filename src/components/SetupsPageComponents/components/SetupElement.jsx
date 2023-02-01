@@ -1,9 +1,17 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { accessUrl } from "../../../utils/axios";
 import { SetupTable } from "./SetupTable";
 import { formatPrice } from "./utils";
+import { selectIsAuth } from "../../../redux/features/authSlice";
+import AuthorizationModal from "../../GeneralComponents/AuthorizationModal/AuthorizationModal";
+import { SetupOrderModal } from "./SetupOrderModal";
 
 export const SetupElement = () => {
+  const isAuth = useSelector(selectIsAuth);
+  const [modalActive, setModalActive] = useState(false);
+  const [modalBuyActive, setModalBuyActive] = useState(false);
+
   const { setup, status } = useSelector((state) => state.data);
 
   if (status === "loading") {
@@ -32,12 +40,23 @@ export const SetupElement = () => {
             <div className="text-2xl font-sans font-semibold">
               {formatPrice(setup.price)}
             </div>
-            <button
-              type="button"
-              className="bg-brand py-2.5 px-10 text-lg text-white"
-            >
-              купить
-            </button>
+            {!isAuth ? (
+              <button
+                type="button"
+                className="bg-brand py-2.5 px-10 text-lg text-white"
+                onClick={() => setModalActive(true)}
+              >
+                войти и купить
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="bg-brand py-2.5 px-10 text-lg text-white"
+                onClick={() => setModalBuyActive(true)}
+              >
+                купить
+              </button>
+            )}
           </div>
         </div>
         <div className="flex-1 flex items-start">
@@ -129,6 +148,12 @@ export const SetupElement = () => {
           <p>{setup.description || "Описание отсутсвует"}</p>
         </div>
       </div>
+      {!isAuth && (
+        <AuthorizationModal active={modalActive} setActive={setModalActive} />
+      )}
+      {isAuth && modalBuyActive && (
+        <SetupOrderModal onClose={() => setModalBuyActive(false)} />
+      )}
     </>
   );
 };
