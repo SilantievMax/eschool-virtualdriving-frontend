@@ -18,7 +18,7 @@ export const SetupElementPage = () => {
   // TODO: bad layout
   return (
     <>
-      <div className="flex-grow">
+      <div className="flex-grow pt-14">
         <Layout>
           <SetupElement />
         </Layout>

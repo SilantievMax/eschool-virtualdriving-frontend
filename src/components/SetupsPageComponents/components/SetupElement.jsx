@@ -24,7 +24,7 @@ export const SetupElement = () => {
 
   return (
     <>
-      <h1 className="font-header text-6xl mb-10 mt-14">{setup.name}</h1>
+      <h1 className="font-header text-6xl mb-10">{setup.name}</h1>
 
       <div className="flex items-start mb-16">
         <div className="w-1/3 shrink-0 mr-8">

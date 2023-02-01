@@ -6,7 +6,7 @@ export const SetupListPage = () => {
   // TODO: bad layout
   return (
     <>
-      <div className="flex-grow">
+      <div className="flex-grow py-14">
         <Layout>
           <SetupList />
         </Layout>
