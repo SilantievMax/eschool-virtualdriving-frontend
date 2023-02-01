@@ -1,30 +1,33 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { formatPrice } from "./utils";
+import axios from "../../../utils/axios.js";
 import file from "../../../assets/files/Politica_confidence.pdf";
 import styles from "../../PersonalClassesPageComponents/OrderForm/OrderForm.module.css";
 
 export const SetupOrderModal = ({ onClose }) => {
   const { setup } = useSelector((state) => state.data);
+  const [communications, setCommunications] = useState("");
   const [privacyPolicy, setPrivacyPolicy] = useState(true);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
     try {
       setLoading(true);
       setError("");
 
-      await new Promise((resolve, reject) =>
-        setTimeout(() => {
-          resolve();
-        }, 2000)
-      );
+      await axios.post(`/orders/setup/${setup.id}`, {
+        communications,
+      });
 
       setSuccess(true);
       setLoading(false);
+      setCommunications("");
     } catch (error) {
       console.log(error);
       setSuccess(false);
@@ -34,10 +37,16 @@ export const SetupOrderModal = ({ onClose }) => {
   };
 
   return (
-    <div class="fixed top-0 left-0 w-full h-full bg-black/40 flex items-center justify-center">
-      <div class="rounded-lg p-8 w-full max-w-xl bg-gray-100">
+    <div
+      className="fixed top-0 left-0 w-full h-full bg-black/40 flex items-center justify-center"
+      onClick={() => (!loading ? onClose() : null)}
+    >
+      <div
+        className="rounded-lg p-8 w-full max-w-xl bg-gray-100"
+        onClick={(e) => e.stopPropagation()}
+      >
         {!success ? (
-          <>
+          <form onSubmit={onSubmit}>
             <h2 className="text-2xl font-bold font-sans mb-8">
               Вы хотите преобрести&nbsp;
               <span className="text-brand">{setup.name}</span>
@@ -46,6 +55,20 @@ export const SetupOrderModal = ({ onClose }) => {
             <div className="text-2xl font-sans font-semibold mb-8">
               Сумма к оплате: {formatPrice(setup.price)}
             </div>
+
+            <label className="block cursor-pointer mb-6">
+              <span className="block mb-2 text-gray-600 font-sans font-semibold text-sm uppercase">
+                Как с вами связаться<span className="text-red-600">*</span>:
+              </span>
+              <input
+                className="w-full h-10 px-4 border-2"
+                type="text"
+                placeholder="Telegram, WhatsApp, Discord, VK"
+                value={communications}
+                onChange={(e) => setCommunications(e.target.value)}
+                required
+              />
+            </label>
 
             <label className={`${styles.checkbox} block cursor-pointer mb-6`}>
               <input
@@ -65,10 +88,9 @@ export const SetupOrderModal = ({ onClose }) => {
 
             <div className="flex justify-between space-x-4">
               <button
-                type="button"
+                type="submit"
                 disabled={!privacyPolicy || loading}
                 className="inline-flex items-center bg-brand hover:bg-brand/80 py-2.5 px-10 text-lg text-white disabled:bg-gray-500 disabled:cursor-not-allowed transition-colors"
-                onClick={onSubmit}
               >
                 {loading && (
                   <svg
@@ -103,7 +125,7 @@ export const SetupOrderModal = ({ onClose }) => {
                 Отменить
               </button>
             </div>
-          </>
+          </form>
         ) : (
           <>
             <h2 className="text-2xl font-bold font-sans mb-8">
@@ -121,7 +143,7 @@ export const SetupOrderModal = ({ onClose }) => {
             </button>
           </>
         )}
-        {error && <div class="text-red-600 mt-4">{error}</div>}
+        {error && <div className="text-red-600 mt-4">{error}</div>}
       </div>
     </div>
   );
