@@ -220,7 +220,7 @@ const OrderForm = () => {
               placeholder="Педали, рулевая база, баранка, кокпит..."
             />
           </label>
-          <label required className={styles.label}>
+          {/* <label required className={styles.label}>
             Промокод:
             <input
               className={styles.input}
@@ -231,7 +231,7 @@ const OrderForm = () => {
                 onchangePrice(e.target.value);
               }}
             />
-          </label>
+          </label> */}
           <label className={styles.checkbox}>
             <input className={styles.checkbox__input} defaultChecked={privacyPolicy} type="checkbox" onChange={() => setPrivacyPolicy(!privacyPolicy)} />
             <span>
