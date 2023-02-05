@@ -1,6 +1,6 @@
 import React from "react";
-import { AdminNavigation } from "./components/AdminNavigation";
-import UserProfile from "./components/UserProfile";
+import UserProfile from "components/AdminPanelPageComponents/AdminAside/components/UserProfile"
+import AdminNavigation from "components/AdminPanelPageComponents/AdminAside/components/AdminNavigation"
 
 const AdminAside = () => {
     return (

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./InfoAboutUser.module.css"
-import img1 from "../../../../assets/images/photoUser1.webp"
-import img2 from "../../../../assets/images/photoUser2.webp"
-import img3 from "../../../../assets/images/photoUser3.webp"
-import img4 from "../../../../assets/images/photoUser4.webp"
+import img1 from "assets/images/photoUser1.webp"
+import img2 from "assets/images/photoUser2.webp"
+import img3 from "assets/images/photoUser3.webp"
+import img4 from "assets/images/photoUser4.webp"
 
 const InfoAboutUser = () => {
     return (

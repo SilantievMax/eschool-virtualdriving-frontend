@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { fetcCars, fetcTracks } from "../../../redux/features/dataSlice.js";
-import img1 from "../../../assets/images/order1.webp";
-import axios from "../../../utils/axios.js";
+import { fetcCars, fetcTracks } from "redux/features/dataSlice.js";
+import img1 from "assets/images/order1.webp";
+import axios from "utils/axios.js";
+import { selectIsAuth } from "redux/features/authSlice.js";
+import file from "assets/files/Politica_confidence.pdf";
 import styles from "./OrderForm.module.css";
-import { selectIsAuth } from "../../../redux/features/authSlice.js";
-import file from "../../../assets/files/Politica_confidence.pdf";
 
 const OrderForm = () => {
   const promocodeNew = "FOTONVDESFEB";

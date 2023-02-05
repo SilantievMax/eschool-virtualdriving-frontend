@@ -1,5 +1,5 @@
 import React from "react";
-import OrderButton from "../../GeneralComponents/Buttons/OrderButton/OrderButton";
+import OrderButton from "components/GeneralComponents/Buttons/OrderButton/OrderButton"
 import styles from "./BannerPersonalClasses.module.css";
 
 const BannerPersonalClasses = () => {

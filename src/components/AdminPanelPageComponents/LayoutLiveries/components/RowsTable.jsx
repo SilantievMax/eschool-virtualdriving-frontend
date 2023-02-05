@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import DropDownInfo from "./DropDownInfo";
-import axios from "../../../../utils/axios.js";
+import axios from "utils/axios.js";
 import { useSelector } from "react-redux";
-import DropDownUpdate from "./DropDownUpdate";
+import DropDownUpdate from "components/AdminPanelPageComponents/LayoutLiveries/components/DropDownUpdate"
+import DropDownInfo from "components/AdminPanelPageComponents/LayoutLiveries/components/DropDownInfo";
 
 const RowsTable = ({ item }) => {
   const [status, setStatus] = useState(item.status);

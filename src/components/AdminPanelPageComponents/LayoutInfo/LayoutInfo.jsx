@@ -1,11 +1,11 @@
 import React from "react";
-import CardCar from "./components/CardCar/CardCar";
-import CardTrack from "./components/CardTrack/CardTrack";
+import CardCa from "components/AdminPanelPageComponents/LayoutInfo/components/CardCar/CardCar";
+import CardTrack from "components/AdminPanelPageComponents/LayoutInfo/components/CardTrack/CardTrack"
 
 const LayoutInfo = () => {
     return (
         <div className="flex">
-            <CardCar />
+            <CardCa />
             <CardTrack />
         </div>
     );

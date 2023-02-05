@@ -1,8 +1,8 @@
 import React from "react";
-import svg1 from '../../../assets/svg/play.svg';
-import svg2 from '../../../assets/svg/magnifier.svg';
-import svg3 from '../../../assets/svg/pen.svg';
-import image1 from '../../../assets/images/services1.webp';
+import svg1 from 'assets/svg/play.svg';
+import svg2 from 'assets/svg/magnifier.svg';
+import svg3 from 'assets/svg/pen.svg';
+import image1 from 'assets/images/services1.webp';
 import styles from './InfoAboutClasses.module.css';
 
 const InfoAboutClasses = () => {

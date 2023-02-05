@@ -1,6 +1,6 @@
-import { SetupList } from "../../components/SetupsPageComponents/components/SetupList";
-import Layout from "../../components/GeneralComponents/Layout/Layout";
-import Footer from "../../components/GeneralComponents/Footer/Footer";
+import Footer from "components/GeneralComponents/Footer/Footer";
+import Layout from "components/GeneralComponents/Layout/Layout";
+import { SetupList } from "components/SetupsPageComponents/components/SetupList";
 
 export const SetupListPage = () => {
   // TODO: bad layout

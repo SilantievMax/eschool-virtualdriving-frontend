@@ -1,4 +1,4 @@
-import axios from "../../../../../utils/axios.js";
+import axios from "utils/axios.js";
 import React, { useState, useRef } from "react";
 import { toast } from "react-toastify";
 
@@ -57,16 +57,9 @@ const FileUpload = () => {
   return (
     <div>
       <p>Название</p>
-      <input
-        onChange={(e) => setName(e.target.value)}
-        type="text"
-        value={name}
-      />
+      <input onChange={(e) => setName(e.target.value)} type="text" value={name} />
       <p>Описание</p>
-      <textarea
-        onChange={(e) => setDescription(e.target.value)}
-        value={description}
-      ></textarea>
+      <textarea onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
       <p>JSON для треков</p>
       <input ref={tracksDataRef} type="file" />
       <p>файл .rar</p>
@@ -76,12 +69,7 @@ const FileUpload = () => {
       <p>Изображение авто с характеристиками</p>
       <input ref={imgCarRef} type="file" />
       <p>Цена</p>
-      <input
-        onChange={(e) => setPrice(e.target.value)}
-        value={price}
-        className="border"
-        type="number"
-      />
+      <input onChange={(e) => setPrice(e.target.value)} value={price} className="border" type="number" />
       <button onClick={onSubmit}>Добавить</button>
     </div>
   );

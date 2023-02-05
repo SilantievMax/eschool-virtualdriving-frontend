@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcOrdersSetup } from "../../../redux/features/ordersSetupSlice";
-import Table from "./components/Table";
+import { fetcOrdersSetup } from "redux/features/ordersSetupSlice";
+// import Table from "./components/Table";
+import Table from "components/AdminPanelPageComponents/LayoutSetup/components/Table"
 
 const LayoutSetup = () => {
     const dispatch = useDispatch();

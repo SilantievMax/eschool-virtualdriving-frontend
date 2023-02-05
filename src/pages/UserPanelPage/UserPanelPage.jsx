@@ -1,10 +1,10 @@
+import AdminAside from "components/AdminPanelPageComponents/AdminAside/AdminAside";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import AdminAside from "../../components/AdminPanelPageComponents/AdminAside/AdminAside";
 import {
     fetcOrdersSetupUers,
     fetcOrdersTrainingUers,
-} from "../../redux/features/ordersUserSlice";
+} from "redux/features/ordersUserSlice";
 
 const UserPanelPage = () => {
     const dispatch = useDispatch();

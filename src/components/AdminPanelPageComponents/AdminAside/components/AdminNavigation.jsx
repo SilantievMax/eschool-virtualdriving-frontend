@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "../../../../redux/features/authSlice";
+import { logout } from "redux/features/authSlice";
 import { useState } from "react";
 
-export const AdminNavigation = () => {
+const AdminNavigation = () => {
     const [active, setActive] = useState(true);
     const dispatch = useDispatch();
 
@@ -192,3 +192,5 @@ export const AdminNavigation = () => {
         </>
     );
 };
+
+export default AdminNavigation;

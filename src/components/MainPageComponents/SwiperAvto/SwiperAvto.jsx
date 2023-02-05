@@ -1,11 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
-import DetailedButton from "../../GeneralComponents/Buttons/DetailedButton/DetailedButton";
-import slider1 from "../../../assets/images/slider1.webp";
-import slider2 from "../../../assets/images/slider2.webp";
-import slider3 from "../../../assets/images/slider3.webp";
-import slider4 from "../../../assets/images/slider4.webp";
+import slider1 from "assets/images/slider1.webp";
+import slider2 from "assets/images/slider2.webp";
+import slider3 from "assets/images/slider3.webp";
+import slider4 from "assets/images/slider4.webp";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";

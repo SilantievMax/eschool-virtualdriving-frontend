@@ -1,7 +1,7 @@
 import React from "react";
-import BtnForInfoCoaches from "./BtnForInfoCoaches/BtnForInfoCoaches";
-import FeedbackAboutCoaches from "./FeedbackAboutCoaches/FeedbackAboutCoaches";
-import InfoAboutUser from "./InfoAboutUser/InfoAboutUser";
+import InfoAboutUser from "components/PersonalClassesPageComponents/InfoAboutCoaches/InfoAboutUser/InfoAboutUser";
+import BtnForInfoCoaches from "components/PersonalClassesPageComponents/InfoAboutCoaches/BtnForInfoCoaches/BtnForInfoCoaches";
+import FeedbackAboutCoaches from "components/PersonalClassesPageComponents/InfoAboutCoaches/FeedbackAboutCoaches/FeedbackAboutCoaches";
 import styles from './InfoAboutCoaches.module.css'
 
 const InfoAboutCoaches = () => {

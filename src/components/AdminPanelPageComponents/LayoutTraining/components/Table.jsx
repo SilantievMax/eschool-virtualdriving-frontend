@@ -1,5 +1,5 @@
 import React from "react";
-import RowsTable from "./RowsTable";
+import RowsTable from "components/AdminPanelPageComponents/LayoutTraining/components/RowsTable"
 
 const Table = ({ orders }) => {
     const items = orders.items;

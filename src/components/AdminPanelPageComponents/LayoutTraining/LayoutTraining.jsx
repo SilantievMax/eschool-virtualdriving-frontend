@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcOrdersTraining } from "../../../redux/features/ordersTrainingSlice";
+import { fetcOrdersTraining } from "redux/features/ordersTrainingSlice";
 import Table from "./components/Table";
 
 const AdminLayoutTraining = () => {

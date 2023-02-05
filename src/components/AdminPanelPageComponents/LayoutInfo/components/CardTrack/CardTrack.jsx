@@ -4,7 +4,7 @@ import {
     fetchGetTrack,
     fetchTrack,
     fetchTrackDelete,
-} from "../../../../../redux/features/infoSlice";
+} from "redux/features/infoSlice";
 
 const CardTrack = () => {
     const dispatch = useDispatch();

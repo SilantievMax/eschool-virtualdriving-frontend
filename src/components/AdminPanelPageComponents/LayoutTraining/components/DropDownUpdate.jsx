@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { fetcCars, fetcTracks } from "../../../../redux/features/dataSlice";
-import { fetcOrdersTraining } from "../../../../redux/features/ordersTrainingSlice";
-import axios from "../../../../utils/axios.js";
+import { fetcCars, fetcTracks } from "redux/features/dataSlice";
+import { fetcOrdersTraining } from "redux/features/ordersTrainingSlice";
+import axios from "utils/axios.js";
 
 const arrStatus = ["В обработке", "Оплачен", "Ждет оценки", "Заявка закрыта"];
 

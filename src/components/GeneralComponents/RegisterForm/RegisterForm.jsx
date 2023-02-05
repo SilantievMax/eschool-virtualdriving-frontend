@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Navigate } from "react-router-dom";
-import { fetchRegister, selectIsAuth } from "../../../redux/features/authSlice";
+import { fetchRegister, selectIsAuth } from "redux/features/authSlice";
 import styles from "./RegisterForm.module.css";
 
 const RegisterForm = ({modal}) => {

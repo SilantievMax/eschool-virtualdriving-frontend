@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteFile, fetcFile } from "../../../../../redux/features/fileSlice";
-import { accessUrl } from "../../../../../utils/axios";
-import FileUpload from "../FileUpload/FileUpload";
+import { deleteFile, fetcFile } from "redux/features/fileSlice";
+import { accessUrl } from "utils/axios";
 
 const File = () => {
     const dispatch = useDispatch();

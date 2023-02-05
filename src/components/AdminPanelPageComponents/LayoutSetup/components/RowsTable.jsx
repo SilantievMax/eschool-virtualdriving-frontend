@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DropDownInfo from "./DropDownInfo";
-import axios from "../../../../utils/axios.js";
+import DropDownInfo from "components/AdminPanelPageComponents/LayoutSetup/components/DropDownInfo"
+import axios from "utils/axios.js";
 import { useSelector } from "react-redux";
 
 const RowsTable = ({

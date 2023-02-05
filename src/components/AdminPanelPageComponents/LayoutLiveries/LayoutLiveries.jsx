@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcOrdersLiveries } from "../../../redux/features/ordersLiveriesSlice";
-import Table from "../LayoutLiveries/components/Table";
+import { fetcOrdersLiveries } from "redux/features/ordersLiveriesSlice";
+// import Table from "../LayoutLiveries/components/Table";
+import Table from "components/AdminPanelPageComponents/LayoutLiveries/components/Table"
 
 const LayoutLiveries = () => {
   const dispatch = useDispatch();

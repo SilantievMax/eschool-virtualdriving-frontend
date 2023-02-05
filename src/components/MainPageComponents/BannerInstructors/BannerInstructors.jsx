@@ -1,12 +1,12 @@
 import React from "react";
-import photoUser1 from "../../../assets/images/photoUser1.webp";
-import photoUser2 from "../../../assets/images/photoUser2.webp";
-import photoUser3 from "../../../assets/images/photoUser3.webp";
-import photoUser4 from "../../../assets/images/photoUser4.webp";
-import Logo1 from "../../../assets/images/bg-logo1.png";
-import Logo2 from "../../../assets/images/bg-logo2.png";
-import Logo3 from "../../../assets/images/bg-logo3.png";
-import Layout from "../../GeneralComponents/Layout/Layout";
+import photoUser1 from "assets/images/photoUser1.webp";
+import photoUser2 from "assets/images/photoUser2.webp";
+import photoUser3 from "assets/images/photoUser3.webp";
+import photoUser4 from "assets/images/photoUser4.webp";
+import Logo1 from "assets/images/bg-logo1.png";
+import Logo2 from "assets/images/bg-logo2.png";
+import Logo3 from "assets/images/bg-logo3.png";
+import Layout from "components/GeneralComponents/Layout/Layout"
 import styles from "./BannerInstructors.module.css";
 
 const BannerInstructors = () => {

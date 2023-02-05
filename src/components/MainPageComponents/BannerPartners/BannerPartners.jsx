@@ -1,7 +1,7 @@
 import React from "react";
-import partners1 from "../../../assets/images/partners1.webp";
-import partners2 from "../../../assets/images/partners2.webp";
-import Layout from "../../GeneralComponents/Layout/Layout";
+import partners1 from "assets/images/partners1.webp";
+import partners2 from "assets/images/partners2.webp";
+import Layout from "components/GeneralComponents/Layout/Layout"
 import styles from "./BannerPartners.module.css";
 
 const BannerPartners = () => {

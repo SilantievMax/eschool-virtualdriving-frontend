@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { fetchLogin, selectIsAuth } from "../../../redux/features/authSlice";
+import { fetchLogin, selectIsAuth } from "redux/features/authSlice";
 import styles from "./LoginForm.module.css";
 import { toast } from "react-toastify";
 

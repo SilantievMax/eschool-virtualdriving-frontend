@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/svg/logo.svg";
+import logo from "assets/svg/logo.svg";
 import { useSelector } from "react-redux";
-import { selectIsAuth } from "../../../redux/features/authSlice";
+import { selectIsAuth } from "redux/features/authSlice";
 import styles from "./Header.module.css";
 
 const Header = () => {

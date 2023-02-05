@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import LoginForm from "../LoginForm/LoginForm.jsx";
-import RegisterForm from "../RegisterForm/RegisterForm.jsx";
+import LoginForm from "components/GeneralComponents/LoginForm/LoginForm";
+import RegisterForm from "components/GeneralComponents/RegisterForm/RegisterForm";
 import styles from "./AuthorizationModal.module.css";
 
 const AuthorizationModal = ({ active, setActive }) => {

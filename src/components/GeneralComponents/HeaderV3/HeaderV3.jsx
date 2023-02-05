@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../assets/svg/logo.svg";
-import { selectIsAuth } from "../../../redux/features/authSlice";
-import AuthorizationModal from "../AuthorizationModal/AuthorizationModal";
-import vk from "../../../assets/svg/vk.svg";
-import discord from "../../../assets/svg/discord.svg";
-import Layout from "../Layout/Layout";
+import logo from "assets/svg/logo.svg";
+import { selectIsAuth } from "redux/features/authSlice";
+import Layout from "components/GeneralComponents/Layout/Layout";
+import AuthorizationModal from "components/GeneralComponents/AuthorizationModal/AuthorizationModal"
+import vk from "assets/svg/vk.svg";
+import discord from "assets/svg/discord.svg";
 import styles from "./HeaderV3.module.css";
 
 const HeaderV3 = () => {

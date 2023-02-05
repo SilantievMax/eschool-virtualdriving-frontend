@@ -4,7 +4,7 @@ import {
     fetchGetCar,
     fetchCar,
     fetchCarDelete,
-} from "../../../../../redux/features/infoSlice";
+} from "redux/features/infoSlice";
 
 const CardCar = () => {
     const dispatch = useDispatch();
