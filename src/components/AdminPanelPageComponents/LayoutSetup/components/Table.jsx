@@ -1,9 +1,9 @@
 import React from "react";
-import RowsTable from "components/AdminPanelPageComponents/LayoutSetup/components/RowsTable"
+import RowsTable from "components/AdminPanelPageComponents/LayoutSetup/components/RowsTable";
 
 const Table = ({ orders }) => {
   const items = orders.items;
-
+console.log(items)
   return (
     <table className="table-fixed w-full">
       <thead className="border-b-4 border-gray-500">
@@ -21,6 +21,7 @@ const Table = ({ orders }) => {
         {items.map((item) => (
           <RowsTable
             key={item._id}
+            refPartner={item.user.refPartner}
             id={item._id}
             orderNumber={item.orderNumber}
             orderDate={item.orderDate}

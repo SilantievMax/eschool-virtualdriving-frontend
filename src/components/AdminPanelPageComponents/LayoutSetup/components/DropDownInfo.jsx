@@ -6,6 +6,7 @@ const DropDownInfo = ({
   communications,
   price,
   track,
+  refPartner,
   experience,
   equipment,
   executor,
@@ -92,6 +93,9 @@ const DropDownInfo = ({
               </div>
               <div>
                 Купон: <span className="font-light">{coupon}</span>
+              </div>
+              <div>
+                Партнер: <span className="font-light">{refPartner ? refPartner.namePartner : '--'}</span>
               </div>
               <div className="absolute bottom-0 right-0">
                 <span className="ml-3 text-4xl">{price}₽</span>

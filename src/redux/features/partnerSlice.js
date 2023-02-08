@@ -11,6 +11,11 @@ export const generalURLpartner = createAsyncThunk("partner/generalURLpartner", a
   return data;
 });
 
+export const getOnePartner = createAsyncThunk("", async (params) => {
+  const { data } = await axios.get(`/partner/${params}`);
+  return data;
+});
+
 const initialState = {
   partnerInfo: [],
   linkPartner: "",

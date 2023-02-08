@@ -9,6 +9,7 @@ const RowsTable = ({
   car,
   coment,
   communications,
+  refPartner,
   createdAt,
   views,
   mark,
@@ -143,6 +144,7 @@ const RowsTable = ({
       </tr>
       <DropDownInfo
         car={car}
+        refPartner={refPartner}
         coment={coment}
         communications={communications}
         price={price}
