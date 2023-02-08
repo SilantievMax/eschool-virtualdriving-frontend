@@ -5,7 +5,7 @@ import AdminNavigation from "components/AdminPanelPageComponents/AdminAside/comp
 const AdminAside = () => {
     return (
         <>
-            <aside className="fixed w-56 h-screen font-sans bg-slate-50 border-r">
+            <aside className="fixed w-56 h-screen font-sans bg-slate-50 border-r mt-36">
                 <UserProfile />
                 <AdminNavigation />
             </aside>

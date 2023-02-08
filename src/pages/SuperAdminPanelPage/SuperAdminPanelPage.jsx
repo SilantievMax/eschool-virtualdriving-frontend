@@ -10,6 +10,7 @@ import LayoutUsers from "components/AdminPanelPageComponents/LayoutUsers/LayoutU
 import LayoutFiles from "components/AdminPanelPageComponents/LayoutFiles/LayoutFiles";
 import LayoutInfo from "components/AdminPanelPageComponents/LayoutInfo/LayoutInfo";
 import LayoutStatistics from "components/AdminPanelPageComponents/LayoutStatistics/LayoutStatistics"
+import LayoutPartner from "components/AdminPanelPageComponents/LayoutPartner/LayoutPartner";
 
 const SuperAdminPanelPage = () => {
     const isAuth = useSelector(selectIsAuth);
@@ -27,6 +28,7 @@ const SuperAdminPanelPage = () => {
                     <Route path="training" element={<AdminLayoutTraining />} />
                     <Route path="setup" element={<LayoutSetup />} />
                     <Route path="liveries" element={<LayoutLiveries />} />
+                    <Route path="partner" element={<LayoutPartner />} />
                     <Route path="users" element={<LayoutUsers />} />
                     <Route path="files" element={<LayoutFiles />} />
                     <Route path="info" element={<LayoutInfo />} />

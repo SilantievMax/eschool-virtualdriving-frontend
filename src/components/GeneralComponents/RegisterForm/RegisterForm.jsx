@@ -6,9 +6,12 @@ import { Navigate } from "react-router-dom";
 import { fetchRegister, selectIsAuth } from "redux/features/authSlice";
 import styles from "./RegisterForm.module.css";
 
-const RegisterForm = ({modal}) => {
+const RegisterForm = ({ modal }) => {
   const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
+
+  const refPartnerLink = window.localStorage.getItem("refPartner");
+
   const {
     register,
     handleSubmit,
@@ -19,6 +22,7 @@ const RegisterForm = ({modal}) => {
       fullName: "",
       email: "",
       password: "",
+      refPartner: refPartnerLink,
     },
     mode: "onChange",
   });
@@ -45,7 +49,13 @@ const RegisterForm = ({modal}) => {
           })}
         />
         <input type="text" autocomplete="off" className={styles.register__input} placeholder="E-mail*" {...register("email", { required: "Укажите email" })} />
-        <input type="password" autocomplete="off" className={styles.register__input} placeholder="Пароль" {...register("password", { required: "Укажите пароль" })} />
+        <input
+          type="password"
+          autocomplete="off"
+          className={styles.register__input}
+          placeholder="Пароль"
+          {...register("password", { required: "Укажите пароль" })}
+        />
         {/* <input type="password" autocomplete="off" className={styles.register__input" placeholder='Повторите пароль'/> */}
         <button type="submit" className={styles.register__btn}>
           Зарегистрироваться
