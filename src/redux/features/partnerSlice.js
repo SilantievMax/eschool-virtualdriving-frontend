@@ -1,13 +1,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "utils/axios";
 
-export const fetcPartner = createAsyncThunk("partner/fetcPartner", async () => {
+export const fetchGetPartner = createAsyncThunk("partner/fetcPartner", async () => {
   const { data } = await axios.get("/partner");
   return data;
 });
 
 export const generalURLpartner = createAsyncThunk("partner/generalURLpartner", async (params) => {
   const { data } = await axios.get(`/partner/url/${params}`);
+  return data;
+});
+
+export const fetchPartner = createAsyncThunk("auth/fetchPartner", async (params) => {
+  const { data } = await axios.post("/partner", params);
   return data;
 });
 
@@ -27,15 +32,15 @@ const partnerSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [fetcPartner.pending]: (state) => {
+    [fetchGetPartner.pending]: (state) => {
       state.partnerInfo = [];
       state.status = "loading";
     },
-    [fetcPartner.fulfilled]: (state, action) => {
+    [fetchGetPartner.fulfilled]: (state, action) => {
       state.partnerInfo = action.payload;
       state.status = "loaded";
     },
-    [fetcPartner.rejected]: (state) => {
+    [fetchGetPartner.rejected]: (state) => {
       state.partnerInfo = [];
       state.status = "error";
     },

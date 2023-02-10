@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetcPartner, generalURLpartner } from "redux/features/partnerSlice";
+import { fetchGetPartner, generalURLpartner } from "redux/features/partnerSlice";
 import { accessUrl } from "utils/axios";
 
 const Partners = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetcPartner());
+    dispatch(fetchGetPartner());
   }, []);
 
   const onSubmitGetLinkspartner = (id) => {
