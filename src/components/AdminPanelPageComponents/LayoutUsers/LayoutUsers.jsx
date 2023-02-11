@@ -1,9 +1,7 @@
 import React from 'react'
 
 const LayoutUsers = () => {
-  return (
-    <div>LayoutUsers</div>
-  )
+	return <div>LayoutUsers</div>
 }
 
 export default LayoutUsers

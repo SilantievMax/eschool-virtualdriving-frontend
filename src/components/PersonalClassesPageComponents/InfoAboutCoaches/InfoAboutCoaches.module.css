@@ -1,14 +1,14 @@
 .section {
-    background-color: #E7EBF5;
-    padding-top: 68px;
-    padding-bottom: 68px;
-    padding-left: 147px;
-    padding-right: 147px;
-    margin-top: 110px;
+	background-color: #e7ebf5;
+	padding-top: 68px;
+	padding-bottom: 68px;
+	padding-left: 147px;
+	padding-right: 147px;
+	margin-top: 110px;
 }
 
 .heading {
-    font-weight: 500;
-    font-size: 30px;
-    color: #333333;   
+	font-weight: 500;
+	font-size: 30px;
+	color: #333333;
 }

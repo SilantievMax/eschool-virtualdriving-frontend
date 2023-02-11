@@ -1,55 +1,55 @@
 .swiper {
-  height: 338px;
-  position: relative;
-  margin-top: 23px;
-  margin-bottom: 16px;
+	height: 338px;
+	position: relative;
+	margin-top: 23px;
+	margin-bottom: 16px;
 }
 
 .slide {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right 0% top;
-  height: 338px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right 0% top;
+	height: 338px;
 }
 
 .wrapper {
-  background: rgb(235, 235, 243);
-  background: linear-gradient(
-    108deg,
-    rgba(235, 235, 243, 1) 46%,
-    rgba(235, 235, 243, 0) 64%
-  );
-  padding-left: 48px;
-  padding-top: 40px;
-  height: calc(100% - 40px);
-  max-width: 2500px;
-  margin-left: auto;
-  margin-right: auto;
+	background: rgb(235, 235, 243);
+	background: linear-gradient(
+		108deg,
+		rgba(235, 235, 243, 1) 46%,
+		rgba(235, 235, 243, 0) 64%
+	);
+	padding-left: 48px;
+	padding-top: 40px;
+	height: calc(100% - 40px);
+	max-width: 2500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .heading {
-  font-family: "Bebas Neue Cyrillic";
-  font-size: 60px;
-  line-height: 92%;
-  color: #15161b;
+	font-family: 'Bebas Neue Cyrillic';
+	font-size: 60px;
+	line-height: 92%;
+	color: #15161b;
 }
 
 .heading > span {
-  color: #e61f26;
+	color: #e61f26;
 }
 
 .description {
-  font-family: "Gilroy";
-  font-size: 16px;
-  line-height: 142%;
-  color: #000000;
-  opacity: 0.6;
-  max-width: 510px;
-  margin-top: 24px;
+	font-family: 'Gilroy';
+	font-size: 16px;
+	line-height: 142%;
+	color: #000000;
+	opacity: 0.6;
+	max-width: 510px;
+	margin-top: 24px;
 }
 
 @media (max-width: 1180px) {
-  .slide {
-    background-size: 1100px;
-  }
+	.slide {
+		background-size: 1100px;
+	}
 }

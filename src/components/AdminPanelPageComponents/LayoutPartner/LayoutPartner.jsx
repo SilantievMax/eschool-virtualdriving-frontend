@@ -1,14 +1,14 @@
-import React from "react";
-import Partners from "components/AdminPanelPageComponents/LayoutPartner/components/Partners";
-import PartnersForm from "components/AdminPanelPageComponents/LayoutPartner/components/PartnersForm";
+import Partners from 'components/AdminPanelPageComponents/LayoutPartner/components/Partners'
+import PartnersForm from 'components/AdminPanelPageComponents/LayoutPartner/components/PartnersForm'
+import React from 'react'
 
 const LayoutPartner = () => {
-  return (
-    <>
-      <PartnersForm />
-      <Partners />
-    </>
-  );
-};
+	return (
+		<>
+			<PartnersForm />
+			<Partners />
+		</>
+	)
+}
 
-export default LayoutPartner;
+export default LayoutPartner

@@ -1,16 +1,16 @@
 .about__container-text {
-    padding-left: 195px;
-    padding-top: 91px;
-    padding-right: 195px;
-    background-color: #fff;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+	padding-left: 195px;
+	padding-top: 91px;
+	padding-right: 195px;
+	background-color: #fff;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
 
 .about__description {
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 34px;
-    color: #7a7a7a;
-    padding-bottom: 57px;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 34px;
+	color: #7a7a7a;
+	padding-bottom: 57px;
 }

@@ -1,12 +1,13 @@
-import React from "react";
-import styles from "./Layout.module.css";
+import React from 'react'
+
+import styles from './Layout.module.css'
 
 const Layout = ({ children }) => {
-    return (
-        <>
-            <section className={styles.layout}>{children}</section>
-        </>
-    );
-};
+	return (
+		<>
+			<section className={styles.layout}>{children}</section>
+		</>
+	)
+}
 
-export default Layout;
+export default Layout

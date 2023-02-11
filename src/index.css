@@ -3,84 +3,84 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Bebas Neue Cyrillic"),
-    url("./assets/fonts/bebasneuecyrillic.woff2") format("woff2"),
-    url("./assets/fonts/bebasneuecyrillic.woff") format("woff");
+	font-family: 'Bebas Neue Cyrillic';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Bebas Neue Cyrillic'),
+		url('./assets/fonts/bebasneuecyrillic.woff2') format('woff2'),
+		url('./assets/fonts/bebasneuecyrillic.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Gilroy-Light"),
-    url("./assets/fonts/Gilroy-Light.woff2") format("woff2"),
-    url("./assets/fonts/Gilroy-Light.woff") format("woff");
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Gilroy-Light'),
+		url('./assets/fonts/Gilroy-Light.woff2') format('woff2'),
+		url('./assets/fonts/Gilroy-Light.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Regular"),
-    url("./assets/fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("./assets/fonts/Gilroy-Regular.woff") format("woff");
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Gilroy-Regular'),
+		url('./assets/fonts/Gilroy-Regular.woff2') format('woff2'),
+		url('./assets/fonts/Gilroy-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 500;
-  src: local("Gilroy-Medium"),
-    url("./assets/fonts/Gilroy-Medium.woff2") format("woff2"),
-    url("./assets/fonts/Gilroy-Medium.woff") format("woff");
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Gilroy-Medium'),
+		url('./assets/fonts/Gilroy-Medium.woff2') format('woff2'),
+		url('./assets/fonts/Gilroy-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Gilroy-Semibold"),
-    url("./assets/fonts/Gilroy-Semibold.woff2") format("woff2"),
-    url("./assets/fonts/Gilroy-Semibold.woff") format("woff");
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Gilroy-Semibold'),
+		url('./assets/fonts/Gilroy-Semibold.woff2') format('woff2'),
+		url('./assets/fonts/Gilroy-Semibold.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Gilroy-Bold"),
-    url("./assets/fonts/Gilroy-Bold.woff2") format("woff2"),
-    url("./assets/fonts/Gilroy-Bold.woff") format("woff");
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Gilroy-Bold'),
+		url('./assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+		url('./assets/fonts/Gilroy-Bold.woff') format('woff');
 }
 
 @font-face {
-  font-family: "GraphikLCG";
-  font-style: normal;
-  font-weight: 600;
-  src: local("GraphikLCG-Semibold"),
-    url("./assets/fonts/GraphikLCG-Semibold.woff2") format("woff2"),
-    url("./assets/fonts/GraphikLCG-Semibold.woff") format("woff");
+	font-family: 'GraphikLCG';
+	font-style: normal;
+	font-weight: 600;
+	src: local('GraphikLCG-Semibold'),
+		url('./assets/fonts/GraphikLCG-Semibold.woff2') format('woff2'),
+		url('./assets/fonts/GraphikLCG-Semibold.woff') format('woff');
 }
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 p,
@@ -89,12 +89,12 @@ h2,
 h3,
 h4,
 h5 {
-  margin-top: 0;
-  margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }

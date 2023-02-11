@@ -1,15 +1,15 @@
 .list {
-  background-color: #ebebf3;
-  height: 133px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 45px;
-  padding-bottom: 45px;
-  margin-top: 30px;
-  margin-bottom: 16px;
+	background-color: #ebebf3;
+	height: 133px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	margin-top: 30px;
+	margin-bottom: 16px;
 }
 
 .img {
-  width: 240px;
+	width: 240px;
 }
