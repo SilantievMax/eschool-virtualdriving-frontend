@@ -10,6 +10,19 @@ import { selectIsAuth } from 'redux/features/authSlice'
 
 import styles from './Header.module.css'
 
+const NavLinks = () => {
+  return (
+    <>
+      <a href='https://vk.com/virtualdriving' target='_blank'>
+        <img src={vk} alt='vk' className={styles.nav_img} />
+      </a>
+      <a href='https://discord.gg/tuQxX6F' target='_blank'>
+        <img src={discord} alt='discord' className={styles.nav_img} />
+      </a>
+    </>
+  )
+}
+
 const Header = () => {
   const isAuth = useSelector(selectIsAuth)
 
@@ -23,7 +36,7 @@ const Header = () => {
     <>
       <Layout>
         <header className={styles.header}>
-          <div className={styles.header_top}>
+          <div className={styles.header_top}> 
             <NavLink to={'/'} className={styles.logo_link}>
               <img src={logo} alt='logo' className={styles.logo} />
             </NavLink>
@@ -58,6 +71,9 @@ const Header = () => {
                   Личный кабинет
                 </NavLink>
               )}
+              <div className={styles.nav__linkInBurger}>
+                <NavLinks />
+              </div>
             </nav>
             <div onClick={toggleClassMenu} className={styles.burger}>
               <span></span>
@@ -104,12 +120,7 @@ const Header = () => {
               </NavLink>
             </nav>
             <div className={styles.nav__link}>
-              <a href='https://vk.com/virtualdriving' target='_blank'>
-                <img src={vk} alt='vk' className={styles.nav_img} />
-              </a>
-              <a href='https://discord.gg/tuQxX6F' target='_blank'>
-                <img src={discord} alt='discord' className={styles.nav_img} />
-              </a>
+              <NavLinks />
             </div>
           </div>
         </header>
