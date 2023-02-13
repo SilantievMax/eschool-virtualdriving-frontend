@@ -1,8 +1,4 @@
 .header {
-  /* position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; */
   z-index: 10;
   background-color: #ffffff;
 }
@@ -83,4 +79,50 @@
 
 .nav_img:hover {
   opacity: 1;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navBottom_link:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .navTop_link {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 875px) {
+  .logo {
+    max-width: 147px;
+  }
+
+  .navTop {
+    display: none;
+    /* visibility: hidden; */
+  }
+
+  .burger {
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .burger span {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    /* background-color: #c80000; */
+    background-color: #666;
+  }
+
+  .active {
+    display: block;
+  }
 }

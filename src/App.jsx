@@ -1,4 +1,4 @@
-import HeaderV3 from 'components/GeneralComponents/HeaderV3/HeaderV3'
+import Header from 'components/Generic/Header/Header'
 import 'normalize.css'
 import AboutPage from 'pages/AboutPage/AboutPage'
 import CoachesPage from 'pages/CoachesPage/CoachesPage'
@@ -45,8 +45,8 @@ const App = () => {
 
   return (
     <div className='flex flex-col min-h-screen'>
-      <HeaderV3 />
-      <Routes>
+      <Header />
+      {/* <Routes>
         <Route path='/' element={<MainPage />} />
         <Route
           path='services/personal-classes'
@@ -62,7 +62,7 @@ const App = () => {
           path='administrator/*'
           element={adminPanelRoleComponents(roleUser)}
         />
-      </Routes>
+      </Routes> */}
       <ToastContainer position='bottom-right' />
     </div>
   )

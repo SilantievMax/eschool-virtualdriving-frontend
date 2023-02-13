@@ -8,14 +8,16 @@ import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { selectIsAuth } from 'redux/features/authSlice'
 
-import styles from './HeaderV3.module.css'
+import styles from './Header.module.css'
 
-const HeaderV3 = () => {
+const Header = () => {
   const isAuth = useSelector(selectIsAuth)
 
   const [modalActive, setModalActive] = useState(false)
+  const [isActive, setActive] = useState(false)
   const color = { color: '#E61F26', opacity: 1 }
   const isActiveNav = ({ isActive }) => (isActive ? color : undefined)
+  const toggleClassMenu = () => setActive(!isActive)
 
   return (
     <>
@@ -25,16 +27,18 @@ const HeaderV3 = () => {
             <NavLink to={'/'} className={styles.logo_link}>
               <img src={logo} alt='logo' className={styles.logo} />
             </NavLink>
-            <nav className={styles.navTop}>
+            <nav
+              className={`${styles.navTop} ${isActive ? styles.active : ''}`}
+            >
               <NavLink to={'/'} className={styles.navTop_link} style={color}>
                 VDES академия
               </NavLink>
-              {/* <NavLink to={"/"} className={styles.navTop_link}>
+              <NavLink to={'/'} className={styles.navTop_link}>
                 VDES оборудование
               </NavLink>
-              <NavLink to={"/"} className={styles.navTop_link}>
+              <NavLink to={'/'} className={styles.navTop_link}>
                 VDES портал
-              </NavLink> */}
+              </NavLink>
               <a
                 href='https://virtualdriving.ru/shop'
                 target='_blank'
@@ -55,6 +59,11 @@ const HeaderV3 = () => {
                 </NavLink>
               )}
             </nav>
+            <div onClick={toggleClassMenu} className={styles.burger}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <div className={styles.header_bottom}>
             <nav className={styles.navBottom}>
@@ -79,12 +88,20 @@ const HeaderV3 = () => {
               >
                 Ливреи
               </NavLink>
-              {/* <NavLink to={"services/coaches"} className={styles.navBottom_link} style={isActiveNav}>
+              <NavLink
+                to={'services/coaches'}
+                className={styles.navBottom_link}
+                style={isActiveNav}
+              >
                 Тренеры
               </NavLink>
-              <NavLink to={"about"} className={styles.navBottom_link} style={isActiveNav}>
+              <NavLink
+                to={'about'}
+                className={styles.navBottom_link}
+                style={isActiveNav}
+              >
                 О нас
-              </NavLink> */}
+              </NavLink>
             </nav>
             <div className={styles.nav__link}>
               <a href='https://vk.com/virtualdriving' target='_blank'>
@@ -104,4 +121,4 @@ const HeaderV3 = () => {
   )
 }
 
-export default HeaderV3
+export default Header
