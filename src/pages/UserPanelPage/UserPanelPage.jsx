@@ -15,8 +15,6 @@ const UserPanelPage = () => {
   }, [])
 
   const { items1, items2 } = useSelector(state => state.ordersUser.orders)
-
-  console.log(items1)
   console.log(items2)
   return (
     <>
@@ -36,11 +34,11 @@ const UserPanelPage = () => {
         <ul>
           {items2 &&
             items2.map(item => (
-              <li className='border' key={item.file._id}>
-                <p>{item.file.orderNumber}</p>
-                <p>{item.file.orderName}</p>
-                <p>{item.file.orderDate}</p>
-                <p>{item.file.status}</p>
+              <li className='border' key={item._id}>
+                <p>{item.orderNumber}</p>
+                <p>{item.orderName}</p>
+                <p>{item.orderDate}</p>
+                <p>{item.status}</p>
                 <a href={item.accessLink}>
                   {item.accessLink ? item.accessLink : 'нет ссылки'}
                 </a>
