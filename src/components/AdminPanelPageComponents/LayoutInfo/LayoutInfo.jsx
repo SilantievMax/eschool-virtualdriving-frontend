@@ -3,12 +3,12 @@ import CardTrack from 'components/AdminPanelPageComponents/LayoutInfo/components
 import React from 'react'
 
 const LayoutInfo = () => {
-	return (
-		<div className='flex'>
-			<CardCa />
-			<CardTrack />
-		</div>
-	)
+  return (
+    <div className='flex'>
+      <CardCa />
+      <CardTrack />
+    </div>
+  )
 }
 
 export default LayoutInfo

@@ -1,75 +1,75 @@
 .list {
-	display: grid;
-	grid-template-columns: repeat(4, 354px);
-	justify-content: center;
-	gap: 35px;
-	margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(4, 354px);
+  justify-content: center;
+  gap: 35px;
+  margin-top: 65px;
 }
 
 .item {
-	background-color: #fff;
-	box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
-	border-radius: 6px;
-	padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  padding: 20px;
 }
 
 .container {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
-	width: 80px;
-	height: 80px;
-	background-color: #efd1d1;
-	border-radius: 50%;
-	align-items: cover;
-	object-fit: cover;
-	object-position: top;
+  width: 80px;
+  height: 80px;
+  background-color: #efd1d1;
+  border-radius: 50%;
+  align-items: cover;
+  object-fit: cover;
+  object-position: top;
 }
 
 .heading {
-	font-weight: 500;
-	font-size: 23px;
-	color: #000000;
+  font-weight: 500;
+  font-size: 23px;
+  color: #000000;
 }
 
 .list_text {
-	margin-top: 32px;
-	list-style: disc;
-	padding-left: 20px;
+  margin-top: 32px;
+  list-style: disc;
+  padding-left: 20px;
 }
 
 .item_text {
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 18px;
-	color: #666666;
-	margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #666666;
+  margin-bottom: 10px;
 }
 
 .list_account {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .item_account1 {
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	background-image: url(../../../../assets/svg/YouTube.svg);
-	background-repeat: no-repeat;
-	/* background-size: cover; */
-	margin-right: 8px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../../assets/svg/YouTube.svg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  margin-right: 8px;
 }
 
 .item_account2 {
-	cursor: pointer;
-	width: 40px;
-	height: 40px;
-	background-image: url(../../../../assets/svg/TikTok.svg);
-	background-repeat: no-repeat;
-	/* background-size: cover; */
-	margin-right: 8px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../../../assets/svg/TikTok.svg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  margin-right: 8px;
 }

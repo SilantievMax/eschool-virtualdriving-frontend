@@ -12,21 +12,21 @@ import OrderForm from 'components/LiveriesPageComponents/OrderForm/OrderForm'
 import React from 'react'
 
 const LiveriesPage = () => {
-	return (
-		<>
-			<Layout>
-				<Heading />
-				<Banner banner={banner3} />
-				<OrderForm />
-				<Banner banner={banner2} />
-				<Banner banner={banner1} />
-				<Banner banner={banner4} />
-				<Banner banner={banner5} />
-				<Banner banner={banner6} />
-			</Layout>
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <Layout>
+        <Heading />
+        <Banner banner={banner3} />
+        <OrderForm />
+        <Banner banner={banner2} />
+        <Banner banner={banner1} />
+        <Banner banner={banner4} />
+        <Banner banner={banner5} />
+        <Banner banner={banner6} />
+      </Layout>
+      <Footer />
+    </>
+  )
 }
 
 export default LiveriesPage

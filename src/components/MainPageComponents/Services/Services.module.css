@@ -1,67 +1,67 @@
 .services {
-	margin-top: 32px;
-	margin-bottom: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .list {
-	display: flex;
-	justify-content: space-between;
-	gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .item {
-	max-width: 420px;
-	background-color: #ebebf3;
-	height: 100%;
+  max-width: 420px;
+  background-color: #ebebf3;
+  height: 100%;
 }
 
 .images_card {
-	max-width: 420px;
-	height: 164px;
-	overflow: hidden;
-	border-bottom: 1px solid #000;
+  max-width: 420px;
+  height: 164px;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
 }
 
 .text_card {
-	padding: 30px;
+  padding: 30px;
 }
 
 .img {
-	width: 100%;
-	margin: -30px 0 0 0px;
+  width: 100%;
+  margin: -30px 0 0 0px;
 }
 
 .heading_card {
-	font-family: 'Bebas Neue Cyrillic';
-	font-size: 40px;
-	line-height: 92%;
-	color: #17181c;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 40px;
+  line-height: 92%;
+  color: #17181c;
 }
 
 .description_card {
-	font-family: 'Gilroy';
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 137.99%;
-	color: #17181c;
-	opacity: 0.5;
-	margin-top: 16px;
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 137.99%;
+  color: #17181c;
+  opacity: 0.5;
+  margin-top: 16px;
 }
 
 .btn {
-	display: inline-block;
-	font-family: 'Gilroy';
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 17px;
-	color: #f2f2f2;
-	padding: 10px 20px;
-	background-color: #e61f26;
-	margin-top: 32px;
+  display: inline-block;
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  background-color: #e61f26;
+  margin-top: 32px;
 }
 
 @media (max-width: 1140px) {
-	.images_card {
-		height: 104px;
-	}
+  .images_card {
+    height: 104px;
+  }
 }

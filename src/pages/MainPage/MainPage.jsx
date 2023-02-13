@@ -8,18 +8,18 @@ import SwiperAvto from 'components/MainPageComponents/SwiperAvto/SwiperAvto'
 import React from 'react'
 
 const MainPage = () => {
-	return (
-		<>
-			<Layout>
-				<SwiperAvto />
-				<Services />
-				<BannerSimulators />
-			</Layout>
-			<BannerInstructors />
-			{/* <BannerPartners /> */}
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <Layout>
+        <SwiperAvto />
+        <Services />
+        <BannerSimulators />
+      </Layout>
+      <BannerInstructors />
+      {/* <BannerPartners /> */}
+      <Footer />
+    </>
+  )
 }
 
 export default MainPage

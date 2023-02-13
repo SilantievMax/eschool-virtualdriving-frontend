@@ -1,53 +1,53 @@
 .register__form {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .register__heading {
-	font-weight: 700;
-	font-size: 42px;
-	color: #3c4858;
-	margin-bottom: 17px;
+  font-weight: 700;
+  font-size: 42px;
+  color: #3c4858;
+  margin-bottom: 17px;
 }
 
 .register__input {
-	width: 530px;
-	height: 50px;
-	padding-left: 25px;
-	background: #ffffff;
-	border: 1px solid #d9d9d9;
-	box-shadow: 15px 4px 74px rgba(0, 0, 0, 0.25);
-	border-radius: 6px;
-	margin-top: 25px;
-	outline: none;
+  width: 530px;
+  height: 50px;
+  padding-left: 25px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 15px 4px 74px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin-top: 25px;
+  outline: none;
 }
 
 .register__input::placeholder {
-	font-weight: 700;
-	font-size: 22px;
-	color: #b6b6b6;
+  font-weight: 700;
+  font-size: 22px;
+  color: #b6b6b6;
 }
 
 button.register__btn {
-	background: #ff2121;
-	border-radius: 6px;
-	border: none;
-	padding: 12px 31px;
-	font-weight: 700;
-	font-size: 18px;
-	color: #ffffff;
-	cursor: pointer;
-	margin-top: 20px;
+  background: #ff2121;
+  border-radius: 6px;
+  border: none;
+  padding: 12px 31px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .register__login {
-	cursor: pointer;
-	font-weight: 700;
-	font-size: 22px;
-	color: #3c4858;
-	margin-top: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 22px;
+  color: #3c4858;
+  margin-top: 20px;
 }

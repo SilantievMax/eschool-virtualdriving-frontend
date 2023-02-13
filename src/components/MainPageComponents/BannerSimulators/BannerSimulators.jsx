@@ -6,23 +6,23 @@ import React from 'react'
 import styles from './BannerSimulators.module.css'
 
 const BannerSimulators = () => {
-	return (
-		<>
-			<section className={styles.section}>
-				<ul className={styles.list}>
-					<li className={styles.item}>
-						<img src={simulators1} alt='' className={styles.img} />
-					</li>
-					<li className={styles.item}>
-						<img src={simulators2} alt='' className={styles.img} />
-					</li>
-					{/* <li className={styles.item}>
+  return (
+    <>
+      <section className={styles.section}>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <img src={simulators1} alt='' className={styles.img} />
+          </li>
+          <li className={styles.item}>
+            <img src={simulators2} alt='' className={styles.img} />
+          </li>
+          {/* <li className={styles.item}>
             <img src={simulators3} alt="" className={styles.img} />
           </li> */}
-				</ul>
-			</section>
-		</>
-	)
+        </ul>
+      </section>
+    </>
+  )
 }
 
 export default BannerSimulators

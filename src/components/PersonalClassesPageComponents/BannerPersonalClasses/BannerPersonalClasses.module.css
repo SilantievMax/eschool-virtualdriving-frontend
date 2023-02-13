@@ -1,24 +1,24 @@
 .section {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url(../../../assets/images/shapka.webp);
-	height: 532px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-top: 65px;
-	padding-left: 95px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../assets/images/shapka.webp);
+  height: 532px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 65px;
+  padding-left: 95px;
 }
 .heading {
-	color: #ffffff;
-	font-size: 67px;
-	line-height: 67px;
-	font-weight: 700;
+  color: #ffffff;
+  font-size: 67px;
+  line-height: 67px;
+  font-weight: 700;
 }
 
 .description {
-	color: #ffffff;
-	font-size: 23px;
-	line-height: 35px;
-	font-weight: 400;
-	width: 950px;
-	margin-top: 20px;
+  color: #ffffff;
+  font-size: 23px;
+  line-height: 35px;
+  font-weight: 400;
+  width: 950px;
+  margin-top: 20px;
 }

@@ -6,16 +6,16 @@ import Text from 'components/PersonalClassesPageComponents/Text/Text'
 import React from 'react'
 
 const PersonalClassesPage = () => {
-	return (
-		<>
-			{/* <BannerPersonalClasses /> */}
-			<Layout>
-				<Text />
-				<OrderForm />
-			</Layout>
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      {/* <BannerPersonalClasses /> */}
+      <Layout>
+        <Text />
+        <OrderForm />
+      </Layout>
+      <Footer />
+    </>
+  )
 }
 
 export default PersonalClassesPage

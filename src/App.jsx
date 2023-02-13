@@ -20,52 +20,52 @@ import { fetchAuthMe } from 'redux/features/authSlice'
 import './index.css'
 
 const App = () => {
-	const dispatch = useDispatch()
-	const roleUser = useSelector(state => state.auth.role)
+  const dispatch = useDispatch()
+  const roleUser = useSelector(state => state.auth.role)
 
-	const urlParams = new URLSearchParams(window.location.search)
-	const myParam = urlParams.get('ref')
-	if (myParam) {
-		window.localStorage.setItem('refPartner', myParam)
-	} else {
-		window.localStorage.removeItem('refPartner')
-	}
+  const urlParams = new URLSearchParams(window.location.search)
+  const myParam = urlParams.get('ref')
+  if (myParam) {
+    window.localStorage.setItem('refPartner', myParam)
+  } else {
+    window.localStorage.removeItem('refPartner')
+  }
 
-	React.useEffect(() => {
-		dispatch(fetchAuthMe())
-	}, [dispatch])
+  React.useEffect(() => {
+    dispatch(fetchAuthMe())
+  }, [dispatch])
 
-	const adminPanelRoleComponents = role => {
-		if (role === 'SUPERADMIN') {
-			return <SuperAdminPanelPage />
-		} else if (role === 'USER') {
-			return <UserPanelPage />
-		}
-	}
+  const adminPanelRoleComponents = role => {
+    if (role === 'SUPERADMIN') {
+      return <SuperAdminPanelPage />
+    } else if (role === 'USER') {
+      return <UserPanelPage />
+    }
+  }
 
-	return (
-		<div className='flex flex-col min-h-screen'>
-			<HeaderV3 />
-			<Routes>
-				<Route path='/' element={<MainPage />} />
-				<Route
-					path='services/personal-classes'
-					element={<PersonalClassesPage />}
-				/>
-				<Route path='services/custom-car' element={<SetupListPage />} />
-				<Route path='services/custom-car/:id' element={<SetupElementPage />} />
-				<Route path='services/liveries' element={<CustomLiveriesPage />} />
-				<Route path='services/equipment' element={<EquipmentPage />} />
-				<Route path='services/coaches' element={<CoachesPage />} />
-				<Route path='about' element={<AboutPage />} />
-				<Route
-					path='administrator/*'
-					element={adminPanelRoleComponents(roleUser)}
-				/>
-			</Routes>
-			<ToastContainer position='bottom-right' />
-		</div>
-	)
+  return (
+    <div className='flex flex-col min-h-screen'>
+      <HeaderV3 />
+      <Routes>
+        <Route path='/' element={<MainPage />} />
+        <Route
+          path='services/personal-classes'
+          element={<PersonalClassesPage />}
+        />
+        <Route path='services/custom-car' element={<SetupListPage />} />
+        <Route path='services/custom-car/:id' element={<SetupElementPage />} />
+        <Route path='services/liveries' element={<CustomLiveriesPage />} />
+        <Route path='services/equipment' element={<EquipmentPage />} />
+        <Route path='services/coaches' element={<CoachesPage />} />
+        <Route path='about' element={<AboutPage />} />
+        <Route
+          path='administrator/*'
+          element={adminPanelRoleComponents(roleUser)}
+        />
+      </Routes>
+      <ToastContainer position='bottom-right' />
+    </div>
+  )
 }
 
 export default App

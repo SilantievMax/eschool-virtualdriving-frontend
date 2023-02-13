@@ -8,23 +8,23 @@ import { useParams } from 'react-router-dom'
 import { fetchSetup } from 'redux/features/dataSlice'
 
 export const SetupElementPage = () => {
-	const { id } = useParams()
-	const dispatch = useDispatch()
+  const { id } = useParams()
+  const dispatch = useDispatch()
 
-	useEffect(() => {
-		dispatch(fetchSetup(id))
-	}, [dispatch, id])
+  useEffect(() => {
+    dispatch(fetchSetup(id))
+  }, [dispatch, id])
 
-	// TODO: bad layout
-	return (
-		<>
-			<div className='flex-grow pt-14'>
-				<Layout>
-					<SetupElement />
-				</Layout>
-				<SetupCarCard />
-			</div>
-			<Footer />
-		</>
-	)
+  // TODO: bad layout
+  return (
+    <>
+      <div className='flex-grow pt-14'>
+        <Layout>
+          <SetupElement />
+        </Layout>
+        <SetupCarCard />
+      </div>
+      <Footer />
+    </>
+  )
 }

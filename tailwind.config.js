@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
       sans: ['Gilroy', 'sans-serif'],
@@ -11,8 +9,8 @@ module.exports = {
     extend: {
       colors: {
         brand: '#e61f26'
-      },
-    },
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

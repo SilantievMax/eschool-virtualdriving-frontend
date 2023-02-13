@@ -1,47 +1,47 @@
 .footer {
-	background-color: #17181c;
-	color: #fff;
-	padding-top: 26px;
-	padding-bottom: 26px;
+  background-color: #17181c;
+  color: #fff;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .copyright,
 .politik_link {
-	font-family: 'Gilroy';
-	font-size: 12px;
-	line-height: 142%;
-	color: #ffffff;
-	opacity: 0.5;
+  font-family: 'Gilroy';
+  font-size: 12px;
+  line-height: 142%;
+  color: #ffffff;
+  opacity: 0.5;
 }
 
 .line {
-	width: 100%;
-	height: 10px;
+  width: 100%;
+  height: 10px;
 
-	background: linear-gradient(
-		89.42deg,
-		#787882 4.24%,
-		#86868f 6.47%,
-		#aaaab0 10.67%,
-		#e4e4e6 16.35%,
-		#ffffff 18.79%,
-		#fdfdfd 26.64%,
-		#f7f6f6 29.47%,
-		#ecebeb 31.48%,
-		#dddada 33.1%,
-		#c9c4c4 34.48%,
-		#c8c3c3 34.55%,
-		#c9c5c5 52.1%,
-		#cecccc 58.42%,
-		#d2d2d2 61.21%,
-		#dfdfdf 68.43%,
-		#ffffff 81.21%,
-		#232323 100%
-	);
+  background: linear-gradient(
+    89.42deg,
+    #787882 4.24%,
+    #86868f 6.47%,
+    #aaaab0 10.67%,
+    #e4e4e6 16.35%,
+    #ffffff 18.79%,
+    #fdfdfd 26.64%,
+    #f7f6f6 29.47%,
+    #ecebeb 31.48%,
+    #dddada 33.1%,
+    #c9c4c4 34.48%,
+    #c8c3c3 34.55%,
+    #c9c5c5 52.1%,
+    #cecccc 58.42%,
+    #d2d2d2 61.21%,
+    #dfdfdf 68.43%,
+    #ffffff 81.21%,
+    #232323 100%
+  );
 }

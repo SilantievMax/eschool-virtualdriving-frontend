@@ -1,65 +1,65 @@
 .header {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: 10;
-	padding-left: 160px;
-	padding-right: 160px;
-	background-color: #ffffff;
-	max-width: 2500px;
-	margin-left: auto;
-	margin-right: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding-left: 160px;
+  padding-right: 160px;
+  background-color: #ffffff;
+  max-width: 2500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header_top {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border-bottom: 2px solid rgba(23, 24, 28, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgba(23, 24, 28, 0.1);
 }
 
 .logo {
-	max-height: 48px;
+  max-height: 48px;
 }
 
 .btn {
-	color: #fff;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 20px;
-	background-color: #000;
-	padding: 8px 26px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  background-color: #000;
+  padding: 8px 26px;
 }
 
 .nav {
-	padding-top: 14px;
-	padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .list {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .item:not(:last-child) {
-	margin-right: 7%;
+  margin-right: 7%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .nav_link {
-	text-transform: uppercase;
-	font-family: 'Bebas Neue';
-	font-size: 18px;
-	font-weight: 700;
-	color: #15161b;
-	opacity: 0.5;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue';
+  font-size: 18px;
+  font-weight: 700;
+  color: #15161b;
+  opacity: 0.5;
 }
 
 .nav_link:hover {
-	color: #e61f26;
-	opacity: 1;
+  color: #e61f26;
+  opacity: 1;
 }

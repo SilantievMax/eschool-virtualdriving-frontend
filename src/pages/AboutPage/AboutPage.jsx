@@ -5,15 +5,15 @@ import Footer from 'components/GeneralComponents/Footer/Footer'
 import React from 'react'
 
 const AboutPage = () => {
-	return (
-		<>
-			<AboutImages />
-			<BackgroundForContents>
-				<AboutText />
-			</BackgroundForContents>
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <AboutImages />
+      <BackgroundForContents>
+        <AboutText />
+      </BackgroundForContents>
+      <Footer />
+    </>
+  )
 }
 
 export default AboutPage

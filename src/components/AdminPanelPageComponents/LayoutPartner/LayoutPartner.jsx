@@ -3,12 +3,12 @@ import PartnersForm from 'components/AdminPanelPageComponents/LayoutPartner/comp
 import React from 'react'
 
 const LayoutPartner = () => {
-	return (
-		<>
-			<PartnersForm />
-			<Partners />
-		</>
-	)
+  return (
+    <>
+      <PartnersForm />
+      <Partners />
+    </>
+  )
 }
 
 export default LayoutPartner

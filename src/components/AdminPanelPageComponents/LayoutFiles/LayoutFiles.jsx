@@ -4,12 +4,12 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 const LayoutFiles = () => {
-	return (
-		<div>
-			<File />
-			<FileUpload />
-		</div>
-	)
+  return (
+    <div>
+      <File />
+      <FileUpload />
+    </div>
+  )
 }
 
 export default LayoutFiles

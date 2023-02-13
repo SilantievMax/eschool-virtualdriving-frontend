@@ -1,16 +1,16 @@
 .heading {
-	font-family: 'Bebas Neue Cyrillic';
-	font-size: 60px;
-	line-height: 92%;
-	color: #17181c;
-	margin-top: 63px;
+  font-family: 'Bebas Neue Cyrillic';
+  font-size: 60px;
+  line-height: 92%;
+  color: #17181c;
+  margin-top: 63px;
 }
 
 .discription {
-	font-family: 'Gilroy-Bold';
-	font-size: 18px;
-	line-height: 137.99%;
-	color: #17181c;
-	opacity: 0.4;
-	margin-top: 5px;
+  font-family: 'Gilroy-Bold';
+  font-size: 18px;
+  line-height: 137.99%;
+  color: #17181c;
+  opacity: 0.4;
+  margin-top: 5px;
 }
