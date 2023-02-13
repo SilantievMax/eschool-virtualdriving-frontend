@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Regular';
   font-style: normal;
   font-weight: 400;
   src: local('Gilroy-Regular'),
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Medium';
   font-style: normal;
   font-weight: 500;
   src: local('Gilroy-Medium'),
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Semibold';
   font-style: normal;
   font-weight: 600;
   src: local('Gilroy-Semibold'),
@@ -48,7 +48,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Bold';
   font-style: normal;
   font-weight: 700;
   src: local('Gilroy-Bold'),
@@ -57,7 +57,7 @@
 }
 
 @font-face {
-  font-family: 'GraphikLCG';
+  font-family: 'GraphikLCG-Semibold';
   font-style: normal;
   font-weight: 600;
   src: local('GraphikLCG-Semibold'),

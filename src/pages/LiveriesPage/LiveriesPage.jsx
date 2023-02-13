@@ -16,8 +16,8 @@ const LiveriesPage = () => {
     <>
       <Layout>
         <Heading />
-        <Banner banner={banner3} />
         <OrderForm />
+        <Banner banner={banner3} />
         <Banner banner={banner2} />
         <Banner banner={banner1} />
         <Banner banner={banner4} />
