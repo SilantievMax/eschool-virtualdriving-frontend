@@ -103,6 +103,13 @@
   .navTop {
     display: none;
     /* visibility: hidden; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #921111;
+    display: flex;
+    flex-direction: column;
+    
   }
 
   .burger {
