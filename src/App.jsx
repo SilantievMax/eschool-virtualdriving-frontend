@@ -46,9 +46,9 @@ const App = () => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route
+        {/* <Route
           path='services/personal-classes'
           element={<PersonalClassesPage />}
         />
@@ -61,8 +61,8 @@ const App = () => {
         <Route
           path='administrator/*'
           element={adminPanelRoleComponents(roleUser)}
-        />
-      </Routes> */}
+        /> */}
+      </Routes>
       <ToastContainer position='bottom-right' />
     </div>
   )

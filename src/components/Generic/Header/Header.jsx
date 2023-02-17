@@ -2,7 +2,7 @@ import discord from 'assets/svg/discord.svg'
 import logo from 'assets/svg/logo.svg'
 import vk from 'assets/svg/vk.svg'
 import AuthorizationModal from 'components/GeneralComponents/AuthorizationModal/AuthorizationModal'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
@@ -36,7 +36,7 @@ const Header = () => {
     <>
       <Layout>
         <header className={styles.header}>
-          <div className={styles.header_top}> 
+          <div className={styles.header_top}>
             <NavLink to={'/'} className={styles.logo_link}>
               <img src={logo} alt='logo' className={styles.logo} />
             </NavLink>

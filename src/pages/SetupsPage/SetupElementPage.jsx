@@ -1,5 +1,5 @@
 import Footer from 'components/GeneralComponents/Footer/Footer'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import { SetupCarCard } from 'components/SetupsPageComponents/components/SetupCarCard'
 import { SetupElement } from 'components/SetupsPageComponents/components/SetupElement'
 import { useEffect } from 'react'

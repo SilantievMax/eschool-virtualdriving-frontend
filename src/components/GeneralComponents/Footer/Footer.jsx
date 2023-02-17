@@ -1,4 +1,4 @@
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import { Link } from 'react-router-dom'
 
 import styles from './Footer.module.css'

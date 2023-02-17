@@ -1,5 +1,5 @@
 import Footer from 'components/GeneralComponents/Footer/Footer'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import BannerInstructors from 'components/MainPageComponents/BannerInstructors/BannerInstructors'
 import BannerPartners from 'components/MainPageComponents/BannerPartners/BannerPartners'
 import BannerSimulators from 'components/MainPageComponents/BannerSimulators/BannerSimulators'

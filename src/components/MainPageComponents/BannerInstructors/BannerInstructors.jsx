@@ -5,7 +5,7 @@ import photoUser1 from 'assets/images/photoUser1.webp'
 import photoUser2 from 'assets/images/photoUser2.webp'
 import photoUser3 from 'assets/images/photoUser3.webp'
 import photoUser4 from 'assets/images/photoUser4.webp'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import React from 'react'
 
 import styles from './BannerInstructors.module.css'
