@@ -1,4 +1,4 @@
-import OrderButton from 'components/GeneralComponents/Buttons/OrderButton/OrderButton'
+import OrderButton from 'components/Generic/OrderButton/OrderButton'
 import React from 'react'
 
 import styles from './BannerPersonalClasses.module.css'

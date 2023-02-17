@@ -1,6 +1,6 @@
 import partners1 from 'assets/images/partners1.webp'
 import partners2 from 'assets/images/partners2.webp'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Layout from 'components/Generic/Layout/Layout'
 import React from 'react'
 
 import styles from './BannerPartners.module.css'

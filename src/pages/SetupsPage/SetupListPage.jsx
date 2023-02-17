@@ -1,5 +1,5 @@
-import Footer from 'components/GeneralComponents/Footer/Footer'
-import Layout from 'components/GeneralComponents/Layout/Layout'
+import Footer from 'components/Generic/Footer/Footer'
+import Layout from 'components/Generic/Layout/Layout'
 import { SetupList } from 'components/SetupsPageComponents/components/SetupList'
 
 export const SetupListPage = () => {
