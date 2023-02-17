@@ -1,4 +1,4 @@
-import Footer from 'components/GeneralComponents/Footer/Footer'
+import Footer from 'components/Generic/Footer/Footer'
 import Layout from 'components/Generic/Layout/Layout'
 import { SetupCarCard } from 'components/SetupsPageComponents/components/SetupCarCard'
 import { SetupElement } from 'components/SetupsPageComponents/components/SetupElement'

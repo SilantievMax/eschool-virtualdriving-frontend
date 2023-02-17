@@ -1,4 +1,4 @@
-import Footer from 'components/GeneralComponents/Footer/Footer'
+import Footer from 'components/Generic/Footer/Footer'
 import Layout from 'components/Generic/Layout/Layout'
 import BannerPersonalClasses from 'components/PersonalClassesPageComponents/BannerPersonalClasses/BannerPersonalClasses'
 import OrderForm from 'components/PersonalClassesPageComponents/OrderForm/OrderForm'

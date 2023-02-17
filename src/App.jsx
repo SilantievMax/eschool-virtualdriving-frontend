@@ -48,7 +48,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        {/* <Route
+        <Route
           path='services/personal-classes'
           element={<PersonalClassesPage />}
         />
@@ -61,7 +61,7 @@ const App = () => {
         <Route
           path='administrator/*'
           element={adminPanelRoleComponents(roleUser)}
-        /> */}
+        />
       </Routes>
       <ToastContainer position='bottom-right' />
     </div>

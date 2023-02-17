@@ -1,4 +1,4 @@
-import Footer from 'components/GeneralComponents/Footer/Footer'
+import Footer from 'components/Generic/Footer/Footer'
 import Layout from 'components/Generic/Layout/Layout'
 import BannerInstructors from 'components/MainPageComponents/BannerInstructors/BannerInstructors'
 import BannerPartners from 'components/MainPageComponents/BannerPartners/BannerPartners'

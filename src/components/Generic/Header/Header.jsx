@@ -1,7 +1,7 @@
 import discord from 'assets/svg/discord.svg'
 import logo from 'assets/svg/logo.svg'
 import vk from 'assets/svg/vk.svg'
-import AuthorizationModal from 'components/GeneralComponents/AuthorizationModal/AuthorizationModal'
+import AuthorizationModal from 'components/Generic/AuthorizationModal/AuthorizationModal'
 import Layout from 'components/Generic/Layout/Layout'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -46,12 +46,12 @@ const Header = () => {
               <NavLink to={'/'} className={styles.navTop_link} style={color}>
                 VDES академия
               </NavLink>
-              <NavLink to={'/'} className={styles.navTop_link}>
+              {/* <NavLink to={'/'} className={styles.navTop_link}>
                 VDES оборудование
               </NavLink>
               <NavLink to={'/'} className={styles.navTop_link}>
                 VDES портал
-              </NavLink>
+              </NavLink> */}
               <a
                 href='https://virtualdriving.ru/shop'
                 target='_blank'
@@ -104,7 +104,7 @@ const Header = () => {
               >
                 Ливреи
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to={'services/coaches'}
                 className={styles.navBottom_link}
                 style={isActiveNav}
@@ -117,7 +117,7 @@ const Header = () => {
                 style={isActiveNav}
               >
                 О нас
-              </NavLink>
+              </NavLink> */}
             </nav>
             <div className={styles.nav__link}>
               <NavLinks />
