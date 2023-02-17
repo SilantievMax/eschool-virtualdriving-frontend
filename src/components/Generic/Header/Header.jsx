@@ -1,7 +1,7 @@
 import discord from 'assets/svg/discord.svg'
 import logo from 'assets/svg/logo.svg'
 import vk from 'assets/svg/vk.svg'
-import AuthorizationModal from 'components/Generic/AuthorizationModal/AuthorizationModal'
+import AuthorizationModal from 'components/Authorization/AuthorizationModal/AuthorizationModal'
 import Layout from 'components/Generic/Layout/Layout'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'

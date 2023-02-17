@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { selectIsAuth } from '../../../redux/features/authSlice'
 import { accessUrl } from '../../../utils/axios'
-import AuthorizationModal from '../../Generic/AuthorizationModal/AuthorizationModal'
+import AuthorizationModal from '../../Authorization/AuthorizationModal/AuthorizationModal'
 
 import { SetupOrderModal } from './SetupOrderModal'
 import { SetupTable } from './SetupTable'

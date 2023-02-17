@@ -1,5 +1,5 @@
-import LoginForm from 'components/Generic/LoginForm/LoginForm'
-import RegisterForm from 'components/Generic/RegisterForm/RegisterForm'
+import LoginForm from 'components/Authorization/LoginForm/LoginForm'
+import RegisterForm from 'components/Authorization/RegisterForm/RegisterForm'
 import React, { useState } from 'react'
 
 import styles from './AuthorizationModal.module.css'
