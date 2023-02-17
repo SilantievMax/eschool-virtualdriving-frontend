@@ -11,6 +11,7 @@ export const SetupOrderModal = ({ onClose }) => {
   const { setup } = useSelector(state => state.data)
   const [communications, setCommunications] = useState('')
   const [coupon, setCoupon] = useState('')
+  const [coment, setComent] = useState('')
   const [privacyPolicy, setPrivacyPolicy] = useState(true)
 
   const [error, setError] = useState('')
@@ -26,13 +27,15 @@ export const SetupOrderModal = ({ onClose }) => {
 
       await axios.post(`/orders/setup/${setup.id}`, {
         communications,
-        coupon
+        coupon,
+        coment
       })
 
       setSuccess(true)
       setLoading(false)
       setCommunications('')
       setCoupon('')
+      setComent('')
     } catch (error) {
       console.log(error)
       setSuccess(false)
@@ -75,7 +78,7 @@ export const SetupOrderModal = ({ onClose }) => {
               />
             </label>
 
-            <label className='block cursor-pointer mb-6'>
+            {/* <label className='block cursor-pointer mb-6'>
               <span className='block mb-2 text-gray-600 font-sans font-semibold text-sm uppercase'>
                 Купон (если есть):
               </span>
@@ -84,6 +87,18 @@ export const SetupOrderModal = ({ onClose }) => {
                 type='text'
                 value={coupon}
                 onChange={e => setCoupon(e.target.value)}
+              />
+            </label> */}
+
+            <label className='block cursor-pointer mb-6'>
+              <span className='block mb-2 text-gray-600 font-sans font-semibold text-sm uppercase'>
+                Комментарий:
+              </span>
+              <input
+                className='w-full h-10 px-4 border-2'
+                type='text'
+                value={coment}
+                onChange={e => setComent(e.target.value)}
               />
             </label>
 
