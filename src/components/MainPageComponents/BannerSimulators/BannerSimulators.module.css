@@ -1,6 +1,6 @@
 .list {
   background-color: #ebebf3;
-  height: 133px;
+  min-height: 133px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,4 +12,13 @@
 
 .img {
   width: 240px;
+}
+
+@media (max-width: 875px) {
+  .list {
+    flex-direction: column;
+  }
+  .img {
+    margin-bottom: 20px;
+  }
 }
