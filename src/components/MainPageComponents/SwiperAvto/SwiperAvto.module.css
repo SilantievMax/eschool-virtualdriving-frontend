@@ -53,3 +53,34 @@
     background-size: 1100px;
   }
 }
+
+@media(max-width: 875px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 12px;
+    max-width: 300px;
+  }
+
+  .swiper {
+    margin-top: 2px; 
+  }
+}
+
+@media(max-width: 576px) {
+  .wrapper {
+    background: rgb(235,235,243);
+    background: linear-gradient(153deg, rgba(235,235,243,1) 29%, rgba(235,235,243,0) 64%);
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  .description {
+    margin-top: 2px;
+    max-width: 200px;
+  }
+  .swiper, .slide {
+    height: 238px;
+  }
+}
