@@ -1,12 +1,12 @@
 import LayoutFiles from 'components/AdminPanelPageComponents/LayoutFiles/LayoutFiles'
 import LayoutInfo from 'components/AdminPanelPageComponents/LayoutInfo/LayoutInfo'
-import LayoutLiveries from 'components/AdminPanelPageComponents/LayoutLiveries/LayoutLiveries'
+import LayoutLiveries from 'components/PanelPage/MainContent/LayoutLiveries'
 import LayoutPartner from 'components/AdminPanelPageComponents/LayoutPartner/LayoutPartner'
-import LayoutSetup from 'components/AdminPanelPageComponents/LayoutSetup/LayoutSetup'
+import LayoutSetup from 'components/PanelPage/MainContent/LayoutSetup'
 import LayoutStatistics from 'components/AdminPanelPageComponents/LayoutStatistics/LayoutStatistics'
-import AdminLayoutTraining from 'components/AdminPanelPageComponents/LayoutTraining/LayoutTraining'
 import LayoutUsers from 'components/AdminPanelPageComponents/LayoutUsers/LayoutUsers'
 import AdminAside from 'components/PanelPage/AsidePanel/AsidePanel'
+import LayoutTraining from 'components/PanelPage/MainContent/LayoutTraining'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate, Route, Routes } from 'react-router-dom'
@@ -22,10 +22,10 @@ const SuperAdminPanelPage = () => {
   return (
     <>
       <AdminAside />
-      <div className='ml-56 bg-slate-50 py-3'>
+      <div className='absolute ml-56 bg-slate-50 py-3 w-[calc(100%-14rem)]'>
         <Routes>
           <Route path='statistics' element={<LayoutStatistics />} />
-          <Route path='training' element={<AdminLayoutTraining />} />
+          <Route path='training' element={<LayoutTraining />} />
           <Route path='setup' element={<LayoutSetup />} />
           <Route path='liveries' element={<LayoutLiveries />} />
           <Route path='partner' element={<LayoutPartner />} />

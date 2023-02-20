@@ -8,6 +8,8 @@ import UsersBtn from 'components/PanelPage/AsidePanel/components/Buttons/UsersBt
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+import InSite from 'components/PanelPage/AsidePanel/components/Buttons/InSite'
+
 const Navigations = () => {
   const roleUser = useSelector(state => state.auth.role)
   const isAdmin = roleUser === 'SUPERADMIN'
@@ -22,6 +24,9 @@ const Navigations = () => {
           <li>{isAdmin && <FilesBtn />}</li>
           <li>{isAdmin && <PartnesBtn />}</li>
           <li>{isAdmin && <InfoSiteBtn />}</li>
+          <li>
+            <InSite />
+          </li>
           <li>
             <LogoutBtn />
           </li>

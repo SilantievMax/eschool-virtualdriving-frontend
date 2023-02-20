@@ -1,4 +1,3 @@
-// import Table from "../LayoutLiveries/components/Table";
 import Table from 'components/AdminPanelPageComponents/LayoutLiveries/components/Table'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

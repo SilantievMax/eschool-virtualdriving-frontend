@@ -19,7 +19,7 @@ const UserPanelPage = () => {
   return (
     <>
       <AdminAside />
-      <div className='ml-56 bg-slate-50 py-3 flex'>
+      <div className='absolute ml-56 bg-slate-50 py-3 w-[calc(100%-14rem)] min-h-screen'>
         <ul>
           {items1 &&
             items1.map(item => (

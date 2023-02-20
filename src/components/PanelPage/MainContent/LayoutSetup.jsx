@@ -1,6 +1,5 @@
-// import Table from "./components/Table";
 import Table from 'components/AdminPanelPageComponents/LayoutSetup/components/Table'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetcOrdersSetup } from 'redux/features/ordersSetupSlice'
 
@@ -9,7 +8,7 @@ const LayoutSetup = () => {
   const { orders } = useSelector(state => state.ordersSetup)
   const isOrdersLoading = orders.status === 'loading'
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(fetcOrdersSetup())
   }, [])
 
