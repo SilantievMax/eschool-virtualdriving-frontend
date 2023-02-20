@@ -1,4 +1,4 @@
-import AdminAside from 'components/AdminPanelPageComponents/AdminAside/AdminAside'
+import AdminAside from 'components/PanelPage/AsidePanel/AsidePanel'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

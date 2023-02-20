@@ -1,4 +1,4 @@
-import FilesBtn from 'components/AdminPanelPageComponents/AdminAside/components/ButtonsForNavigation/FilesBtn'
+import FilesBtn from 'components/PanelPage/AsidePanel/components/Buttons/FilesBtn'
 import InfoSiteBtn from 'components/AdminPanelPageComponents/AdminAside/components/ButtonsForNavigation/InfoSiteBtn'
 import LogoutBtn from 'components/AdminPanelPageComponents/AdminAside/components/ButtonsForNavigation/LogoutBtn'
 import OrdersBtn from 'components/AdminPanelPageComponents/AdminAside/components/ButtonsForNavigation/OrdersBtn'
@@ -8,7 +8,7 @@ import UsersBtn from 'components/AdminPanelPageComponents/AdminAside/components/
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const AdminNavigation = () => {
+const Navigations = () => {
   const roleUser = useSelector(state => state.auth.role)
   const isAdmin = roleUser === 'SUPERADMIN'
   console.log(roleUser)
@@ -31,4 +31,4 @@ const AdminNavigation = () => {
   )
 }
 
-export default AdminNavigation
+export default Navigations

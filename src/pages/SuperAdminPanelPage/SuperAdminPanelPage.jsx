@@ -1,4 +1,3 @@
-import AdminAside from 'components/AdminPanelPageComponents/AdminAside/AdminAside'
 import LayoutFiles from 'components/AdminPanelPageComponents/LayoutFiles/LayoutFiles'
 import LayoutInfo from 'components/AdminPanelPageComponents/LayoutInfo/LayoutInfo'
 import LayoutLiveries from 'components/AdminPanelPageComponents/LayoutLiveries/LayoutLiveries'
@@ -7,6 +6,7 @@ import LayoutSetup from 'components/AdminPanelPageComponents/LayoutSetup/LayoutS
 import LayoutStatistics from 'components/AdminPanelPageComponents/LayoutStatistics/LayoutStatistics'
 import AdminLayoutTraining from 'components/AdminPanelPageComponents/LayoutTraining/LayoutTraining'
 import LayoutUsers from 'components/AdminPanelPageComponents/LayoutUsers/LayoutUsers'
+import AdminAside from 'components/PanelPage/AsidePanel/AsidePanel'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate, Route, Routes } from 'react-router-dom'
