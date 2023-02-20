@@ -32,3 +32,15 @@
   top: 300px;
   left: 120px;
 }
+
+@media (max-width: 576px) {
+  .swiper-button-prev {
+    top: 235px;
+    left: calc(50% - 30px);
+  }
+  
+  .swiper-button-next {
+    top: 235px;
+    left: calc(50% + 30px);
+  }
+}

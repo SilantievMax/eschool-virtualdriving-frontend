@@ -5,7 +5,8 @@
 
 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -60,8 +61,27 @@
   margin-top: 32px;
 }
 
-@media (max-width: 1140px) {
-  .images_card {
-    height: 104px;
+@media (max-width: 875px) {
+  .item {
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .text_card {
+    padding: 13px;
+    padding-bottom: 25px;
+  }
+  .heading_card {
+    font-size: 30px;
+  }
+  .description_card {
+    margin-top: 5px;
+  }
+  .img {
+    margin: 0;
+  }
+  .btn {
+    margin-top: 10px;
   }
 }

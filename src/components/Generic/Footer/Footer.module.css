@@ -45,3 +45,9 @@
     #232323 100%
   );
 }
+
+@media (max-width: 875px) {
+  .content {
+    align-items: center;
+  }
+}

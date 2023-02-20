@@ -65,3 +65,31 @@
   line-height: 142%;
   color: #17181c;
 }
+
+@media (max-width: 1424px) {
+  .list {
+    grid-column-gap: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: 875px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .name_instructor {
+    text-align: center;
+  }
+  .list_text {
+    max-width: none;
+    margin: 0;
+    padding-left: 50px;
+  }
+}
