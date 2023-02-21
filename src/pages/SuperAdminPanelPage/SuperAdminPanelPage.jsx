@@ -22,7 +22,7 @@ const SuperAdminPanelPage = () => {
   return (
     <>
       <AdminAside />
-      <div className='absolute ml-56 bg-slate-50 py-3 w-[calc(100%-14rem)]'>
+      <div className='absolute ml-56 bg-slate-50 py-3 w-[calc(100%-14rem)] min-h-full'>
         <Routes>
           <Route path='statistics' element={<LayoutStatistics />} />
           <Route path='training' element={<LayoutTraining />} />

@@ -1,7 +1,8 @@
-import Table from 'components/AdminPanelPageComponents/LayoutLiveries/components/Table'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetcOrdersLiveries } from 'redux/features/ordersLiveriesSlice'
+
+import TableOrders from './components/TableOrders'
 
 const LayoutLiveries = () => {
   const dispatch = useDispatch()
@@ -14,10 +15,11 @@ const LayoutLiveries = () => {
 
   return (
     <>
-      <section className='mx-2 bg-slate-700 rounded p-2 text-gray-100'>
-        <div className='font-bold text-2xl pb-4'>Ливреи</div>
-        {isOrdersLoading ? <div>Загрузка...</div> : <Table orders={orders} />}
-      </section>
+      <TableOrders
+        nameTable='Ливреи'
+        loader={isOrdersLoading}
+        orders={orders}
+      />
     </>
   )
 }

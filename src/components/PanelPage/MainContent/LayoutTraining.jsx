@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetcOrdersTraining } from 'redux/features/ordersTrainingSlice'
 
-import Table from '../../AdminPanelPageComponents/LayoutTraining/components/Table'
+import TableOrders from './components/TableOrders'
 
 const LayoutTraining = () => {
   const dispatch = useDispatch()
@@ -15,10 +15,11 @@ const LayoutTraining = () => {
 
   return (
     <>
-      <section className='mx-2 rounded p-2'>
-        <div className='font-bold text-2xl pb-4'>Тренировки</div>
-        {isOrdersLoading ? <div>Загрузка...</div> : <Table orders={orders} />}
-      </section>
+      <TableOrders
+        nameTable='Тренировки'
+        loader={isOrdersLoading}
+        orders={orders}
+      />
     </>
   )
 }
