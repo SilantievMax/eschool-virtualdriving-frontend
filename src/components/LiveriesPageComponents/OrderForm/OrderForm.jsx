@@ -1,6 +1,7 @@
 import file from 'assets/files/Politica_confidence.pdf'
 import img1 from 'assets/images/order1.webp'
-import React, { useEffect } from 'react'
+import Popup from 'components/Generic/Popup/Popup'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import { selectIsAuth } from 'redux/features/authSlice.js'
@@ -24,6 +25,7 @@ const OrderForm = () => {
   // const [equipment, setEquipment] = React.useState("");
   const [price, setPrice] = React.useState(2000)
   const [privacyPolicy, setPrivacyPolicy] = React.useState(false)
+  const [success, setSuccess] = useState(false)
   // const [quantityTrining, setQuantityTrining] = React.useState("1");
   // const [promocode, setPromocode] = React.useState("");
 
@@ -46,7 +48,7 @@ const OrderForm = () => {
 
       const id = data._id
       if (data) {
-        toast.success('Заказ создан')
+        // toast.success('Заказ создан')
       }
       setCommunications('')
       setSimulator('ACC')
@@ -138,11 +140,18 @@ const OrderForm = () => {
             Поля с * являются обязательными для создания заявки
           </small>
           <div className={styles.price}>{`${price}₽`} </div>
-          <button className={styles.btn} onClick={onSubmit}>
+          <button
+            className={styles.btn}
+            onClick={() => {
+              onSubmit()
+              setSuccess(true)
+            }}
+          >
             Отправить
           </button>
         </li>
       </ul>
+      {!success || <Popup onClose={() => setSuccess(false)} />}
     </>
   )
 }

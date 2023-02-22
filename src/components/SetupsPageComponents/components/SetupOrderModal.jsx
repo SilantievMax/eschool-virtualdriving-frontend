@@ -1,3 +1,4 @@
+import Popup from 'components/Generic/Popup/Popup'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -159,21 +160,7 @@ export const SetupOrderModal = ({ onClose }) => {
             </div>
           </form>
         ) : (
-          <>
-            <h2 className='text-2xl font-bold font-sans mb-8'>
-              Спасибо за вашу заявку!
-            </h2>
-            <div className='text-lg font-sans mb-8'>
-              <p>В ближайшее время мы свяжемся с вами!</p>
-            </div>
-            <button
-              type='button'
-              className='bg-brand hover:bg-brand/80 py-2.5 px-10 text-lg text-white transition-colors'
-              onClick={onClose}
-            >
-              Закрыть
-            </button>
-          </>
+          <Popup onClose={onClose} />
         )}
         {error && <div className='text-red-600 mt-4'>{error}</div>}
       </div>
