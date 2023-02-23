@@ -22,8 +22,6 @@ const DropDownUpdate = ({
   setCommunications
 }) => {
   const [orderDate, setOrderDate] = useState(item.orderDate)
-  const [] = useState()
-  const [] = useState()
 
   const dispatch = useDispatch()
   useEffect(() => {

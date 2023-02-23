@@ -4,6 +4,7 @@ import axios from 'utils/axios.js'
 import modifiedDate from 'utils/modifiedDate.js'
 
 import DropDownInfo from './DropDownInfo'
+import DropDownUpdate from './DropDownUpdate'
 
 const RowsTable = ({ item }) => {
   const [status, setStatus] = useState(item.status)
@@ -52,11 +53,6 @@ const RowsTable = ({ item }) => {
       })
     }
   }
-
-  let tetHours = new Date(item.orderDate).getHours()
-  let tetMinutes = new Date(item.orderDate).getMinutes()
-  tetHours = String(tetHours).length === 1 ? `0${tetHours}` : tetHours
-  tetMinutes = String(tetMinutes).length === 1 ? `0${tetMinutes}` : tetMinutes
 
   const statusColorBg = status => {
     // eslint-disable-next-line default-case
@@ -139,21 +135,13 @@ const RowsTable = ({ item }) => {
         </td>
       </tr>
       <DropDownInfo item={item} hiddenClass={hiddenClass} />
-      {/* 
       <DropDownUpdate
+        hiddenClass={hiddenClass2}
+        checkOrderPath={checkOrderPath}
         status={status}
         setStatus={setStatus}
         item={item}
-        track={track}
-        setTrack={setTrack}
-        car={car}
-        setCar={setCar}
-        hiddenClass={hiddenClass2}
-        communications={communications}
-        setCommunications={setCommunications}
-        setPrice={setPrice}
-        price={price}
-      /> */}
+      />
     </>
   )
 }
