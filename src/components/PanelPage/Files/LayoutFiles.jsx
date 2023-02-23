@@ -1,5 +1,5 @@
-import File from 'components/AdminPanelPageComponents/LayoutFiles/components/File/File'
-import FileUpload from 'components/AdminPanelPageComponents/LayoutFiles/components/FileUpload/FileUpload'
+import File from 'components/PanelPage/Files/components/File'
+import FileUpload from 'components/PanelPage/Files/components/FileUpload'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
