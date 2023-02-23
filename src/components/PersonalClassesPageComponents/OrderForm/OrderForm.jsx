@@ -1,5 +1,6 @@
 import file from 'assets/files/Politica_confidence.pdf'
 import img1 from 'assets/images/order1.webp'
+import AuthorizationModal from 'components/Authorization/AuthorizationModal/AuthorizationModal'
 import Popup from 'components/Generic/Popup/Popup'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -28,6 +29,8 @@ const OrderForm = () => {
   const [quantityTrining, setQuantityTrining] = React.useState('1')
   const [promocode, setPromocode] = React.useState('')
   const [success, setSuccess] = useState(false)
+  const [modalActive, setModalActive] = useState(false)
+  const [modalBuyActive, setModalBuyActive] = useState(false)
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -63,7 +66,7 @@ const OrderForm = () => {
 
       const id = data._id
       if (data) {
-        // toast.success('Заказ создан')
+        setSuccess(true)
       }
       setCommunications('')
       setOrderDate('')
@@ -274,7 +277,7 @@ const OrderForm = () => {
             Поля с * являются обязательными для создания заявки
           </small>
           <div className={styles.price}>{`${price}₽`} </div>
-          <button
+          {/* <button
             className={styles.btn}
             onClick={() => {
               onSubmit()
@@ -282,9 +285,32 @@ const OrderForm = () => {
             }}
           >
             Отправить
-          </button>
+          </button> */}
+          {!isAuth ? (
+            <button
+              className={styles.btn}
+              onClick={() => {
+                setModalActive(true)
+              }}
+            >
+              войти и купить
+            </button>
+          ) : (
+            <button
+              className={styles.btn}
+              onClick={() => {
+                setModalBuyActive(true)
+                onSubmit()
+              }}
+            >
+              Заказать
+            </button>
+          )}
         </li>
       </ul>
+      {!isAuth && (
+        <AuthorizationModal active={modalActive} setActive={setModalActive} />
+      )}
       {!success || <Popup onClose={() => setSuccess(false)} />}
     </>
   )

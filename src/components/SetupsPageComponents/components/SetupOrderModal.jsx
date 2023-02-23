@@ -27,7 +27,7 @@ export const SetupOrderModal = ({ onClose }) => {
       setError('')
 
       await axios.post(`/orders/setup/${setup.id}`, {
-        communications,
+        communications, 
         coupon,
         coment
       })
