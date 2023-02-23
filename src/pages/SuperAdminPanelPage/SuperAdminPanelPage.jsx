@@ -1,6 +1,6 @@
 import LayoutFiles from 'components/AdminPanelPageComponents/LayoutFiles/LayoutFiles'
 import LayoutInfo from 'components/AdminPanelPageComponents/LayoutInfo/LayoutInfo'
-import LayoutPartner from 'components/AdminPanelPageComponents/LayoutPartner/LayoutPartner'
+import LayoutPartner from 'components/PanelPage/Partners/LayoutPartner'
 import LayoutStatistics from 'components/AdminPanelPageComponents/LayoutStatistics/LayoutStatistics'
 import LayoutUsers from 'components/AdminPanelPageComponents/LayoutUsers/LayoutUsers'
 import AdminAside from 'components/PanelPage/AsidePanel/AsidePanel'
