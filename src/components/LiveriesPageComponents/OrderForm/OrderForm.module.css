@@ -161,3 +161,24 @@
   left: 0;
   top: -4px;
 }
+
+
+@media (max-width: 875px) {
+  .order__list {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    position: relative;
+  }
+
+  .price {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .warning {
+    position: relative;
+    display: block;
+  }
+}
