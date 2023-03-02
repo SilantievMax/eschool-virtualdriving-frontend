@@ -14,9 +14,9 @@ const AuthorizationModal = ({ active, setActive }) => {
       >
         <div className={styles.modal__content} onClick={() => setActive(false)}>
           <div className={styles.modal__bg} onClick={e => e.stopPropagation()}>
-            <div className={styles.modal__X} onClick={() => setActive(false)}>&times;</div>
             {modal === 1 && <LoginForm modal={setModal} />}
             {modal === 2 && <RegisterForm modal={setModal} />}
+            <div className={styles.modal__X} onClick={() => setActive(false)}>&times;</div>
           </div>
         </div>
       </div>

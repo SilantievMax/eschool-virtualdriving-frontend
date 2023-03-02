@@ -63,8 +63,6 @@ button.login__btn {
   cursor: pointer;
   width: 340px;
   height: 70px;
-  background-repeat: no-repeat;
-  background-image: url(../../../assets/svg/discordButton.svg);
 }
 
 .login__register {

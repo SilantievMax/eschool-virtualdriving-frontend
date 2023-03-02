@@ -52,9 +52,9 @@ const LoginForm = ({ modal }) => {
         {/* <a href="/" className={styles.login__forgot}>
           Забыли пароль?
         </a> */}
-        <div className={styles.login__buttons}>
+        {/* <div className={styles.login__buttons}>
           <div className={styles.login__btn_discord}></div>
-        </div>
+        </div> */}
         <button type='submit' className={styles.login__btn}>
           Войти
         </button>

@@ -12,6 +12,8 @@
 .modal__content {
   height: 100vh;
   width: 100vw;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +27,7 @@
   position: relative;
   background-color: #e5e7eb;
   padding: 20px;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -40,6 +43,8 @@
 @media (max-width: 875px) {
   .modal__content {
     display: block;
+  max-width: none;
+
   }
 
   .modal__bg {

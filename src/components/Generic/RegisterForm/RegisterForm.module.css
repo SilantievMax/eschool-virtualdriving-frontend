@@ -3,13 +3,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
   height: 100%;
 }
 
 .register__heading {
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   color: #3c4858;
   margin-bottom: 17px;
 }
@@ -29,8 +28,22 @@
 
 .register__input::placeholder {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   color: #b6b6b6;
+}
+
+.register__forgot {
+  font-weight: 700;
+  font-size: 22px;
+  color: #3c4858;
+  margin-top: 25px;
+}
+
+.register__buttons {
+  display: flex;
+  width: 530px;
+  justify-content: space-between;
+  margin-top: 42px;
 }
 
 button.register__btn {
