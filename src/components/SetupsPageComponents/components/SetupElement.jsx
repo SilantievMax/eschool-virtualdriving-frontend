@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 
 import { selectIsAuth } from '../../../redux/features/authSlice'
 import { accessUrl } from '../../../utils/axios'
@@ -9,7 +10,10 @@ import { SetupOrderModal } from './SetupOrderModal'
 import { SetupTable } from './SetupTable'
 import { formatPrice } from './utils'
 
+import PopupSuccess from 'components/Generic/Popup/PopupSuccess'
+
 export const SetupElement = () => {
+  const [searchParams, setSearchParams] = useSearchParams()
   const isAuth = useSelector(selectIsAuth)
   const [modalActive, setModalActive] = useState(false)
   const [modalBuyActive, setModalBuyActive] = useState(false)
@@ -23,6 +27,8 @@ export const SetupElement = () => {
   }
 
   const tableData = setup.tracksData || []
+
+  const successPayment = searchParams.get('successPayment')
 
   return (
     <>
@@ -155,6 +161,9 @@ export const SetupElement = () => {
       )}
       {isAuth && modalBuyActive && (
         <SetupOrderModal onClose={() => setModalBuyActive(false)} />
+      )}
+      {isAuth && !!successPayment && !modalBuyActive && (
+        <PopupSuccess onClose={() => setSearchParams('')} />
       )}
     </>
   )
