@@ -8,6 +8,7 @@ import { setupReducer } from 'redux/features/ordersSetupSlice'
 import { traningReducer } from 'redux/features/ordersTrainingSlice'
 import { ordersUserReducer } from 'redux/features/ordersUserSlice'
 import { partnerReducer } from 'redux/features/partnerSlice'
+import { infoStatistic } from 'redux/features/statistic'
 
 export default configureStore({
   reducer: {
@@ -19,6 +20,7 @@ export default configureStore({
     ordersLiveries: liveriesReducer,
     ordersUser: ordersUserReducer,
     file: fileReducer,
-    partner: partnerReducer
+    partner: partnerReducer,
+    statistic: infoStatistic
   }
 })
