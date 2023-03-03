@@ -14,6 +14,7 @@ export const SetupOrderModal = ({ onClose }) => {
   const [coupon, setCoupon] = useState('')
   const [coment, setComent] = useState('')
   const [privacyPolicy, setPrivacyPolicy] = useState(true)
+  const [orderId, setOrderId] = useState(null)
 
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
@@ -26,11 +27,13 @@ export const SetupOrderModal = ({ onClose }) => {
       setLoading(true)
       setError('')
 
-      await axios.post(`/orders/setup/${setup.id}`, {
-        communications, 
+      const { data } = await axios.post(`/orders/setup/${setup.id}`, {
+        communications,
         coupon,
         coment
       })
+
+      setOrderId(data.orderNumber)
 
       setSuccess(true)
       setLoading(false)
@@ -160,7 +163,7 @@ export const SetupOrderModal = ({ onClose }) => {
             </div>
           </form>
         ) : (
-          <Popup onClose={onClose} />
+          <Popup onClose={onClose} orderId={orderId} />
         )}
         {error && <div className='text-red-600 mt-4'>{error}</div>}
       </div>
