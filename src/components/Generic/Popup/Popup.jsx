@@ -1,6 +1,18 @@
 import React from 'react'
+import axios from '../../../utils/axios.js'
 
-const Popup = ({ onClose }) => {
+const Popup = ({ onClose, orderId }) => {
+  const handlePayClick = async () => {
+    const { data } = await axios.post(`/orders/setup/${orderId}/payment`, {
+      successUrl: `${window.location.href}?successPayment=${orderId}`
+    })
+
+    if (data.redirectUrl) {
+      window.location.href = data.redirectUrl
+      return
+    }
+  }
+
   return (
     <>
       <div className='fixed top-0 left-0 w-full h-full bg-black/40 flex items-center justify-center'>
@@ -17,19 +29,22 @@ const Popup = ({ onClose }) => {
               Также вы можете сразу оплатить заказ."
             </p>
           </div>
-          <button
-            type='button'
-            className='bg-brand hover:bg-brand/80 py-2.5 px-10 text-lg text-white transition-colors'
-            onClick={onClose}
-          >
-            Закрыть
-          </button>
-          <button
-            type='button'
-            className='bg-white hover:bg-white/80 py-2.5 px-10 text-lg text-blac transition-colors ml-40'
-          >
-            Оплатить
-          </button>
+          <div className='flex justify-between'>
+            <button
+              type='button'
+              className='bg-brand hover:bg-brand/80 py-2.5 px-10 text-lg text-white transition-colors'
+              onClick={handlePayClick}
+            >
+              Оплатить
+            </button>
+            <button
+              type='button'
+              className='bg-gray-900 hover:bg-gray-900/80 py-2.5 px-10 text-lg text-white transition-colors ml-5'
+              onClick={onClose}
+            >
+              Закрыть
+            </button>
+          </div>
         </div>
       </div>
     </>
