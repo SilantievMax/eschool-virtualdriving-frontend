@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from '../../../utils/axios.js'
 
-const Popup = ({ onClose, orderId }) => {
+const Popup = ({ onClose, orderId, order }) => {
   const handlePayClick = async () => {
-    const { data } = await axios.post(`/orders/setup/${orderId}/payment`, {
+    const { data } = await axios.post(`/orders/${order}/${orderId}/payment`, {
       successUrl: `${window.location.href}?successPayment=${orderId}`
     })
 

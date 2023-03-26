@@ -163,7 +163,7 @@ export const SetupOrderModal = ({ onClose }) => {
             </div>
           </form>
         ) : (
-          <Popup onClose={onClose} orderId={orderId} />
+          <Popup onClose={onClose} orderId={orderId} order='setup' />
         )}
         {error && <div className='text-red-600 mt-4'>{error}</div>}
       </div>

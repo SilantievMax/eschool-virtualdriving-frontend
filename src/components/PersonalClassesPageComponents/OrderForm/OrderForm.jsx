@@ -4,10 +4,12 @@ import AuthorizationModal from 'components/Authorization/AuthorizationModal/Auth
 import Popup from 'components/Generic/Popup/Popup'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { selectIsAuth } from 'redux/features/authSlice.js'
 import { fetcCars, fetcTracks } from 'redux/features/dataSlice.js'
 import axios from 'utils/axios.js'
+import PopupSuccess from 'components/Generic/Popup/PopupSuccess'
 
 import styles from './OrderForm.module.css'
 
@@ -31,6 +33,8 @@ const OrderForm = () => {
   const [success, setSuccess] = useState(false)
   const [modalActive, setModalActive] = useState(false)
   const [modalBuyActive, setModalBuyActive] = useState(false)
+  const [orderId, setOrderId] = useState(null)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -64,7 +68,7 @@ const OrderForm = () => {
 
       const { data } = await axios.post('/orders/training', fields)
 
-      const id = data._id
+      setOrderId(data.orderNumber)
       if (data) {
         setSuccess(true)
       }
@@ -113,6 +117,8 @@ const OrderForm = () => {
       }
     }
   }
+
+  const successPayment = searchParams.get('successPayment')
 
   return (
     <>
@@ -311,7 +317,16 @@ const OrderForm = () => {
       {!isAuth && (
         <AuthorizationModal active={modalActive} setActive={setModalActive} />
       )}
-      {!success || <Popup onClose={() => setSuccess(false)} />}
+      {!success || (
+        <Popup
+          orderId={orderId}
+          order='training'
+          onClose={() => setSuccess(false)}
+        />
+      )}
+      {isAuth && !!successPayment && !modalBuyActive && (
+        <PopupSuccess onClose={() => setSearchParams('')} />
+      )}
     </>
   )
 }

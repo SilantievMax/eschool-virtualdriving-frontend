@@ -4,16 +4,18 @@ import AuthorizationModal from 'components/Authorization/AuthorizationModal/Auth
 import Popup from 'components/Generic/Popup/Popup'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { selectIsAuth } from 'redux/features/authSlice.js'
 import { fetcCars, fetcTracks } from 'redux/features/dataSlice.js'
 import axios from 'utils/axios.js'
+import PopupSuccess from 'components/Generic/Popup/PopupSuccess'
 
 import styles from './OrderForm.module.css'
 
 const OrderForm = () => {
   const promocodeNew = 'FOTONVDESFEB'
-
+  const [searchParams, setSearchParams] = useSearchParams()
   const isAuth = useSelector(selectIsAuth)
   const [isLoading, setLoading] = React.useState(false)
   const [communications, setCommunications] = React.useState('')
@@ -31,6 +33,7 @@ const OrderForm = () => {
   const [modalBuyActive, setModalBuyActive] = useState(false)
   // const [quantityTrining, setQuantityTrining] = React.useState("1");
   // const [promocode, setPromocode] = React.useState("");
+  const [orderId, setOrderId] = useState(null)
 
   const onSubmit = async () => {
     try {
@@ -49,7 +52,7 @@ const OrderForm = () => {
 
       const { data } = await axios.post('/orders/liveries', fields)
 
-      const id = data._id
+      setOrderId(data.orderNumber)
       if (data) {
         setSuccess(true)
         // toast.success('Заказ создан')
@@ -67,6 +70,8 @@ const OrderForm = () => {
       }
     }
   }
+
+  const successPayment = searchParams.get('successPayment')
 
   return (
     <>
@@ -178,7 +183,16 @@ const OrderForm = () => {
       {!isAuth && (
         <AuthorizationModal active={modalActive} setActive={setModalActive} />
       )}
-      {!success || <Popup onClose={() => setSuccess(false)} />}
+      {!success || (
+        <Popup
+          orderId={orderId}
+          order='liveries'
+          onClose={() => setSuccess(false)}
+        />
+      )}
+      {isAuth && !!successPayment && !modalBuyActive && (
+        <PopupSuccess onClose={() => setSearchParams('')} />
+      )}
     </>
   )
 }
