@@ -62,7 +62,7 @@ export const SetupElement = () => {
                 className='bg-brand py-2.5 px-10 text-lg text-white'
                 onClick={() => setModalBuyActive(true)}
               >
-                Заказать
+                Купить
               </button>
             )}
           </div>
