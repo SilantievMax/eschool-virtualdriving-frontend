@@ -24,13 +24,13 @@ const DropDownUpdate = ({
       }
     }
   }
-  
+
   return (
     <>
       <tr className={`py-2 text-black md-1 ${hiddenClass}`} id='dropdown-table'>
         <td className='pl-5' colspan='5'>
           <div className='py-2 border-b-2'>
-            Статус: {' '}
+            Статус:{' '}
             <select
               className='w-32'
               value={status}

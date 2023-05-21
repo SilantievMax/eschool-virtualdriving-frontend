@@ -14,12 +14,14 @@ const AdminHeader = () => {
 
   return (
     <>
-    <div className='flex mb-5 ml-2'>
-      Всего:
-      <div className='mr-5'>Тренировок: {statisticOrders?.countTraining}шт, </div>
-      <div className='mr-5'>Ливреи: {statisticOrders?.countLiveries}шт, </div>
-      <div className='mr-5'>Сетапы: {statisticOrders?.countSetup}шт </div>
-    </div>
+      <div className='flex mb-5 ml-2'>
+        Всего:
+        <div className='mr-5'>
+          Тренировок: {statisticOrders?.countTraining}шт,{' '}
+        </div>
+        <div className='mr-5'>Ливреи: {statisticOrders?.countLiveries}шт, </div>
+        <div className='mr-5'>Сетапы: {statisticOrders?.countSetup}шт </div>
+      </div>
       <div className='flex'>
         <div className='shadow-lg bg-red-500 border-l-8 border-l-red-600 mb-2 p-1 w-1/4 mx-2'>
           <div className='p-4 flex flex-col'>
