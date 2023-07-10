@@ -28,7 +28,8 @@ export const fetchRegister = createAsyncThunk(
 const initialState = {
   data: null,
   role: null,
-  status: 'loading'
+  status: 'loading',
+  serverStatus: null
 }
 
 const authSlice = createSlice({
@@ -44,14 +45,19 @@ const authSlice = createSlice({
     [fetchLogin.pending]: state => {
       state.status = 'loading'
       state.data = null
+      state.role = null
+      state.serverStatus = null
     },
     [fetchLogin.fulfilled]: (state, action) => {
       state.status = 'loaded'
-      state.role = action.payload.role[0]
+      state.serverStatus = action.payload.message
+      state.role = action.payload.role
       state.data = action.payload
     },
     [fetchLogin.rejected]: state => {
       state.status = 'error'
+      state.role = null
+      state.serverStatus = null
       state.data = null
     },
     [fetchAuthMe.pending]: state => {
@@ -61,7 +67,7 @@ const authSlice = createSlice({
     },
     [fetchAuthMe.fulfilled]: (state, action) => {
       state.status = 'loaded'
-      state.role = action.payload.role[0]
+      state.role = action.payload.role
       state.data = action.payload
     },
     [fetchAuthMe.rejected]: state => {
@@ -71,21 +77,26 @@ const authSlice = createSlice({
     },
     [fetchRegister.pending]: state => {
       state.status = 'loading'
+      state.role = null
       state.data = null
+      state.serverStatus = null
     },
     [fetchRegister.fulfilled]: (state, action) => {
       state.status = 'loaded'
-      state.role = action.payload.role[0]
+      state.serverStatus = action.payload.message
+      state.role = action.payload.role
       state.data = action.payload
     },
-    [fetchRegister.rejected]: state => {
+    [fetchRegister.rejected]: (state, action) => {
       state.status = 'error'
+      state.role = null
+      state.serverStatus = null
       state.data = null
     }
   }
 })
 
-export const selectIsAuth = state => Boolean(state.auth.data)
+export const selectIsAuth = state => Boolean(state.auth.role)
 
 export const authReducer = authSlice.reducer
 

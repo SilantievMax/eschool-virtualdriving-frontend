@@ -1,15 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import { fetchRegister, selectIsAuth } from 'redux/features/authSlice'
+import { toast } from 'react-toastify'
 
 import styles from './RegisterForm.module.css'
 
 const RegisterForm = ({ modal }) => {
   const isAuth = useSelector(selectIsAuth)
   const dispatch = useDispatch()
+
+  const { serverStatus } = useSelector(state => state.auth)
+
+  useEffect(() => {
+    if (typeof serverStatus == 'string') {
+      toast.error(serverStatus)
+    } else if (serverStatus != null) {
+      serverStatus.map(status => {
+        toast.error(status.msg)
+      })
+    }
+    console.log(serverStatus)
+  }, [serverStatus])
 
   const refPartnerLink = window.localStorage.getItem('refPartner')
 

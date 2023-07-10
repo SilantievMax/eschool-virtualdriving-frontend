@@ -12,8 +12,8 @@ import InSite from 'components/PanelPage/AsidePanel/components/Buttons/InSite'
 
 const Navigations = () => {
   const roleUser = useSelector(state => state.auth.role)
-  const isAdmin = roleUser === 'SUPERADMIN'
-  console.log(roleUser)
+  const isAdmin = roleUser[0] === 'SUPERADMIN'
+
   return (
     <>
       <section>

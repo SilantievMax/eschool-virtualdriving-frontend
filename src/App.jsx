@@ -60,7 +60,7 @@ const App = () => {
         <Route path='about' element={<AboutPage />} />
         <Route
           path='administrator/*'
-          element={adminPanelRoleComponents(roleUser)}
+          element={adminPanelRoleComponents(roleUser && roleUser[0])}
         />
       </Routes>
       <ToastContainer position='bottom-right' />

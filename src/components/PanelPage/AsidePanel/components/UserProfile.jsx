@@ -16,7 +16,7 @@ const UserProfile = () => {
         <div className='ml-5'>
           <div className='font-bold text-gray-800 text-base'>{fullName}</div>
           <div className='font-normal text-gray-500 text-xs uppercase'>
-            {role}
+            {role[0]}
           </div>
         </div>
       </section>
