@@ -3,7 +3,7 @@ import logo from 'assets/svg/logo.svg'
 import vk from 'assets/svg/vk.svg'
 import AuthorizationModal from 'components/Authorization/AuthorizationModal/AuthorizationModal'
 import Layout from 'components/Generic/Layout/Layout'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import { selectIsAuth } from 'redux/features/authSlice'
@@ -25,12 +25,19 @@ const NavLinks = () => {
 
 const Header = () => {
   const isAuth = useSelector(selectIsAuth)
-
   const [modalActive, setModalActive] = useState(false)
   const [isActive, setActive] = useState(false)
   const color = { color: '#E61F26', opacity: 1 }
   const isActiveNav = ({ isActive }) => (isActive ? color : undefined)
   const toggleClassMenu = () => setActive(!isActive)
+  console.log('isAuth', isAuth)
+  console.log('isActive', isActive)
+
+  useEffect(() => {
+    if (isAuth) {
+      setModalActive(false)
+    }
+  }, [isAuth])
 
   return (
     <>
@@ -125,7 +132,7 @@ const Header = () => {
           </div>
         </header>
       </Layout>
-      {!isAuth && (
+      {isAuth || (
         <AuthorizationModal active={modalActive} setActive={setModalActive} />
       )}
     </>

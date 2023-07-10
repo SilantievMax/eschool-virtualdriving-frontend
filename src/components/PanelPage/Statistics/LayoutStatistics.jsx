@@ -10,7 +10,6 @@ const AdminHeader = () => {
   }, [])
 
   const { statisticOrders } = useSelector(state => state.statistic)
-  console.log(statisticOrders)
 
   return (
     <>

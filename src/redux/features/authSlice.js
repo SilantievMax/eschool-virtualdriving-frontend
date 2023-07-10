@@ -38,6 +38,8 @@ const authSlice = createSlice({
   reducers: {
     logout: state => {
       state.data = null
+      state.status = 'loading'
+      state.serverStatus = null
       window.localStorage.removeItem('token')
     }
   },
@@ -96,7 +98,7 @@ const authSlice = createSlice({
   }
 })
 
-export const selectIsAuth = state => Boolean(state.auth.role)
+export const selectIsAuth = state => Boolean(state.auth.data?._id)
 
 export const authReducer = authSlice.reducer
 

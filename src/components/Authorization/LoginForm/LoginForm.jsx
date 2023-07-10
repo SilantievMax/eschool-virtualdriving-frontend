@@ -20,7 +20,6 @@ const LoginForm = ({ modal }) => {
         toast.error(status.msg)
       })
     }
-    console.log(serverStatus)
   }, [serverStatus])
 
   const {

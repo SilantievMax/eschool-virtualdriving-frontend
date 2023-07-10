@@ -7,8 +7,12 @@ import {
   fetcOrdersTrainingUers
 } from 'redux/features/ordersUserSlice'
 import Card from './Card'
+import { selectIsAuth } from 'redux/features/authSlice'
+import { Navigate } from 'react-router-dom'
 
 const UserPanelPage = () => {
+  const isAuth = useSelector(selectIsAuth)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -20,6 +24,10 @@ const UserPanelPage = () => {
   const { items1, items2, items3 } = useSelector(
     state => state.ordersUser.orders
   )
+
+  if (!isAuth) {
+    return <Navigate to='/' />
+  }
 
   return (
     <>
